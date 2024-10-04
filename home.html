@@ -36,7 +36,17 @@
             background-position: center;
             background-repeat: no-repeat;
         }
-
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+        .animate-scroll {
+            animation: scroll 15s linear infinite;
+        }
     </style>
 </head>
 <body class="font-plus-jakarta">
@@ -49,7 +59,7 @@
     
             <ul class="hidden lg:flex space-x-12 mx-auto" data-aos="fade-right" data-aos-duration="1100" data-aos-delay="300">
                 <li class="home-link"><a href="/home.html" class="text-white hover:text-black nav-link text-xl font-semibold">Home</a></li>
-                <li><a href="#about" class="text-white hover:text-black nav-link text-xl font-semibold">About</a></li>
+                <li><a href="/home.html#about" class="text-white hover:text-black nav-link text-xl font-semibold">About</a></li>
                 <li class="relative group">
                     <a href="#services" class="text-white hover:text-black nav-link text-xl font-semibold">Services</a>
                     <ul class="submenu absolute mt-2 bg-white text-gray-800 w-72 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out z-50 overflow-hidden">
@@ -80,13 +90,13 @@
                         </li>
                     </ul>
                 </li>
-                <li><a href="#projects" class="text-white hover:text-black nav-link text-xl font-semibold">Projects</a></li>
-                <li><a href="#testimonial" class="text-white hover:text-black nav-link text-xl font-semibold">Testimonial</a></li>
+                <li><a href="/home.html#projects" class="text-white hover:text-black nav-link text-xl font-semibold">Projects</a></li>
+                
                 <li><a href="/contactus.html" class="text-white hover:text-black nav-link text-xl font-semibold">Contact Us</a></li>
             </ul>
     
             <div class="hidden lg:flex items-center" data-aos="fade-left" data-aos-duration="1100" data-aos-delay="300">
-                <a href="#" class="bg-gray-700 text-white px-6 py-2 rounded-full border-2 border-transparent hover:bg-white hover:text-gray-600 hover:text-lg hover:border-gray-400 transition duration-300 transform hover:scale-105 text-lg font-bold shadow-lg">Get Started</a>
+                <a href="/contactus.html#contact" class="bg-gray-700 text-white px-6 py-2 rounded-full border-2 border-transparent hover:bg-white hover:text-gray-600 hover:text-lg hover:border-gray-400 transition duration-300 transform hover:scale-105 text-lg font-bold shadow-lg">Get Started</a>
             </div>
     
             <div class="lg:hidden" data-aos="fade-left" data-aos-duration="1000">
@@ -102,26 +112,38 @@
         <div class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden" id="mobile-menu-overlay">
             <div class="mobile-menu fixed inset-y-0 right-0 w-full sm:w-3/4 md:w-1/2 bg-white text-gray-900 p-6 transform translate-x-full transition-transform duration-300" id="mobile-menu-content">
                 <button class="text-gray-600 text-3xl absolute top-4 right-4 focus:outline-none" id="close-menu-btn">&times;</button>
-                <ul class="flex flex-col space-y-6 mt-16">
+                <ul class="flex flex-col justify-between space-y-14 mt-16">
                     <li class="home-link" data-aos="fade-up" data-aos-delay="100"><a href="/home.html" class="text-2xl font-semibold hover:text-primary transition duration-300">Home</a></li>
-                    <li data-aos="fade-up" data-aos-delay="200"><a href="#about" class="text-2xl font-semibold hover:text-primary transition duration-300">About</a></li>
+                    <li data-aos="fade-up" data-aos-delay="200"><a href="home.html#about" class="text-2xl font-semibold hover:text-primary transition duration-300">About</a></li>
                     <li data-aos="fade-up" data-aos-delay="300">
-                        <button class="text-2xl font-semibold hover:text-primary transition duration-300 flex justify-between items-center w-full" id="services-menu-btn">
+                        <a href="#" class="text-2xl font-semibold hover:text-primary transition duration-300 flex justify-between items-center" id="services-menu-btn">
                             Services
                             <svg class="w-6 h-6 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
-                        </button>
-                        <ul class="mobile-submenu pl-6 space-y-4 mt-4 hidden" id="services-submenu">
-                            <li><a href="services/software.html" class="text-xl hover:text-primary transition duration-300">Software Services</a></li>
-                            <li><a href="services/enginnering.html" class="text-xl hover:text-primary transition duration-300">Engineering Services</a></li>
-                            <li><a href="services/manufacturing.html" class="text-xl hover:text-primary transition duration-300">Manufacturing Services</a></li>
-                        </ul>
+                        </a>
+                        <ul class="mobile-submenu pl-6 pt-5 space-y-7" id="services-submenu">
+                            <li class="flex">
+                                <a href="services/software.html" class="text-xl text-gray-700 pl-7 hover:text-white hover:bg-primary hover:scale-105 hover:shadow-lg hover:rounded-xl transition-all duration-300 ease-in-out w-full py-4 flex items-center justify-start">
+                                    Software Services
+                                </a>
+                            </li>
+                            <li class="flex">
+                                <a href="services/enginnering.html" class="text-xl pl-7 text-gray-700 hover:text-white hover:bg-primary hover:scale-105 hover:shadow-lg hover:rounded-xl transition-all duration-300 ease-in-out w-full py-4 flex items-center justify-start">
+                                    Engineering Services
+                                </a>
+                            </li>
+                            <li class="flex">
+                                <a href="services/manufacturing.html" class="text-xl pl-7 text-gray-700 hover:text-white hover:bg-primary hover:scale-105 hover:shadow-lg hover:rounded-xl transition-all duration-300 ease-in-out w-full py-4 flex items-center justify-start">
+                                    Manufacturing Services
+                                </a>
+                            </li>
+                        </ul>                                              
                     </li>
-                    <li data-aos="fade-up" data-aos-delay="400"><a href="#projects" class="text-2xl font-semibold hover:text-primary transition duration-300">Projects</a></li>
+                    <li data-aos="fade-up" data-aos-delay="400"><a href="/home.html#projects" class="text-2xl font-semibold hover:text-primary transition duration-300">Projects</a></li>
                     <li data-aos="fade-up" data-aos-delay="500"><a href="#testimonial" class="text-2xl font-semibold hover:text-primary transition duration-300">Testimonial</a></li>
                     <li data-aos="fade-up" data-aos-delay="600"><a href="/contactus.html" class="text-2xl font-semibold hover:text-primary transition duration-300">Contact Us</a></li>
-                    <li data-aos="fade-up" data-aos-delay="700"><a href="#" class="bg-primary text-white px-6 py-3 rounded-full hover:bg-orange-600 transition duration-300 inline-block mt-4 text-xl font-bold text-center">Get Started</a></li>
+                    <li data-aos="fade-up" data-aos-delay="700"><a href="/contactus.html#contact" class="bg-primary text-white px-6 py-3 rounded-full hover:bg-orange-600 transition duration-300 inline-block mt-4 text-xl font-bold text-center">Get Started</a></li>
                 </ul>
             </div>
         </div>
@@ -500,30 +522,51 @@
     <!-- trusted -->
     <section class="pb-20 px-4 sm:px-6 lg:px-8 bg-orange-50 overflow-hidden">
         <div class="container mx-auto">
-            <h2 class="text-4xl font-bold text-center mb-24 flex items-center justify-center space-x-4" data-aos="fade-down">
+            <h2 class="text-4xl font-bold text-center mb-12 flex items-center justify-center space-x-4" data-aos="fade-down">
                 <span class="flex-grow h-0.5 bg-current opacity-30"></span>
                 <span class="px-4">
                     <span class="relative ">
-                        1k + Brands Trust Us
+                        1000+ Brands Trust Us
                     </span>
                 </span>
                 <span class="flex-grow h-0.5 bg-current opacity-30"></span>
             </h2>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-12 items-center">
-                <div class="logo-container flex justify-center" data-aos="zoom-in" data-aos-delay="100">
-                    <img src="/src/images/patners/Group 6.png" alt="Company 1" class="h-16 object-contain">
-                </div>
-                <div class="logo-container flex justify-center" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="/src/images/patners/Group 7.png" alt="Company 2" class="h-16 object-contain">
-                </div>
-                <div class="logo-container flex justify-center" data-aos="zoom-in" data-aos-delay="300">
-                    <img src="/src/images/patners/Group 8.png" alt="Company 3" class="h-16 object-contain">
-                </div>
-                <div class="logo-container flex justify-center" data-aos="zoom-in" data-aos-delay="400">
-                    <img src="/src/images/patners/Group.png" alt="Company 4" class="h-16 object-contain">
-                </div>
-                <div class="logo-container flex justify-center" data-aos="zoom-in" data-aos-delay="500">
-                    <img src="/src/images/patners/XMLID_7_.png" alt="Company 5" class="h-16 object-contain">
+            <div class="relative" data-aos="fade-up" data-aos-duration="1000">
+                <div class="flex animate-scroll">
+                    <div class="flex space-x-8 min-w-full">
+                        <div data-aos="zoom-in" data-aos-delay="100" data-aos-duration="800">
+                            <img src="/src/images/clients1/image (1).png" alt="Client Logo" class="h-full md:h-48 w-full">
+                        </div>
+                        <div data-aos="zoom-in" data-aos-delay="200" data-aos-duration="800">
+                            <img src="/src/images/clients1/image (2).png" alt="Client Logo" class="h-full md:h-48 w-full">
+                        </div>
+                        <div data-aos="zoom-in" data-aos-delay="300" data-aos-duration="800">
+                            <img src="/src/images/clients1/image (3).png" alt="Client Logo" class="h-full md:h-48 w-full">
+                        </div>
+                        <div data-aos="zoom-in" data-aos-delay="400" data-aos-duration="800">
+                            <img src="/src/images/clients1/image 1.png" alt="Client Logo" class="h-full md:h-48 w-full">
+                        </div>
+                        <div data-aos="zoom-in" data-aos-delay="500" data-aos-duration="800">
+                            <img src="/src/images/clients1/image.png" alt="Client Logo" class="h-full md:h-48 w-full">
+                        </div>
+                    </div>
+                    <div class="flex space-x-8 min-w-full">
+                        <div data-aos="zoom-in" data-aos-delay="100" data-aos-duration="800">
+                            <img src="/src/images/clients1/image (1).png" alt="Client Logo" class="h-full md:h-48 w-full">
+                        </div>
+                        <div data-aos="zoom-in" data-aos-delay="200" data-aos-duration="800">
+                            <img src="/src/images/clients1/image (2).png" alt="Client Logo" class="h-full md:h-48 w-full">
+                        </div>
+                        <div data-aos="zoom-in" data-aos-delay="300" data-aos-duration="800">
+                            <img src="/src/images/clients1/image (3).png" alt="Client Logo" class="h-full md:h-48 w-full">
+                        </div>
+                        <div data-aos="zoom-in" data-aos-delay="400" data-aos-duration="800">
+                            <img src="/src/images/clients1/image 1.png" alt="Client Logo" class="h-full md:h-48 w-full">
+                        </div>
+                        <div data-aos="zoom-in" data-aos-delay="500" data-aos-duration="800">
+                            <img src="/src/images/clients1/image.png" alt="Client Logo" class="h-full md:h-48 w-full">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -736,9 +779,9 @@
                     </div>
                     <h2 class="text-2xl text-black font-bold ml-4">why choose us.</h2>
                 </div>
-                <h1 class="text-3xl md:text-5xl font-bold text-primary mb-8 max-w-3xl leading-10" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
-                    We Deliver Prominent and Trusted IT Solutions You Can Rely On
-                </h1>
+                <h1 class="text-3xl md:text-5xl font-bold text-primary mb-8 max-w-4xl leading-10" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                    We Deliver Prominent and Trusted IT, Engineering, and Manufacturing Services You Can Rely On
+                </h1>                
                 <p class="text-gray-600 text-2xl mb-12 font-semibold max-w-3xl" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">It is a well-known fact that readers can be distracted by the content on a page when focusing on its layout and design.</p>
                 <ul class="grid grid-cols-1 sm:grid-cols-2 gap-8">
                     <li class="flex items-start space-x-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
@@ -802,7 +845,7 @@
                     <ul class="space-y-3" data-aos="fade-right">
                         <li><a href="#about" class="hover:text-primary transition duration-300">About us</a></li>
                         <li><a href="#services" class="hover:text-primary transition duration-300">Services</a></li>
-                        <li><a href="#projects" class="hover:text-primary transition duration-300">Projects</a></li>
+                        <li><a href="/home.html#projects" class="hover:text-primary transition duration-300">Projects</a></li>
                         <li><a href="#testimonial"class="hover:text-primary transition duration-300">testimonial</a></li>
                     </ul>
                 </div>
