@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will Sparrow</title>
+    <link href="/dist/output.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/src/css/index.css">
+    <style>
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .carousel-container {
+            perspective: 1000px;
+        }
+
+        @keyframes testimonialFadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .testimonial-fade-in {
+            animation: testimonialFadeIn 0.5s ease-out forwards;
+        }
+        .testimonial-bg {
+            background-image: url('/src/images/testimonals.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+        .animate-scroll {
+            animation: scroll 15s linear infinite;
+        }
+    </style>
+</head>
+<body class="font-plus-jakarta">
+    <!-- navbar -->
+    <nav class="bg-primary p-2 fixed w-full z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-4" data-aos="fade-right" data-aos-duration="1000">
+                <img src="/src/images/lightlogo.png" alt="Logo" class="w-auto h-16">
+            </div>
+    
+            <ul class="hidden lg:flex space-x-12 mx-auto" data-aos="fade-right" data-aos-duration="1100" data-aos-delay="300">
+                <li class="home-link"><a href="/home.html" class="text-white hover:text-black nav-link text-xl font-semibold">Home</a></li>
+                <li><a href="/home.html#about" class="text-white hover:text-black nav-link text-xl font-semibold">About</a></li>
+                <li class="relative group">
+                    <a href="#services" class="text-white hover:text-black nav-link text-xl font-semibold">Services</a>
+                    <ul class="submenu absolute mt-2 bg-white text-gray-800 w-72 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out z-50 overflow-hidden">
+                        <li class="border-b border-gray-100 last:border-b-0 transform translate-y-2 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                            <a href="/services/software.html" class="submenu-item block px-6 py-4 hover:bg-primary hover:text-white transition duration-300 flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                                </svg>
+                                <span class="font-medium">Software Services</span>
+                            </a>
+                        </li>
+                        <li class="border-b border-gray-100 last:border-b-0 transform translate-y-2 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100" style="transition-delay: 50ms;">
+                            <a href="/services/enginnering.html" class="submenu-item block px-6 py-4 hover:bg-primary hover:text-white transition duration-300 flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                                <span class="font-medium">Engineering Services</span>
+                            </a>
+                        </li>
+                        <li class="border-b border-gray-100 last:border-b-0 transform translate-y-2 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100" style="transition-delay: 100ms;">
+                            <a href="/services/manufacturing.html" class="submenu-item block px-6 py-4 hover:bg-primary hover:text-white transition duration-300 flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                                </svg>
+                                <span class="font-medium">Manufacturing Services</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="/home.html#projects" class="text-white hover:text-black nav-link text-xl font-semibold">Projects</a></li>
+                
+                <li><a href="/contactus.html" class="text-white hover:text-black nav-link text-xl font-semibold">Contact Us</a></li>
+            </ul>
+    
+            <div class="hidden lg:flex items-center" data-aos="fade-left" data-aos-duration="1100" data-aos-delay="300">
+                <a href="#contact" class="bg-gray-700 text-white px-6 py-2 rounded-full border-2 border-transparent hover:bg-white hover:text-gray-600 hover:text-lg hover:border-gray-400 transition duration-300 transform hover:scale-105 text-lg font-bold shadow-lg">
+                    Get Started
+                </a>
+            </div>
+    
+            <div class="lg:hidden" data-aos="fade-left" data-aos-duration="1000">
+                <button class="text-white focus:outline-none" id="mobile-menu-btn">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    
+        <!-- Mobile Menu -->
+        <div class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden" id="mobile-menu-overlay">
+            <div class="mobile-menu fixed inset-y-0 right-0 w-full sm:w-3/4 md:w-1/2 bg-white text-gray-900 p-6 transform translate-x-full transition-transform duration-300" id="mobile-menu-content">
+                <button class="text-gray-600 text-3xl absolute top-4 right-4 focus:outline-none" id="close-menu-btn">&times;</button>
+                <ul class="flex flex-col justify-between space-y-14 mt-16">
+                    <li class="home-link" data-aos="fade-up" data-aos-delay="100"><a href="/home.html" class="text-2xl font-semibold hover:text-primary transition duration-300">Home</a></li>
+                    <li data-aos="fade-up" data-aos-delay="200"><a href="/home.html#about" class="text-2xl font-semibold hover:text-primary transition duration-300">About</a></li>
+                    <li data-aos="fade-up" data-aos-delay="300">
+                        <a href="#" class="text-2xl font-semibold hover:text-primary transition duration-300 flex justify-between items-center" id="services-menu-btn">
+                            Services
+                            <svg class="w-6 h-6 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </a>
+                        <ul class="mobile-submenu pl-6 pt-5 space-y-7" id="services-submenu">
+                            <li class="flex">
+                                <a href="/services/software.html" class="text-xl text-gray-700 pl-7 hover:text-white hover:bg-primary hover:scale-105 hover:shadow-lg hover:rounded-xl transition-all duration-300 ease-in-out w-full py-4 flex items-center justify-start">
+                                    Software Services
+                                </a>
+                            </li>
+                            <li class="flex">
+                                <a href="/services/enginnering.html" class="text-xl pl-7 text-gray-700 hover:text-white hover:bg-primary hover:scale-105 hover:shadow-lg hover:rounded-xl transition-all duration-300 ease-in-out w-full py-4 flex items-center justify-start">
+                                    Engineering Services
+                                </a>
+                            </li>
+                            <li class="flex">
+                                <a href="/services/manufacturing.html" class="text-xl pl-7 text-gray-700 hover:text-white hover:bg-primary hover:scale-105 hover:shadow-lg hover:rounded-xl transition-all duration-300 ease-in-out w-full py-4 flex items-center justify-start">
+                                    Manufacturing Services
+                                </a>
+                            </li>
+                        </ul>                                              
+                    </li>
+                    <li data-aos="fade-up" data-aos-delay="400"><a href="/home.html#projects" class="text-2xl font-semibold hover:text-primary transition duration-300">Projects</a></li>
+                    <li data-aos="fade-up" data-aos-delay="500"><a href="#testimonial" class="text-2xl font-semibold hover:text-primary transition duration-300">Testimonial</a></li>
+                    <li data-aos="fade-up" data-aos-delay="600"><a href="/contactus.html" class="text-2xl font-semibold hover:text-primary transition duration-300">Contact Us</a></li>
+                    <li data-aos="fade-up" data-aos-delay="700"><a href="#contact" class="bg-primary text-white px-6 py-3 rounded-full hover:bg-orange-600 transition duration-300 inline-block mt-4 text-xl font-bold text-center">Get Started</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- hero -->
+    <section class="relative min-h-[60vh] pt-36 pb-16 flex items-center overflow-hidden">
+        <div
+            class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style="background-image: url('/src/images/asian-woman-call-center-agent-with-headset-working-support-hotline.jpg'); filter: brightness(40%);"
+        ></div>
+    
+        <div class="container mx-auto relative z-10 px-6 lg:px-12">
+            <div class="flex flex-col lg:flex-row items-center justify-center">
+                <!-- Text Section -->
+                <div class="w-full lg:w-1/2 text-white space-y-6 sm:space-y-8 lg:space-y-7 mb-10 lg:mb-0 flex flex-col items-center text-center">
+                    <h1
+                        class="text-3xl sm:text-4xl lg:text-5xl text-primary font-bold leading-tight max-w-5xl"
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                        data-aos-delay="100"
+                    >
+                        Get in Touch with Our Experts
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white py-10">
+        <div class="container mx-auto px-6 md:px-4">
+            <h2 
+                class="text-3xl font-bold text-center mb-8"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+            >
+                Connect With Us
+            </h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Office Location -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                    <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-building text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-3">Main Office</h3>
+                    <address class="text-gray-600 text-center not-italic">
+                        123 Engineering Way<br>
+                        Tech District<br>
+                        Innovation City, IC 12345
+                    </address>
+                </div>
+    
+                <!-- Working Hours -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-clock text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-3">Working Hours</h3>
+                    <ul class="text-gray-600 text-center">
+                        <li>Monday - Friday</li>
+                        <li class="font-semibold">9:00 AM - 6:00 PM</li>
+                        <li class="mt-2">Weekend</li>
+                        <li class="font-semibold">By Appointment</li>
+                    </ul>
+                </div>
+    
+                <!-- Contact Info -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                    <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-phone-alt text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-3">Contact Info</h3>
+                    <ul class="text-gray-600 text-center">
+                        <li><strong>Phone:</strong></li>
+                        <li>+1 (555) 123-4567</li>
+                        <li class="mt-2"><strong>Email:</strong></li>
+                        <li>info@willsparrow.com</li>
+                    </ul>
+                </div>
+    
+                <!-- Emergency Support -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                    <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-headset text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-3">24/7 Support</h3>
+                    <p class="text-gray-600 text-center">
+                        Emergency technical support<br>available 24/7 for our<br>enterprise clients
+                    </p>
+                    <p class="text-primary font-semibold text-center mt-2">
+                        +1 (555) 999-8888
+                    </p>
+                </div>
+            </div>
+    
+            <!-- Additional Information -->
+            <div class="mt-12 bg-white p-8 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                <div class="flex px-20 flex-col md:flex-row justify-between items-start md:items-center">
+                    <div class="mb-6 md:mb-0">
+                        <h3 class="text-2xl font-bold text-primary mb-2">Quality Certifications</h3>
+                        <p class="text-gray-600">
+                            ISO 9001:2015 Certified<br>
+                            AS9100D Certified for Aerospace<br>
+                            IATF 16949 Automotive Quality Management
+                        </p>
+                    </div>
+                    <div class="border-l border-gray-300 h-20 mx-8 hidden md:block"></div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-primary mb-2">Global Presence</h3>
+                        <p class="text-gray-600">
+                            With facilities in North America, Europe, and Asia,<br>
+                            we provide worldwide engineering and software solutions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    
+
+    <!-- contact -->
+    <section id="contact" class="container mx-auto px-6 md:px-4 py-16">
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+            <!-- Left side image -->
+            <div class="lg:w-1/2" data-aos="fade-right" data-aos-duration="1000">
+                <img src="/src/images/2754428 1.png" alt="Contact Us" class="rounded-lg shadow-lg w-full h-auto object-cover">
+            </div>
+            
+            <!-- Right side form -->
+            <div class="lg:w-1/2 bg-white" data-aos="fade-left" data-aos-duration="1000">
+                <h1 class="text-4xl font-bold text-primary mb-4">We're Here to Help</h1>
+                <p class="text-lg text-gray-600 mb-8">Please fill in your details below. Rest assured, your information is safe with us.</p>
+                
+                <form id="contactForm" class="space-y-6">
+                    <div>
+                        <label for="enquiry" class="block text-sm font-medium text-gray-700 mb-1">Enquiry</label>
+                        <select id="enquiry" name="enquiry" class="w-full px-4 py-3 rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50">
+                            <option>General Inquiry</option>
+                            <option>Technical Support</option>
+                            <option>Sales</option>
+                            <option>Partnerships</option>
+                        </select>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-2 rounded-md border-2 border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-2 rounded-md border-2 border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50">
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone</label>
+                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 rounded-md border-2 border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50">
+                        </div>
+                        
+                        <div>
+                            <label for="company" class="block text-sm font-medium text-gray-700 mb-1">Company</label>
+                            <input type="text" id="company" name="company" class="w-full px-4 py-2 rounded-md border-2 border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                        <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 rounded-md border-2 border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50"></textarea>
+                    </div>
+                    
+                    <div id="errorMessage" class="text-red-500 text-sm hidden"></div>
+                    
+                    <button type="submit" class="w-full md:w-auto inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-primary hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors duration-300">
+                        Send
+                        <i class="fas fa-paper-plane ml-2"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Boxes Section -->
+    <section id="info-boxes" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6 md:px-4">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-16">
+                <!-- Engineering Excellence Box -->
+                <div class="bg-white p-10 rounded-lg shadow-lg hover:shadow-xl transition duration-300 flex flex-col items-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                    <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-cog text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center">Engineering Excellence</h3>
+                    <p class="text-gray-600 text-center">Our team of expert engineers brings decades of experience in manufacturing processes, automation, and quality control.</p>
+                </div>
+            
+                <!-- Software Innovation Box -->
+                <div class="bg-white p-10 rounded-lg shadow-lg hover:shadow-xl transition duration-300 flex flex-col items-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-laptop-code text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center">Software Innovation</h3>
+                    <p class="text-gray-600 text-center">Cutting-edge software solutions tailored to streamline your manufacturing processes and boost efficiency.</p>
+                </div>
+            
+                <!-- Integrated Solutions Box -->
+                <div class="bg-white p-10 rounded-lg shadow-lg hover:shadow-xl transition duration-300 flex flex-col items-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                    <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-puzzle-piece text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center">Integrated Solutions</h3>
+                    <p class="text-gray-600 text-center">Seamlessly combining hardware and software expertise to deliver comprehensive, end-to-end solutions.</p>
+                </div>
+            </div>
+            
+        </div>
+    </section>    
+
+    <!-- footer -->
+    <footer class="bg-[#212529] text-white pt-16 pb-8 overflow-hidden">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div class="space-y-8">
+                    <h2 class="text-2xl font-semibold border-b-2 border-primary pb-2 inline-block">Browse</h2>
+                    <ul class="space-y-3" data-aos="fade-right">
+                        <li><a href="#about" class="hover:text-primary transition duration-300">About us</a></li>
+                        <li><a href="#services" class="hover:text-primary transition duration-300">Services</a></li>
+                        <li><a href="/home.html#projects" class="hover:text-primary transition duration-300">Projects</a></li>
+                        <li><a href="#testimonial"class="hover:text-primary transition duration-300">testimonial</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-8">
+                    <h2 class="text-2xl font-semibold border-b-2 border-primary pb-2 inline-block">Our Services</h2>
+                    <ul class="space-y-3"  data-aos="fade-right">
+                        <li><a href="#" class="hover:text-primary transition duration-300">Software Services</a></li>
+                        <li><a href="#"
+                                class="hover:text-primary transition duration-300">Engineering Services</a></li>
+                        <li><a href="#"
+                                class="hover:text-primary transition duration-300">Manufacturing Services</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-8">
+                    <h2 class="text-2xl font-semibold border-b-2 border-primary pb-2 inline-block">Locate Us</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-1 gap-6" data-aos="fade-right">
+                        <div class="space-y-4">
+                            <img src="/src/images/footer/Frame 198.png" alt="Temple" class="h-20">
+                            <div class="flex items-center space-x-2">
+                                <img src="/src/images/footer/emojione-v1_flag-for-india.svg" alt="India Flag" class="w-6">
+                                <h3 class="text-xl font-semibold">INDIA</h3>
+                            </div>
+                            <div class="text-sm space-y-1">
+                                <!-- Address Section -->
+                                <div class="space-y-1">
+                                    <p>D No.4/367-A, Rajiv Nagar,</p>
+                                    <p>Venkatapuram,</p>
+                                    <p>Krishnagiri Indl. Estate, Krishnagiri,</p>
+                                    <p>Tamil Nadu,INDIA - 635002</p>
+                                </div>
+
+                                <!-- Divider -->
+                                <div class="flex items-center">
+                                    <div class="flex-grow border-t border-gray-400"></div>
+                                    <div class="mx-4 text-gray-400">•</div>
+                                    <div class="flex-grow border-t border-gray-400"></div>
+                                </div>
+
+                                <!-- Address Section -->
+                                <div class="space-y-1">
+                                    <p>C204, ISR Sukriti,</p>
+                                    <p>Halasahalli cross road, Varthur,</p>
+                                    <p>Bengaluru, INDIA 560087</p>
+                                </div>
+
+                                <!-- Phone Section -->
+                                <div class="font-semibold pt-5">
+                                    <p>PH: +91 99446 13667</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-3">
+                    <h2 class="text-2xl text-white font-bold uppercase">Follow Us On</h2>
+                    <div class="w-full md:w-auto" data-aos="fade-right">
+                        <div class="flex space-x-4">
+                            <a href="#"
+                                class="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-blue-500 transition duration-300">
+                                <svg class="h-6 w-6 text-white" fill="currentColor" viewBox="0 0 24 24"
+                                    aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                            <a href="#"
+                                class="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-blue-500 transition duration-300">
+                                <svg class="h-6 w-6 text-white" fill="currentColor" viewBox="0 0 24 24"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                                </svg>
+                            </a>
+                            <a href="#"
+                                class="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-pink-500 transition duration-300">
+                                <i class="fa-brands fa-instagram text-white text-2xl"></i>
+                            </a>
+                            <a href="#"
+                                class="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-red-500 transition duration-300">
+                                <i class="fa-brands fa-youtube text-white text-2xl"></i>
+                            </a>
+                            <a href="#"
+                                class="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-blue-500 transition duration-300">
+                                <i class="fa-brands fa-linkedin text-white text-2xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-white pt-8 mt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                    <div class="text-sm text-gray-300">
+                        © 2022 <a href="#"
+                            class="hover:text-white transition-colors duration-300">Willsparrow Technologies™</a>. All Rights 
+                        Reserved.
+                    </div>
+                    <div class="flex space-x-4 text-sm text-gray-300">
+                        <a href="#" class="hover:text-white transition-colors duration-300">Terms of Use</a>
+                        <a href="#" class="hover:text-white transition-colors duration-300">Privacy Policy</a>
+                        <a href="#" class="hover:text-white transition-colors duration-300">Sale & Refunds</a>
+                        <a href="#" class="hover:text-white transition-colors duration-300">Legal</a>
+                        <a href="#" class="hover:text-white transition-colors duration-300">Site Map</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="/src/js/aos-init.js"></script>
+    <script src="/src/js/navbar.js"></script>
+    <script>
+        const scrollContainer = document.querySelector('.animate-scroll');
+        scrollContainer.addEventListener('mouseenter', () => {
+            scrollContainer.style.animationPlayState = 'paused';
+        });
+        scrollContainer.addEventListener('mouseleave', () => {
+            scrollContainer.style.animationPlayState = 'running';
+        });
+    </script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            let isValid = true;
+            let errorMessage = '';
+            
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const message = document.getElementById('message').value.trim();
+            
+            if (name === '') {
+                isValid = false;
+                errorMessage += 'Name is required. ';
+            }
+            
+            if (email === '' || !/\S+@\S+\.\S+/.test(email)) {
+                isValid = false;
+                errorMessage += 'Valid email is required. ';
+            }
+            
+            if (phone === '' || !/^\d{10}$/.test(phone.replace(/\D/g,''))) {
+                isValid = false;
+                errorMessage += 'Valid phone number is required. ';
+            }
+            
+            if (message === '') {
+                isValid = false;
+                errorMessage += 'Message is required. ';
+            }
+            
+            const errorElement = document.getElementById('errorMessage');
+            if (!isValid) {
+                errorElement.textContent = errorMessage;
+                errorElement.classList.remove('hidden');
+            } else {
+                errorElement.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -7,6 +7,15 @@ const projectsMenuBtn = document.getElementById('projects-menu-btn');
 const servicesSubmenu = document.getElementById('services-submenu');
 const projectsSubmenu = document.getElementById('projects-submenu');
 
+const homeLinks = document.querySelectorAll('.home-link');
+const currentPath = window.location.pathname;
+
+homeLinks.forEach(link => {
+    if (currentPath === '/home.html') {
+        link.style.display = 'none';
+    }
+});
+
 mobileMenuBtn.addEventListener('click', () => {
     mobileMenuOverlay.classList.remove('hidden');
     setTimeout(() => mobileMenuContent.classList.add('open'), 0);
@@ -28,3 +37,5 @@ projectsMenuBtn.addEventListener('click', (e) => {
     projectsSubmenu.classList.toggle('open');
     projectsMenuBtn.querySelector('svg').classList.toggle('rotate-180');
 });
+
+

@@ -1,6 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
+  content: [
+    "./src/**/*.{html,js}",
+    "./*.{html,js}" 
+  ],
   theme: {
     extend: {
       colors: {
@@ -8,14 +11,17 @@ module.exports = {
         secondary: '#3f444b',
       },
       fontFamily: {
-        'josefin': ['"Josefin Sans"', 'sans-serif'],
+        'plus-jakarta': ['"Plus Jakarta Sans"', 'sans-serif'], 
       },
       height: {
         '60': '240px',
       },
       width: {
-          '125': '500px',
+        '125': '500px',
       },
+    },
+    fontFamily: {
+      sans: ['plus-jakarta', 'sans-serif'],
     },
   },
   plugins: [],
