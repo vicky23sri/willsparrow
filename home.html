@@ -39,37 +39,54 @@
 
     </style>
 </head>
-<body class="font-josefin">
+<body class="font-plus-jakarta">
     <!-- navbar -->
-    <nav class="bg-black p-4 fixed w-full z-50">
+    <nav class="bg-primary p-2 fixed w-full z-50">
         <div class="container mx-auto flex justify-between items-center">
             <div class="flex items-center space-x-4" data-aos="fade-right" data-aos-duration="1000">
-                <img src="/src/images/Will-Sparrow-logo-White 1.png" alt="Logo" class="w-auto h-16">
+                <img src="/src/images/lightlogo.png" alt="Logo" class="w-auto h-16">
             </div>
     
-            <ul class="hidden lg:flex space-x-12 mx-auto">
-                <li><a href="#about" class="text-white hover:text-primary nav-link text-lg font-semibold" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200">About</a></li>
+            <ul class="hidden lg:flex space-x-12 mx-auto" data-aos="fade-right" data-aos-duration="1100" data-aos-delay="300">
+                <li class="home-link"><a href="/home.html" class="text-white hover:text-black nav-link text-xl font-semibold">Home</a></li>
+                <li><a href="#about" class="text-white hover:text-black nav-link text-xl font-semibold">About</a></li>
                 <li class="relative group">
-                    <a href="#services" class="text-white hover:text-primary nav-link text-lg font-semibold" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="300">Services</a>
-                    <!-- <ul class="submenu absolute mt-6 bg-white text-gray-800 w-56 z-50 py-2">
-                        <li><a href="#" class="submenu-item block px-6 py-3 hover:bg-primary hover:text-white transition duration-300">Service 1</a></li>
-                        <li><a href="#" class="submenu-item block px-6 py-3 hover:bg-primary hover:text-white transition duration-300">Service 2</a></li>
-                        <li><a href="#" class="submenu-item block px-6 py-3 hover:bg-primary hover:text-white transition duration-300">Service 3</a></li>
-                    </ul> -->
+                    <a href="#services" class="text-white hover:text-black nav-link text-xl font-semibold">Services</a>
+                    <ul class="submenu absolute mt-2 bg-white text-gray-800 w-72 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out z-50 overflow-hidden">
+                        <li class="border-b border-gray-100 last:border-b-0 transform translate-y-2 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                            <a href="services/software.html" class="submenu-item block px-6 py-4 hover:bg-primary hover:text-white transition duration-300 flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                                </svg>
+                                <span class="font-medium">Software Services</span>
+                            </a>
+                        </li>
+                        <li class="border-b border-gray-100 last:border-b-0 transform translate-y-2 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100" style="transition-delay: 50ms;">
+                            <a href="services/enginnering.html" class="submenu-item block px-6 py-4 hover:bg-primary hover:text-white transition duration-300 flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                                <span class="font-medium">Engineering Services</span>
+                            </a>
+                        </li>
+                        <li class="border-b border-gray-100 last:border-b-0 transform translate-y-2 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100" style="transition-delay: 100ms;">
+                            <a href="services/manufacturing.html" class="submenu-item block px-6 py-4 hover:bg-primary hover:text-white transition duration-300 flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                                </svg>
+                                <span class="font-medium">Manufacturing Services</span>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
-                <li class="relative group">
-                    <a href="#projects" class="text-white hover:text-primary nav-link text-lg font-semibold" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="400">Projects</a>
-                    <!-- <ul class="submenu absolute transform mt-6 bg-white text-gray-800 w-56 z-50 py-2">
-                        <li><a href="#" class="submenu-item block px-6 py-3 hover:bg-primary hover:text-white transition duration-300">Project 1</a></li>
-                        <li><a href="#" class="submenu-item block px-6 py-3 hover:bg-primary hover:text-white transition duration-300">Project 2</a></li>
-                        <li><a href="#" class="submenu-item block px-6 py-3 hover:bg-primary hover:text-white transition duration-300">Project 3</a></li>
-                    </ul> -->
-                </li>
-                <li><a href="#testimonial" class="text-white hover:text-primary nav-link text-lg font-semibold" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="500">Testimonial</a></li>
+                <li><a href="#projects" class="text-white hover:text-black nav-link text-xl font-semibold">Projects</a></li>
+                <li><a href="#testimonial" class="text-white hover:text-black nav-link text-xl font-semibold">Testimonial</a></li>
+                <li><a href="/contactus.html" class="text-white hover:text-black nav-link text-xl font-semibold">Contact Us</a></li>
             </ul>
     
-            <div class="hidden lg:flex items-center" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
-                <a href="#" class="bg-primary text-white px-6 py-3 rounded-full hover:bg-orange-600 transition duration-300 transform hover:scale-105 text-lg font-bold shadow-lg">Get Started</a>
+            <div class="hidden lg:flex items-center" data-aos="fade-left" data-aos-duration="1100" data-aos-delay="300">
+                <a href="#" class="bg-gray-700 text-white px-6 py-2 rounded-full border-2 border-transparent hover:bg-white hover:text-gray-600 hover:text-lg hover:border-gray-400 transition duration-300 transform hover:scale-105 text-lg font-bold shadow-lg">Get Started</a>
             </div>
     
             <div class="lg:hidden" data-aos="fade-left" data-aos-duration="1000">
@@ -83,39 +100,28 @@
     
         <!-- Mobile Menu -->
         <div class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden" id="mobile-menu-overlay">
-            <div class="mobile-menu fixed inset-y-0 right-0 w-full sm:w-3/4 md:w-1/2 bg-white text-gray-900 p-6 transform translate-x-full" id="mobile-menu-content" data-aos="fade-left" data-aos-duration="500">
+            <div class="mobile-menu fixed inset-y-0 right-0 w-full sm:w-3/4 md:w-1/2 bg-white text-gray-900 p-6 transform translate-x-full transition-transform duration-300" id="mobile-menu-content">
                 <button class="text-gray-600 text-3xl absolute top-4 right-4 focus:outline-none" id="close-menu-btn">&times;</button>
                 <ul class="flex flex-col space-y-6 mt-16">
-                    <!-- <li data-aos="fade-up" data-aos-delay="100"><a href="#" class="text-2xl font-semibold hover:text-primary transition duration-300">Home</a></li> -->
+                    <li class="home-link" data-aos="fade-up" data-aos-delay="100"><a href="/home.html" class="text-2xl font-semibold hover:text-primary transition duration-300">Home</a></li>
                     <li data-aos="fade-up" data-aos-delay="200"><a href="#about" class="text-2xl font-semibold hover:text-primary transition duration-300">About</a></li>
                     <li data-aos="fade-up" data-aos-delay="300">
-                        <a href="#services" class="text-2xl font-semibold hover:text-primary transition duration-300 flex justify-between items-center" id="services-menu-btn">
+                        <button class="text-2xl font-semibold hover:text-primary transition duration-300 flex justify-between items-center w-full" id="services-menu-btn">
                             Services
-                            <!-- <svg class="w-6 h-6 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="w-6 h-6 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg> -->
-                        </a>
-                        <!-- <ul class="mobile-submenu pl-6 space-y-4 mt-4" id="services-submenu">
-                            <li><a href="#" class="text-xl hover:text-primary transition duration-300">Service 1</a></li>
-                            <li><a href="#" class="text-xl hover:text-primary transition duration-300">Service 2</a></li>
-                            <li><a href="#" class="text-xl hover:text-primary transition duration-300">Service 3</a></li>
-                        </ul> -->
+                            </svg>
+                        </button>
+                        <ul class="mobile-submenu pl-6 space-y-4 mt-4 hidden" id="services-submenu">
+                            <li><a href="services/software.html" class="text-xl hover:text-primary transition duration-300">Software Services</a></li>
+                            <li><a href="services/enginnering.html" class="text-xl hover:text-primary transition duration-300">Engineering Services</a></li>
+                            <li><a href="services/manufacturing.html" class="text-xl hover:text-primary transition duration-300">Manufacturing Services</a></li>
+                        </ul>
                     </li>
-                    <li data-aos="fade-up" data-aos-delay="400">
-                        <a href="#projects" class="text-2xl font-semibold hover:text-primary transition duration-300 flex justify-between items-center" id="projects-menu-btn">
-                            Projects
-                            <!-- <svg class="w-6 h-6 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg> -->
-                        </a>
-                        <!-- <ul class="mobile-submenu pl-6 space-y-4 mt-4" id="projects-submenu">
-                            <li><a href="#" class="text-xl hover:text-primary transition duration-300">Project 1</a></li>
-                            <li><a href="#" class="text-xl hover:text-primary transition duration-300">Project 2</a></li>
-                            <li><a href="#" class="text-xl hover:text-primary transition duration-300">Project 3</a></li>
-                        </ul> -->
-                    </li>
+                    <li data-aos="fade-up" data-aos-delay="400"><a href="#projects" class="text-2xl font-semibold hover:text-primary transition duration-300">Projects</a></li>
                     <li data-aos="fade-up" data-aos-delay="500"><a href="#testimonial" class="text-2xl font-semibold hover:text-primary transition duration-300">Testimonial</a></li>
-                    <li data-aos="fade-up" data-aos-delay="600"><a href="#" class="bg-primary text-white px-6 py-3 rounded-full hover:bg-orange-600 transition duration-300 inline-block mt-4 text-xl font-bold text-center">Get Started</a></li>
+                    <li data-aos="fade-up" data-aos-delay="600"><a href="/contactus.html" class="text-2xl font-semibold hover:text-primary transition duration-300">Contact Us</a></li>
+                    <li data-aos="fade-up" data-aos-delay="700"><a href="#" class="bg-primary text-white px-6 py-3 rounded-full hover:bg-orange-600 transition duration-300 inline-block mt-4 text-xl font-bold text-center">Get Started</a></li>
                 </ul>
             </div>
         </div>
@@ -125,7 +131,7 @@
     <section class="relative min-h-[90vh] pt-36 pb-16 flex items-center overflow-hidden">
         <div
             class="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style="background-image: url('/src/images/banner-1.png'); filter: brightness(40%);"
+            style="background-image: url('/src/images/banner-1.png'); filter: brightness(90%);"
         ></div>
     
         <div class="container mx-auto relative z-10 px-6 lg:px-12">
@@ -150,19 +156,30 @@
                         Our electronics and software expertise drives innovative solutions, connecting devices, networks, 
                         and users for a smarter, interconnected world.
                     </p>
-                    <div class="pt-4 mt-7" 
-                        data-aos="fade-up"
-                        data-aos-duration="1400"
-                        data-aos-delay="500"
-                    >
-                        <button class="group inline-flex items-center justify-center text-white font-semibold py-3 px-6 sm:py-4 sm:px-8 rounded-full transition-all duration-300 transform bg-primary hover:bg-opacity-90 hover:scale-105 shadow-lg hover:shadow-xl">
-                            <span class="mr-2 text-base sm:text-lg">Let's Talk</span>
-                            <span class="w-8 h-8 sm:w-10 sm:h-10 ml-4 rounded-full bg-white bg-opacity-20 flex items-center justify-center transition-all duration-300 transform group-hover:bg-white">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white group-hover:text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                </svg>
-                            </span>
-                        </button>
+                    <div class="flex flex-col md:flex-row gap-6 mt-10">
+                        <div
+                            data-aos="fade-up"
+                            data-aos-duration="1400"
+                            data-aos-delay="500"
+                        >
+                            <button class="group inline-flex items-center justify-center text-white font-semibold py-3 px-6 sm:py-4 sm:px-8 rounded-full transition-all duration-300 transform bg-primary hover:bg-opacity-90 hover:scale-105 shadow-lg hover:shadow-xl">
+                                <span class="mr-2 text-base sm:text-lg">Explore More</span>
+                            </button>
+                        </div>
+                        <div 
+                            data-aos="fade-up"
+                            data-aos-duration="1400"
+                            data-aos-delay="500"
+                        >
+                            <button class="group inline-flex items-center justify-center text-white font-semibold px-4 py-[10px] sm:px-8 rounded-full transition-all duration-300 transform hover:bg-primary hover:bg-opacity-90 hover:scale-105 shadow-lg hover:shadow-xl">
+                                <span class="mr-2 text-base sm:text-lg">Let's Talk</span>
+                                <span class="w-8 h-8 sm:w-10 sm:h-10 ml-4 rounded-full bg-white bg-opacity-20 flex items-center justify-center transition-all duration-300 transform group-hover:bg-white">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white group-hover:text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </div>
                     </div>
                 </div>
     
@@ -234,7 +251,7 @@
                 </div>
                 
                 <!-- Right side - Content -->
-                <div class="w-full lg:w-1/2 px-4" data-aos="fade-left">
+                <div class="w-full lg:w-1/2 px-10" data-aos="fade-left">
                     <div class="lg:pl-8">
                         <div class="flex items-center mb-6">
                             <div class="w-[62px] h-[20px] bg-transparent rounded-xl border border-primary p-[2px]">
@@ -248,10 +265,10 @@
                         </h1>
                         
                         <div class="space-y-4 mb-8">
-                            <p class="text-gray-600 text-lg">
+                            <p class="text-gray-600 text-lg" data-aos="fade-left" data-aos-duration="1400" data-aos-delay="500">
                                 Throughout this period, we have earned a strong reputation for outstanding client satisfaction, as demonstrated by our...
                             </p>
-                            <p class="text-gray-600 text-lg">
+                            <p class="text-gray-600 text-lg" data-aos="fade-left" data-aos-duration="1400" data-aos-delay="500">
                                 Will Sparrow Technologies is a global powerhouse in software solutions, engineering, and manufacturing. Since our inception in 2019, we've expanded our presence across India, Australia, the UK, and Canada, serving diverse industries with cutting-edge solutions.
                             </p>
                         </div>
@@ -261,7 +278,7 @@
                             data-aos="fade-up"
                             data-aos-duration="1400"
                             data-aos-delay="500">
-                            <button class="group inline-flex items-center justify-center text-white font-semibold py-3 px-6 sm:py-4 sm:px-8 rounded-full transition-all duration-300 transform bg-primary hover:bg-opacity-90 hover:scale-105 shadow-lg hover:shadow-xl">
+                            <button class="group inline-flex items-center justify-center text-white font-semibold py-3 px-6 sm:py-2 sm:px-8 rounded-full transition-all duration-300 transform bg-primary hover:bg-opacity-90 hover:scale-105 shadow-lg hover:shadow-xl">
                                 <span class="mr-2 text-base sm:text-lg">View More</span>
                                 <span class="w-8 h-8 sm:w-10 sm:h-10 ml-4 rounded-full bg-white bg-opacity-20 flex items-center justify-center transition-all duration-300 transform group-hover:bg-white">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white group-hover:text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -405,11 +422,11 @@
     </section>
 
     <!-- case study -->
-    <section id="projects" class="bg-orange-50 rounded-xl shadow-2xl overflow-hidden mx-auto py-16">
+    <section id="projects" class="bg-orange-50 rounded-xl mx-auto py-24 overflow-hidden relative">
         <div class="container mx-auto px-4 md:px-8 lg:px-12">
             <div class="grid grid-cols-1 lg:grid-cols-[1fr,2fr] gap-12">
                 <!-- Left Section -->
-                <div class="space-y-8">
+                <div class="space-y-8 relative z-10">
                     <div class="flex items-center mb-4" data-aos="fade-right">
                         <div class="w-[62px] h-[20px] bg-transparent rounded-xl border border-primary p-[2px]">
                             <div class="w-full h-full bg-primary rounded-lg"></div>
@@ -424,18 +441,17 @@
                     <p class="text-lg text-gray-600 leading-relaxed" data-aos="fade-up" data-aos-delay="200">
                         We have been a trusted and innovative software engineering partner for world-class brands, delivering visionary solutions and lasting value.
                     </p>
-                    
-                    <div class="flex justify-start mt-12" data-aos="zoom-in">
-                        <img 
-                            src="/src/images/sparrow-icon 1.png" 
-                            alt="Sparrow Icon" 
-                            class="w-full max-w-md h-auto mx-auto rounded-lg"
-                        >
-                    </div>
+                </div>
+    
+                <!-- Sparrow Icon as Background -->
+                <div class="absolute inset-0 bg-contain bg-no-repeat opacity-90 pointer-events-none z-0 max-w-sm h-auto
+                            bg-bottom-left lg:bg-left-bottom
+                            lg:w-1/2 left-10 top-10 lg:top-4 lg:left-32 " 
+                    style="background-image: url('/src/images/sparrow-icon 1.png');">
                 </div>
     
                 <!-- Right Section -->
-                <div class="grid grid-cols-2 gap-6 lg:gap-8 mt-16 lg:mt-0">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 mt-16 lg:mt-0">
                     <div class="space-y-8">
                         <!-- Case Study 1 -->
                         <div class="relative group overflow-hidden rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300" data-aos="flip-left" data-aos-duration="1000">
@@ -459,7 +475,7 @@
                             <img src="/src/images/image (1).png" alt="Image 2" class="w-full h-[250px] sm:h-[300px] lg:h-[350px] object-cover" data-aos="fade-up" data-aos-duration="500">
                         </div>
                     </div>
-    
+                
                     <div class="space-y-8 mt-10 lg:mt-16">
                         <!-- Case Study 3 -->
                         <div class="relative group overflow-hidden rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300" data-aos="fade-up" data-aos-duration="1000">
@@ -476,6 +492,7 @@
                         </div>
                     </div>
                 </div>
+                
             </div>
         </div>
     </section>
@@ -513,8 +530,9 @@
     </section>
 
     <!-- process -->
-    <section class="py-24 px-4" style="background-image: url('/src/images/texture\ 2.png'); background-repeat: no-repeat; background-position: right top;">
-        <div class="container mx-auto">
+    <section class="py-24 px-4 relative" style="background-image: url('/src/images/texture\ 2.png'); background-repeat: no-repeat; background-position: right top;">
+        <div class="absolute inset-0 pointer-events-none" style="background-image: url('/src/images/Group 72.png'); background-repeat: no-repeat; background-position: left calc(100% - 30px);"></div>
+        <div class="container mx-auto relative z-10">
             <div class="mb-6 md:mb-14" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
                 <div class="flex items-center mb-4">
                     <div class="w-[62px] h-[20px] bg-transparent rounded-xl border border-primary p-[2px]">
@@ -678,25 +696,25 @@
     </section>
 
     <!-- stats -->
-    <section class="container mx-auto py-24 px-4 bg-black rounded-full h-full md:h-48 lg:h-64">
+    <section class="mx-auto container py-10 px-4 md:px-0 bg-black rounded-3xl md:rounded-full">
         <div class="container mx-auto h-full flex justify-center items-center">
-            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 w-full">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
                 <!-- Card 1 -->
                 <div class="card p-4 flex flex-col items-center text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
                     <img src="/src/images/pajamas_work.png" alt="Projects Icon" class="w-12 h-12 mb-4">
                     <h2 class="text-2xl font-bold mb-2 text-white" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">100+</h2>
                     <h3 class="text-lg text-gray-300">Projects Completed</h3>
                 </div>
-            
+                
                 <!-- Card 2 -->
-                <div class="card p-4 flex flex-col items-center text-center h-full" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                <div class="card p-4 flex flex-col items-center text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
                     <img src="/src/images/mdi_like-outline.png" alt="Satisfaction Icon" class="w-12 h-12 mb-4">
                     <h2 class="text-2xl font-bold mb-2 text-white" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">98%</h2>
                     <h3 class="text-lg text-gray-300">Customer Satisfaction</h3>
                 </div>
-            
+                
                 <!-- Card 3 -->
-                <div class="card p-4 flex flex-col items-center text-center h-full" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                <div class="card p-4 flex flex-col items-center text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
                     <img src="/src/images/mingcute_time-line.png" alt="Time Icon" class="w-12 h-12 mb-4">
                     <h2 class="text-2xl font-bold mb-2 text-white" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">3 Mins</h2>
                     <h3 class="text-lg text-gray-300">Average Answer Time</h3>
@@ -718,8 +736,10 @@
                     </div>
                     <h2 class="text-2xl text-black font-bold ml-4">why choose us.</h2>
                 </div>
-                <h1 class="text-3xl md:text-6xl font-bold text-primary mb-8" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">We Deliver Prominent and Trusted IT Solutions You Can Rely On</h1>
-                <p class="text-gray-600 text-xl mb-12 font-semibold" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">It is a well-known fact that readers can be distracted by the content on a page when focusing on its layout and design.</p>
+                <h1 class="text-3xl md:text-5xl font-bold text-primary mb-8 max-w-3xl leading-10" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                    We Deliver Prominent and Trusted IT Solutions You Can Rely On
+                </h1>
+                <p class="text-gray-600 text-2xl mb-12 font-semibold max-w-3xl" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">It is a well-known fact that readers can be distracted by the content on a page when focusing on its layout and design.</p>
                 <ul class="grid grid-cols-1 sm:grid-cols-2 gap-8">
                     <li class="flex items-start space-x-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                         <div class="flex-shrink-0">
@@ -808,16 +828,32 @@
                             <div class="text-sm space-y-1">
                                 <!-- Address Section -->
                                 <div class="space-y-1">
-                                    <p>Bangalore, KA.,</p>
-                                    <p>INDIA,</p>
-                                    <!-- <p>Bangalore-560049, KA.</p> -->
+                                    <p>D No.4/367-A, Rajiv Nagar,</p>
+                                    <p>Venkatapuram,</p>
+                                    <p>Krishnagiri Indl. Estate, Krishnagiri,</p>
+                                    <p>Tamil Nadu,INDIA - 635002</p>
+                                </div>
+
+                                <!-- Divider -->
+                                <div class="flex items-center">
+                                    <div class="flex-grow border-t border-gray-400"></div>
+                                    <div class="mx-4 text-gray-400">•</div>
+                                    <div class="flex-grow border-t border-gray-400"></div>
+                                </div>
+
+                                <!-- Address Section -->
+                                <div class="space-y-1">
+                                    <p>C204, ISR Sukriti,</p>
+                                    <p>Halasahalli cross road, Varthur,</p>
+                                    <p>Bengaluru, INDIA 560087</p>
                                 </div>
 
                                 <!-- Phone Section -->
-                                <div class="font-semibold">
+                                <div class="font-semibold pt-5">
                                     <p>PH: +91 99446 13667</p>
                                 </div>
                             </div>
+                            
                         </div>
                     </div>
                 </div>

@@ -11,7 +11,7 @@ module.exports = {
         secondary: '#3f444b',
       },
       fontFamily: {
-        'josefin': ['"Josefin Sans"', 'sans-serif'],
+        'plus-jakarta': ['"Plus Jakarta Sans"', 'sans-serif'], 
       },
       height: {
         '60': '240px',
@@ -19,6 +19,9 @@ module.exports = {
       width: {
         '125': '500px',
       },
+    },
+    fontFamily: {
+      sans: ['plus-jakarta', 'sans-serif'],
     },
   },
   plugins: [],
