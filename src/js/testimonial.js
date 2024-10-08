@@ -84,17 +84,26 @@ function createTestimonialElement(testimonial) {
 
 function updateTestimonial() {
     const wrapper = document.getElementById('testimonialWrapper');
-    wrapper.innerHTML = createTestimonialElement(testimonials[currentIndex]);
     
-    document.querySelector('.prevButton').addEventListener('click', () => {
-        currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
-        updateTestimonial();
-    });
+    if (wrapper) {
+        wrapper.innerHTML = createTestimonialElement(testimonials[currentIndex]);
 
-    document.querySelector('.nextButton').addEventListener('click', () => {
-        currentIndex = (currentIndex + 1) % testimonials.length;
-        updateTestimonial();
-    });
+        document.querySelector('.prevButton').addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+            updateTestimonial(); 
+        });
+
+        document.querySelector('.nextButton').addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % testimonials.length;
+            updateTestimonial();
+        });
+    } else {
+        console.error('Element with id "testimonialWrapper" not found in the DOM');
+    }
 }
 
-document.addEventListener('DOMContentLoaded', updateTestimonial);
+document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('load', function() {
+        updateTestimonial();
+    });
+});
