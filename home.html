@@ -150,18 +150,18 @@
     </nav>
 
     <!-- hero -->
-    <section class="relative min-h-[90vh] pt-36 pb-16 flex items-center overflow-hidden">
+    <section class="relative min-h-[80vh] pt-36 flex items-center overflow-hidden">
         <div
             class="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style="background-image: url('/src/images/banner-1.png'); filter: brightness(90%);"
         ></div>
     
-        <div class="container mx-auto relative z-10 px-6 lg:px-12">
+        <div class="container mx-auto relative z-10 px-5 lg:px-5">
             <div class="flex flex-col lg:flex-row items-center">
                 <!-- Text Section -->
-                <div class="w-full lg:w-1/2 text-white space-y-6 sm:space-y-8 lg:space-y-10 mb-10 lg:mb-0">
+                <div class="w-full lg:w-1/2 text-white space-y-6 sm:space-y-8 lg:space-y-10">
                     <h1
-                        class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight max-w-3xl"
+                        class="text-3xl sm:text-4xl lg:text-5xl xl:text-5xl font-semibold leading-tight max-w-4xl"
                         data-aos="fade-up"
                         data-aos-duration="1000"
                         data-aos-delay="100"
@@ -206,12 +206,12 @@
                 </div>
     
                 <!-- Image Section -->
-                <div class="w-full lg:w-1/2 flex justify-center lg:justify-end"
+                <div class="w-full lg:w-1/2 h-full flex justify-center lg:justify-end"
                     data-aos="fade-left"
                     data-aos-duration="1200"
                     data-aos-delay="600"
                 >
-                    <img src="/src/images/WILL 2.png" alt="Innovative Solutions" class="rounded-lg shadow-2xl max-w-full h-auto lg:max-w-[90%] xl:max-w-[80%]" />
+                    <img src="/src/images/WILL 2.png" alt="Innovative Solutions" class="rounded-lg shadow-2xl max-w-[70%] h-full lg:max-w-[100%] xl:max-w-[100%]" />
                 </div>
             </div>
         </div>
@@ -275,14 +275,14 @@
                 <!-- Right side - Content -->
                 <div class="w-full lg:w-1/2 px-10" data-aos="fade-left">
                     <div class="lg:pl-8">
-                        <div class="flex items-center mb-6">
+                        <div class="flex items-center mb-5">
                             <div class="w-[62px] h-[20px] bg-transparent rounded-xl border border-primary p-[2px]">
                                 <div class="w-full h-full bg-primary rounded-lg"></div>
                             </div>
                             <h2 class="text-2xl font-bold ml-4">About Us</h2>
                         </div>
                         
-                        <h1 class="text-3xl md:text-6xl font-bold mb-6 text-primary leading-tight">
+                        <h1 class="text-3xl md:text-5xl font-bold mb-6 text-primary leading-tight">
                             More than 25+ years we provide IT solutions
                         </h1>
                         
@@ -290,7 +290,7 @@
                             <p class="text-gray-600 text-lg" data-aos="fade-left" data-aos-duration="1400" data-aos-delay="500">
                                 Throughout this period, we have earned a strong reputation for outstanding client satisfaction, as demonstrated by our...
                             </p>
-                            <p class="text-gray-600 text-lg" data-aos="fade-left" data-aos-duration="1400" data-aos-delay="500">
+                            <p class="text-gray-600 text-lg" data-aos="fade-right" data-aos-duration="1400" data-aos-delay="700">
                                 Will Sparrow Technologies is a global powerhouse in software solutions, engineering, and manufacturing. Since our inception in 2019, we've expanded our presence across India, Australia, the UK, and Canada, serving diverse industries with cutting-edge solutions.
                             </p>
                         </div>
@@ -316,7 +316,7 @@
     </section>
 
     <!-- services --> 
-    <section id="services" class="bg-gray-900 py-12 md:py-24">
+    <!-- <section id="services" class="bg-gray-900 py-12 md:py-24">
         <div class="container mx-auto px-4 py-8 md:py-16 bg-gradient-to-br from-dark to-gray-800" x-data="{ 
             currentIndex: 0,
             autoPlay: null,
@@ -370,7 +370,7 @@
                         <div class="w-[62px] h-[20px] bg-transparent rounded-xl border border-primary p-[2px]">
                             <div class="w-full h-full bg-primary rounded-lg"></div>
                         </div>
-                        <h2 class="text-xl md:text-2xl text-white font-medium ml-4">Exclusive IT Services</h2>
+                        <h2 class="text-xl md:text-2xl text-white font-medium ml-4">Exclusive Services</h2>
                     </div>
                     <p class="text-primary text-3xl md:text-5xl font-semibold">Services We're offering</p>
                 </div>
@@ -439,6 +439,72 @@
                         </div>
                     </template>
                 </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- services -->
+    <section id="services" class="bg-gray-900 py-12 md:py-16">
+        <div class="container mx-auto px-4 py-8 md:py-16 bg-gradient-to-br from-dark to-gray-800" x-data="{ 
+            cards: [
+                {
+                    icon: 'M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z',
+                    title: 'IT Services',
+                    description: 'Expert IT solutions for businesses, including infrastructure management, network security, and cloud services. Our team provides reliable and efficient support to keep your operations running smoothly.',
+                    link: '/services/software.html'
+                },
+                {
+                    icon: 'M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z',
+                    title: 'Engineering',
+                    description: 'Innovative engineering solutions for complex projects. Our team of experts provides design, development, and implementation services for mechanical, electrical, and software engineering projects.',
+                    link: '/services/enginnering.html'
+                },
+                {
+                    icon: 'M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z',
+                    title: 'Manufacturing',
+                    description: 'Efficient manufacturing solutions for businesses, including production planning, quality control, and supply chain management. Our team helps optimize your manufacturing processes to increase productivity and reduce costs.',
+                    link: '/services/manufacturing.html'
+                },
+                {
+                    icon: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z',
+                    title: 'Mechanical',
+                    description: 'Specialized mechanical services for businesses, including design, prototyping, and production. Our team of experts provides innovative solutions for mechanical engineering projects, from concept to delivery.',
+                    link: '#'
+                },
+            ]
+        }">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8 md:mb-12" data-aos="fade-up">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center mb-4">
+                        <div class="w-[62px] h-[20px] bg-transparent rounded-xl border border-primary p-[2px]">
+                            <div class="w-full h-full bg-primary rounded-lg"></div>
+                        </div>
+                        <h2 class="text-xl md:text-2xl text-white font-medium ml-4">Exclusive Services</h2>
+                    </div>
+                    <p class="text-primary text-3xl md:text-5xl font-semibold">Services We're offering</p>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" data-aos="fade-up" data-aos-delay="200">
+                <template x-for="card in cards" :key="card.title">
+                    <div class="rounded-lg shadow-lg p-6 md:p-8 bg-gray-100 hover:bg-primary group transition-all duration-300 h-full flex flex-col justify-start">
+                        <div class="flex flex-col items-start">
+                            <div class="w-16 h-16 md:w-20 md:h-20 mb-4 md:mb-6 flex items-center justify-center rounded-xl bg-#ccccc group-hover:bg-white group-hover:bg-opacity-20 transition-all duration-300 border border-primary group-hover:border-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 md:h-12 md:w-12 text-primary group-hover:text-white transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" :d="card.icon" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl md:text-2xl font-bold mb-3 md:mb-4 text-left text-gray-800 group-hover:text-white transition-all duration-300" x-text="card.title"></h3>
+                            <p class="text-md leading-relaxed font-semibold text-left text-gray-600 group-hover:text-gray-200 transition-all duration-300" x-text="card.description"></p>
+                        </div>
+                        <a :href="card.link" class="transition-all duration-300 py-4 px-6 rounded-lg flex items-center justify-center group mt-auto text-sm font-semibold uppercase tracking-wider shadow-md hover:shadow-lg bg-gray-200 group-hover:bg-white text-gray-800 group-hover:text-primary">
+                            <span class="mr-2">Explore Now</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                            </svg>
+                        </a>
+                    </div>
+                </template>
             </div>
         </div>
     </section>
@@ -520,51 +586,50 @@
     </section>
 
     <!-- trusted -->
-    <section class="pb-20 px-4 sm:px-6 lg:px-8 bg-orange-50 overflow-hidden">
-        <div class="container mx-auto">
-            <h2 class="text-4xl font-bold text-center mb-12 flex items-center justify-center space-x-4" data-aos="fade-down">
-                <span class="flex-grow h-0.5 bg-current opacity-30"></span>
-                <span class="px-4">
-                    <span class="relative ">
-                        1000+ Brands Trust Us
-                    </span>
-                </span>
-                <span class="flex-grow h-0.5 bg-current opacity-30"></span>
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-orange-50 overflow-hidden">
+        <div>
+            <h2 class="text-4xl font-bold text-center mb-12 flex items-center justify-center">
+                <span class="flex-grow h-0.5 bg-orange-300"></span>
+                <span class="px-4 py-4 text-primary text-4xl bg-white">1000+ Brands Trust Us</span>
+                <span class="flex-grow h-0.5 bg-orange-300"></span>
             </h2>
-            <div class="relative" data-aos="fade-up" data-aos-duration="1000">
-                <div class="flex animate-scroll">
-                    <div class="flex space-x-8 min-w-full">
-                        <div data-aos="zoom-in" data-aos-delay="100" data-aos-duration="800">
-                            <img src="/src/images/clients1/image (1).png" alt="Client Logo" class="h-full md:h-48 w-full">
+            
+            <div class="relative overflow-hidden">
+                <div class="flex animate-scroll space-x-12">
+                    <!-- First set of logos -->
+                    <div class="flex space-x-12 items-center">
+                        <div class="w-40 h-40 bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                            <img src="/src/images/clients1/image (1).png" alt="Partner 1" class="w-full h-full object-contain p-4">
                         </div>
-                        <div data-aos="zoom-in" data-aos-delay="200" data-aos-duration="800">
-                            <img src="/src/images/clients1/image (2).png" alt="Client Logo" class="h-full md:h-48 w-full">
+                        <div class="w-40 h-40 bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                            <img src="/src/images/clients1/image (2).png" alt="Partner 2" class="w-full h-full object-contain p-4">
                         </div>
-                        <div data-aos="zoom-in" data-aos-delay="300" data-aos-duration="800">
-                            <img src="/src/images/clients1/image (3).png" alt="Client Logo" class="h-full md:h-48 w-full">
+                        <div class="w-40 h-40 bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                            <img src="/src/images/clients1/image (3).png" alt="Partner 3" class="w-full h-full object-contain p-4">
                         </div>
-                        <div data-aos="zoom-in" data-aos-delay="400" data-aos-duration="800">
-                            <img src="/src/images/clients1/image 1.png" alt="Client Logo" class="h-full md:h-48 w-full">
+                        <div class="w-40 h-40 bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                            <img src="/src/images/clients1/image 1.png" alt="Partner 4" class="w-full h-full object-contain p-4">
                         </div>
-                        <div data-aos="zoom-in" data-aos-delay="500" data-aos-duration="800">
-                            <img src="/src/images/clients1/image.png" alt="Client Logo" class="h-full md:h-48 w-full">
+                        <div class="w-40 h-40 bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                            <img src="/src/images/clients1/image.png" alt="Partner 5" class="w-full h-full object-contain p-4">
                         </div>
                     </div>
-                    <div class="flex space-x-8 min-w-full">
-                        <div data-aos="zoom-in" data-aos-delay="100" data-aos-duration="800">
-                            <img src="/src/images/clients1/image (1).png" alt="Client Logo" class="h-full md:h-48 w-full">
+                    <!-- Second set of logos (duplicate for infinite scroll effect) -->
+                    <div class="flex space-x-12 items-center">
+                        <div class="w-40 h-40 bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                            <img src="/src/images/clients1/image (1).png" alt="Partner 1" class="w-full h-full object-contain p-4">
                         </div>
-                        <div data-aos="zoom-in" data-aos-delay="200" data-aos-duration="800">
-                            <img src="/src/images/clients1/image (2).png" alt="Client Logo" class="h-full md:h-48 w-full">
+                        <div class="w-40 h-40 bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                            <img src="/src/images/clients1/image (2).png" alt="Partner 2" class="w-full h-full object-contain p-4">
                         </div>
-                        <div data-aos="zoom-in" data-aos-delay="300" data-aos-duration="800">
-                            <img src="/src/images/clients1/image (3).png" alt="Client Logo" class="h-full md:h-48 w-full">
+                        <div class="w-40 h-40 bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                            <img src="/src/images/clients1/image (3).png" alt="Partner 3" class="w-full h-full object-contain p-4">
                         </div>
-                        <div data-aos="zoom-in" data-aos-delay="400" data-aos-duration="800">
-                            <img src="/src/images/clients1/image 1.png" alt="Client Logo" class="h-full md:h-48 w-full">
+                        <div class="w-40 h-40 bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                            <img src="/src/images/clients1/image 1.png" alt="Partner 4" class="w-full h-full object-contain p-4">
                         </div>
-                        <div data-aos="zoom-in" data-aos-delay="500" data-aos-duration="800">
-                            <img src="/src/images/clients1/image.png" alt="Client Logo" class="h-full md:h-48 w-full">
+                        <div class="w-40 h-40 bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                            <img src="/src/images/clients1/image.png" alt="Partner 5" class="w-full h-full object-contain p-4">
                         </div>
                     </div>
                 </div>
@@ -599,12 +664,12 @@
                     </div>
                     <div class="text-center mb-8">
                         <h3 class="text-2xl font-bold text-black mb-4">Planning</h3>
-                        <p class="text-black font-semibold text-xl">
-                            Strategic project roadmapping.<br>
+                        <p class="text-gray-600 font-semibold text-xl">
+                            Strategic project roadmapping.
                             Defining clear objectives and milestones.
                         </p>
                     </div>
-                    <p class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-5xl font-bold text-primary">01</p>
+                    <p class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-5xl font-bold opacity-40 text-primary">01</p>
                 </div>
 
                 <!-- Design Box -->
@@ -620,12 +685,12 @@
                     </div>
                     <div class="text-center mb-8">
                         <h3 class="text-2xl font-bold text-black mb-4">Design</h3>
-                        <p class="text-black font-semibold text-xl">
-                            Creating intuitive user interfaces.<br>
+                        <p class="text-gray-600 font-semibold text-xl">
+                            Creating intuitive user interfaces.
                             Crafting engaging user experiences.
                         </p>
                     </div>
-                    <p class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-5xl font-bold text-primary">02</p>
+                    <p class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-5xl font-bold opacity-40 text-primary">02</p>
                 </div>
 
                 <!-- Development Box -->
@@ -641,12 +706,12 @@
                     </div>
                     <div class="text-center mb-8">
                         <h3 class="text-2xl font-bold text-black mb-4">Development</h3>
-                        <p class="text-black font-semibold text-xl">
-                            Writing clean, efficient code.<br>
+                        <p class="text-gray-600 font-semibold text-xl">
+                            Writing clean, efficient code.
                             Building robust, scalable solutions.
                         </p>
                     </div>
-                    <p class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-5xl font-bold text-primary">03</p>
+                    <p class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-5xl font-bold opacity-40 text-primary">03</p>
                 </div>
 
                 <!-- Deployment Box -->
@@ -662,12 +727,12 @@
                     </div>
                     <div class="text-center mb-8">
                         <h3 class="text-2xl font-bold text-black mb-4">Deployment</h3>
-                        <p class="text-black font-semibold text-xl">
-                            Seamless product launch strategies.<br>
+                        <p class="text-gray-600 font-semibold text-xl">
+                            Seamless product launch strategies.
                             Ongoing maintenance and support.
                         </p>
                     </div>
-                    <p class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-5xl font-bold text-primary">04</p>
+                    <p class="absolute bottom-8 left-1/2 -translate-x-1/2 text-5xl font-extrabold text-primary opacity-40 transform">04</p>
                 </div>
             </div>
         </div>
@@ -772,18 +837,18 @@
             <div class="lg:w-1/2 relative" data-aos="fade-right" data-aos-duration="1000">
                 <img src="/src/images/Group 66.png" alt="Vector 1" width="100%" height="auto">
             </div>
-            <div class="lg:w-1/2" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
-                <div class="flex items-center mb-10" data-aos="fade-up" data-aos-duration="800">
+            <div class="lg:w-1/2 px-5" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                <div class="flex items-center mb-5" data-aos="fade-up" data-aos-duration="800">
                     <div class="w-[62px] h-[20px] bg-transparent rounded-xl border border-primary p-[2px]">
                         <div class="w-full h-full bg-primary rounded-lg"></div>
                     </div>
                     <h2 class="text-2xl text-black font-bold ml-4">why choose us.</h2>
                 </div>
-                <h1 class="text-3xl md:text-5xl font-bold text-primary mb-8 max-w-4xl leading-10" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                <h1 class="text-3xl md:text-4xl 2xl:text-5xl font-bold text-primary mb-5 max-w-4xl leading-10" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
                     We Deliver Prominent and Trusted IT, Engineering, and Manufacturing Services You Can Rely On
                 </h1>                
-                <p class="text-gray-600 text-2xl mb-12 font-semibold max-w-3xl" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">It is a well-known fact that readers can be distracted by the content on a page when focusing on its layout and design.</p>
-                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                <p class="text-gray-600 text-xl mb-14 font-medium max-w-4xl" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">It is a well-known fact that readers can be distracted by the content on a page when focusing on its layout and design.</p>
+                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-20">
                     <li class="flex items-start space-x-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                         <div class="flex-shrink-0">
                             <span class="flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary">
@@ -839,7 +904,7 @@
     <!-- footer -->
     <footer class="bg-[#212529] text-white pt-16 pb-8 overflow-hidden">
         <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mb-12">
                 <div class="space-y-8">
                     <h2 class="text-2xl font-semibold border-b-2 border-primary pb-2 inline-block">Browse</h2>
                     <ul class="space-y-3" data-aos="fade-right">
@@ -861,7 +926,9 @@
                 </div>
                 <div class="space-y-8">
                     <h2 class="text-2xl font-semibold border-b-2 border-primary pb-2 inline-block">Locate Us</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-1 gap-6" data-aos="fade-right">
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6" data-aos="fade-right">
+                        <!-- India Address -->
                         <div class="space-y-4">
                             <img src="/src/images/footer/Frame 198.png" alt="Temple" class="h-20">
                             <div class="flex items-center space-x-2">
@@ -874,34 +941,71 @@
                                     <p>D No.4/367-A, Rajiv Nagar,</p>
                                     <p>Venkatapuram,</p>
                                     <p>Krishnagiri Indl. Estate, Krishnagiri,</p>
-                                    <p>Tamil Nadu,INDIA - 635002</p>
+                                    <p>Tamil Nadu, INDIA - 635002</p>
                                 </div>
-
+                
                                 <!-- Divider -->
                                 <div class="flex items-center">
                                     <div class="flex-grow border-t border-gray-400"></div>
                                     <div class="mx-4 text-gray-400">•</div>
                                     <div class="flex-grow border-t border-gray-400"></div>
                                 </div>
-
-                                <!-- Address Section -->
+                
+                                <!-- Additional Address Section -->
                                 <div class="space-y-1">
                                     <p>C204, ISR Sukriti,</p>
                                     <p>Halasahalli cross road, Varthur,</p>
                                     <p>Bengaluru, INDIA 560087</p>
                                 </div>
-
+                
                                 <!-- Phone Section -->
                                 <div class="font-semibold pt-5">
                                     <p>PH: +91 99446 13667</p>
                                 </div>
                             </div>
-                            
+                        </div>
+                
+                        <!-- USA Address -->
+                        <div class="space-y-4">
+                            <img src="/src/images/Group.png" alt="USA" class="h-20">
+                            <div class="flex items-center space-x-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="2em" viewBox="0 0 64 64">
+                                    <path fill="#ec1c24" d="M26 17.76v3.38h37.965c-.053-1.09-.167-2.468-.575-3.38" />
+                                    <path fill="#e6e7e8" d="M61.6 14.38H26v3.38h37.39c-.406-1.261-1.01-2.411-1.79-3.38" />
+                                    <path fill="#ec1c24" d="M54 11H26v3.38h35.6C59.931 12.29 57.184 11 54 11" />
+                                    <path fill="#e6e7e8" d="M63.965 21.14H26v3.38h38v-2.253c0-.201-.013-.397-.019-.594c-.004-.054-.01-.193-.016-.533" />
+                                    <path fill="#ec1c24" d="M26 27.9h38v-3.38H26z" />
+                                    <path fill="#e6e7e8" d="M26 31.28h38V27.9H26z" />
+                                    <path fill="#ec1c24" d="M26 31.28h38v3.38H26z" />
+                                    <path fill="#e6e7e8" d="M0 34.66v3.38h64v-3.38H26z" />
+                                    <path fill="#ec1c24" d="M0 38.04h64v3.38H0z" />
+                                    <path fill="#e6e7e8" d="M.005 43.499s-.009.819.015 1.301h63.96c.028-.494.015-1.301.015-1.301L64 41.42H0z" />
+                                    <path fill="#ec1c24" d="M10 55h44c3.193 0 5.847-1.16 7.66-3.44H2.33C4.202 53.89 6.906 55 9.995 55" />
+                                    <path fill="#e6e7e8" d="M2.335 51.56h59.33a10 10 0 0 0 1.74-3.38H.605a10.4 10.4 0 0 0 1.735 3.38" />
+                                    <path fill="#ec1c24" d="M.6 48.18h62.8a14.4 14.4 0 0 0 .58-3.38H.02c.099 1.156.191 2.029.58 3.38" />
+                                    <path fill="#176496" d="M26 11H10C3.373 11 0 15.925 0 22v12.66h26z" />
+                                    <path fill="#fff" d="m2.798 16.976l.544-.418l.543.418l-.211-.672l.541-.411h-.668l-.207-.675l-.206.675h-.667l.543.411zm3.594 0l.544-.418l.543.418l-.21-.672l.54-.411h-.667l-.207-.675l-.206.675H6.06l.543.411zm3.965 0l.543-.418l.544.418l-.211-.672l.54-.411h-.663l-.21-.675l-.207.675h-.663l.537.411zm3.936 0l.543-.418l.544.418l-.21-.672l.54-.411h-.67l-.204-.675l-.206.675h-.668l.542.411zm3.95 0l.544-.418l.543.418l-.21-.672l.541-.411h-.669l-.206-.675l-.206.675h-.667l.54.411zM4.711 18.731l.543-.417l.543.417l-.209-.671l.54-.411H5.46l-.207-.674l-.203.674h-.67l.541.411zm3.595 0l.543-.417l.543.417l-.21-.671l.54-.411H9.05l-.201-.674l-.207.674h-.667l.541.411zm3.965 0l.542-.417l.543.417l-.21-.671l.541-.411h-.667l-.207-.674l-.207.674h-.668l.541.411zm3.934 0l.544-.417l.544.417l-.213-.671l.542-.411h-.667l-.207-.674l-.205.674h-.668l.541.411zm3.955 0l.539-.417l.543.417l-.212-.671l.542-.411h-.666l-.208-.674l-.205.674h-.668l.541.411zm2.227-1.755l.543-.418l.544.418l-.211-.672l.54-.411h-.663l-.211-.675l-.206.675h-.673l.547.411zM2.745 31.02l.544-.413l.543.413l-.21-.666l.54-.412l-.667.002l-.208-.674l-.204.674l-.669-.002l.541.412zm3.595 0l.543-.413l.544.413l-.211-.666l.54-.412l-.666.002l-.208-.674l-.205.674l-.667-.002l.54.412zm3.965 0l.543-.413l.544.413l-.211-.666l.54-.412l-.671.002l-.203-.674l-.206.674l-.667-.002l.541.412zm3.936 0l.543-.413l.543.413l-.207-.666l.537-.412l-.668.002l-.206-.674l-.206.674l-.667-.002l.54.412zm3.949 0l.544-.413l.544.413l-.208-.666l.537-.412l-.667.002l-.207-.674l-.205.674l-.668-.002l.54.412zm4.144 0l.543-.413l.544.413l-.211-.666l.541-.412l-.671.002l-.204-.674l-.206.674l-.67-.002l.544.412zM2.798 20.488l.544-.418l.543.418l-.211-.672l.541-.411l-.668.002l-.207-.676l-.206.676l-.667-.002l.543.411zm3.594 0l.544-.418l.543.418l-.21-.672l.54-.411l-.667.002l-.207-.676l-.206.676l-.669-.002l.543.411zm3.965 0l.543-.418l.544.418l-.211-.672l.54-.411l-.663.002l-.21-.676l-.207.676l-.663-.002l.537.411zm3.936 0l.543-.418l.544.418l-.21-.672l.54-.411l-.67.002l-.204-.676l-.206.676l-.668-.002l.542.411zm3.95 0l.544-.418l.543.418l-.21-.672l.541-.411l-.669.002l-.206-.676l-.206.676l-.667-.002l.54.411zM4.711 22.244l.543-.417l.543.417l-.209-.671l.54-.413H5.46l-.207-.672l-.203.672h-.67l.541.413zm3.595 0l.543-.417l.543.417l-.21-.671l.54-.413H9.05l-.201-.672l-.207.672h-.667l.541.413zm3.965 0l.542-.417l.543.417l-.21-.671l.541-.413h-.667l-.207-.672l-.207.672h-.668l.541.413zm3.934 0l.544-.417l.544.417l-.213-.671l.542-.413h-.667l-.207-.672l-.205.672h-.668l.541.413zm3.955 0l.539-.417l.543.417l-.212-.671l.542-.413h-.666l-.208-.672l-.205.672h-.668l.541.413zm2.227-1.756l.543-.418l.544.418l-.211-.672l.54-.411l-.663.002l-.211-.676l-.206.676l-.673-.002l.547.411zM2.745 24l.544-.417l.543.417l-.211-.67l.541-.412l-.668.002l-.207-.676l-.204.676l-.669-.002l.541.412zm3.595 0l.543-.417l.544.417l-.211-.67l.54-.412l-.666.002l-.208-.676l-.205.676l-.667-.002l.539.412zm3.965 0l.543-.417l.543.417l-.21-.67l.54-.412l-.671.002l-.203-.676l-.206.676l-.667-.002l.541.412zm3.936 0l.542-.417l.544.417l-.207-.67l.537-.412l-.668.002l-.206-.676l-.206.676l-.667-.002l.54.412zm3.949 0l.544-.417l.543.417l-.207-.67l.537-.412l-.668.002l-.206-.676l-.205.676l-.668-.002l.54.412zM4.658 25.756l.543-.416l.543.416l-.209-.666l.539-.414h-.668L5.2 24l-.205.676h-.668l.541.414zm3.595 0l.543-.416l.543.416l-.21-.666l.54-.414H9L8.795 24l-.206.676h-.668l.542.414zm3.966 0l.541-.416l.544.416l-.214-.666l.544-.414h-.667L12.76 24l-.206.676h-.668l.541.414zm3.931 0l.546-.416l.544.416l-.21-.666l.539-.414h-.667L16.695 24l-.205.676h-.668l.541.414zm3.95 0l.546-.416l.544.416l-.211-.666l.542-.414h-.667L20.646 24l-.206.676h-.668l.541.414zM22.334 24l.543-.417l.543.417l-.21-.67l.541-.412l-.671.002l-.204-.676l-.206.676l-.67-.002l.544.412zM2.745 27.513l.544-.413l.543.413l-.211-.671l.541-.412l-.668.002l-.207-.676l-.204.676l-.669-.002l.541.412zm3.595 0l.543-.413l.544.413l-.211-.671l.54-.412l-.666.002l-.208-.676l-.205.676l-.667-.002l.539.412zm3.965 0l.543-.413l.543.413l-.21-.671l.54-.412l-.671.002l-.203-.676l-.206.676l-.667-.002l.541.412zm3.936 0l.542-.413l.544.413l-.207-.671l.537-.412l-.668.002l-.206-.676l-.206.676l-.667-.002l.54.412zm3.949 0l.544-.413l.543.413l-.207-.671l.537-.412l-.668.002l-.206-.676l-.205.676l-.668-.002l.54.412zM4.658 29.27l.543-.418l.543.418l-.209-.672l.539-.408h-.668l-.206-.677l-.205.677h-.668l.541.408zm3.595 0l.543-.418l.543.418l-.21-.672l.54-.408H9l-.205-.677l-.206.677h-.668l.542.408zm3.966 0l.541-.418l.544.418l-.214-.672l.544-.408h-.667l-.207-.677l-.206.677h-.668l.541.408zm3.931 0l.546-.418l.544.418l-.21-.672l.539-.408h-.667l-.207-.677l-.205.677h-.668l.541.408zm3.95 0l.546-.418l.544.418l-.211-.672l.542-.408h-.667l-.208-.677l-.206.677h-.668l.541.408zm2.234-1.757l.543-.413l.543.413l-.21-.671l.541-.412l-.671.002l-.204-.676l-.206.676l-.67-.002l.544.412z" />
+                                </svg>
+                                <h3 class="text-xl font-semibold">USA</h3>
+                            </div>
+                            <div class="text-sm space-y-1">
+                                <!-- Address Section -->
+                                <div class="space-y-1">
+                                    <p>Fremont,</p>
+                                    <p>California, USA - 94538</p>
+                                </div>
+                
+                                <!-- Phone Section -->
+                                <div class="font-semibold pt-5">
+                                    <p>PH: +1 123 456 7890</p> <!-- Add USA phone number here if available -->
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="space-y-3">
-                    <h2 class="text-2xl text-white font-bold uppercase">Follow Us On</h2>
+                
+                <div class="space-y-4">
+                    <h2 class="text-2xl text-white font-bold uppercase mb-4">Follow Us On</h2>
                     <div class="w-full md:w-auto" data-aos="fade-right">
                         <div class="flex space-x-4">
                             <a href="#"
