@@ -231,7 +231,7 @@
     <!-- notes -->
     <section class="py-16 bg-[#F5F5F5]  overflow-hidden">
         <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
                 <!-- Box 1 -->
                 <div class=" transform transition-transform duration-300 p-6">
                     <div class="flex items-center">
@@ -277,14 +277,14 @@
         <div class="container mx-auto">
             <div class="flex flex-wrap items-center -mx-4">
                 <!-- Left side - Image -->
-                <div class="w-full lg:w-1/2 px-4 mb-8 lg:mb-0" data-aos="fade-right">
+                <div class="w-full xl:w-1/2 px-4 mb-8 lg:mb-0" data-aos="fade-right">
                     <div class="relative">
                         <img src="/src/images/Group 67.png" alt="About Us">
                     </div>
                 </div>
                 
                 <!-- Right side - Content -->
-                <div class="w-full lg:w-1/2 px-10" data-aos="fade-left">
+                <div class="w-full xl:w-1/2 px-10" data-aos="fade-left">
                     <div class="lg:pl-8">
                         <div class="flex items-center mb-5">
                             <div class="w-[62px] h-[20px] bg-transparent rounded-xl border border-primary p-[2px]">
@@ -298,10 +298,10 @@
                         </h1>
                         
                         <div class="space-y-4 mb-8">
-                            <p class="text-gray-600 text-lg" data-aos="fade-left" data-aos-duration="1400" data-aos-delay="500">
+                            <p class="text-gray-600 text-lg" data-aos="fade-up" data-aos-duration="1400" data-aos-delay="500">
                                 Throughout this period, we have earned a strong reputation for outstanding client satisfaction, as demonstrated by our...
                             </p>
-                            <p class="text-gray-600 text-lg" data-aos="fade-right" data-aos-duration="1400" data-aos-delay="700">
+                            <p class="text-gray-600 text-lg" data-aos="fade-up" data-aos-duration="1400" data-aos-delay="700">
                                 Will Sparrow Technologies is a global powerhouse in software solutions, engineering, and manufacturing. Since our inception in 2019, we've expanded our presence across India, Australia, the UK, and Canada, serving diverse industries with cutting-edge solutions.
                             </p>
                         </div>
@@ -496,7 +496,7 @@
                 </div>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6" data-aos="fade-up" data-aos-delay="200">
                 <template x-for="card in cards" :key="card.title">
                     <div class="rounded-lg shadow-lg p-6 md:p-8 bg-gray-100 hover:bg-primary group transition-all duration-300 h-full flex flex-col justify-start relative bg-no-repeat bg-right-top" style="background-image: url('/src/images/line-shape\ 1.png');">
                         <div class="flex flex-col items-start">
@@ -521,7 +521,7 @@
     <!-- case study -->
     <section id="projects" class="bg-orange-50 rounded-xl mx-auto py-24 overflow-hidden relative">
         <div class="container mx-auto px-4 md:px-8 lg:px-12">
-            <div class="grid grid-cols-1 lg:grid-cols-[1fr,2fr] gap-12">
+            <div class="grid grid-cols-1 xl:grid-cols-[1fr,2fr] gap-12">
                 <!-- Left Section -->
                 <div class="space-y-8 relative z-10">
                     <div class="flex items-center mb-4" data-aos="fade-right">
@@ -803,7 +803,7 @@
                 </div>
                 <p class="text-primary text-3xl md:text-5xl font-semibold" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Our software development process.</p>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
                 <!-- Planning Box -->
                 <div class="relative flex-1 min-w-[280px] h-[340px] bg-[#fafafa] rounded-tl-xl rounded-tr-xl rounded-br-full rounded-bl-full p-6 pt-20 pb-16 mt-16 shadow-lg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
                     <div class="absolute -top-16 left-1/2 transform -translate-x-1/2 w-32 h-32 bg-primary rounded-full flex items-center justify-center p-[2px]">
@@ -905,7 +905,7 @@
         <div class="container mx-auto px-4 py-8 md:py-16 relative z-10" x-data="testimonialCarousel()">
             <div class="flex flex-col md:flex-row justify-between items-center mb-12">
                 <div class="mb-6 md:mb-0" data-aos="fade-up">
-                    <div class="flex items-center mb-4">
+                    <div class="flex  items-center mb-4">
                         <div class="w-[62px] h-[20px] bg-transparent rounded-xl border border-white p-[2px]">
                             <div class="w-full h-full bg-white rounded-lg"></div>
                         </div>
@@ -931,7 +931,7 @@
             <div class="relative overflow-hidden testimonial-container" @mouseleave="startAutoPlay()" @mouseover="stopAutoPlay()">
                 <div class="flex transition-all duration-500 ease-in-out testimonial-slider" :style="`transform: translateX(-${currentIndex * (100 / visibleCards)}%);`">
                     <template x-for="(testimonial, index) in testimonials" :key="index">
-                        <div class="w-full sm:w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="w-full sm:w-full md:w-1/2 xl:w-1/3 flex-shrink-0 px-4" data-aos="fade-up" data-aos-delay="100">
                             <div class="bg-white rounded-lg shadow-2xl p-8 transform hover:scale-105 transition-all duration-300 testimonial-fade-in h-full flex flex-col justify-between items-center text-center">
                                 <div class="flex flex-col items-center relative">
                                     <div class="relative">
@@ -971,34 +971,34 @@
                 <!-- Card 1 -->
                 <div class="card p-4 flex flex-col items-center text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
                     <img src="/src/images/pajamas_work.png" alt="Projects Icon" class="w-12 h-12 mb-4">
-                    <h2 class="text-2xl font-bold mb-2 text-white" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">100+</h2>
-                    <h3 class="text-lg text-gray-300">Projects Completed</h3>
+                    <h2 class="text-3xl font-bold mb-2 text-white" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">100+</h2>
+                    <h3 class="text-xl font-bold text-gray-300">Projects Completed</h3>
                 </div>
                 
                 <!-- Card 2 -->
                 <div class="card p-4 flex flex-col items-center text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
                     <img src="/src/images/mdi_like-outline.png" alt="Satisfaction Icon" class="w-12 h-12 mb-4">
-                    <h2 class="text-2xl font-bold mb-2 text-white" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">98%</h2>
-                    <h3 class="text-lg text-gray-300">Customer Satisfaction</h3>
+                    <h2 class="text-3xl font-bold mb-2 text-white" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">98%</h2>
+                    <h3 class="text-xl font-bold text-gray-300">Customer Satisfaction</h3>
                 </div>
                 
                 <!-- Card 3 -->
                 <div class="card p-4 flex flex-col items-center text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
                     <img src="/src/images/mingcute_time-line.png" alt="Time Icon" class="w-12 h-12 mb-4">
-                    <h2 class="text-2xl font-bold mb-2 text-white" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">3 Mins</h2>
-                    <h3 class="text-lg text-gray-300">Average Answer Time</h3>
+                    <h2 class="text-3xl font-bold mb-2 text-white" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">3 Mins</h2>
+                    <h3 class="text-xl font-bold text-gray-300">Average Answer Time</h3>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- why choose us  -->
-    <section class="px-4 md:px-0 overflow-hidden py-5">
-        <div class="flex flex-col lg:flex-row items-center gap-8">
-            <div class="lg:w-1/2 relative" data-aos="fade-right" data-aos-duration="1000">
-                <img src="/src/images/Group 66.png" alt="Vector 1" width="100%" height="auto">
+    <section class="px-4 md:px-0 overflow-hidden pt-5">
+        <div class="flex flex-col xl:flex-row items-center gap-8">
+            <div class="xl:w-1/2 relative" data-aos="fade-right" data-aos-duration="1000">
+                <img src="/src/images/Group 77.png" alt="Vector 1" width="100%" height="auto">
             </div>
-            <div class="lg:w-1/2 px-5" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+            <div class="xl:w-1/2 px-5" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
                 <div class="flex items-center mb-5" data-aos="fade-up" data-aos-duration="800">
                     <div class="w-[62px] h-[20px] bg-transparent rounded-xl border border-primary p-[2px]">
                         <div class="w-full h-full bg-primary rounded-lg"></div>
@@ -1245,12 +1245,14 @@
                     window.addEventListener('resize', () => this.updateVisibleCards());
                 },
                 updateVisibleCards() {
-                    if (window.innerWidth >= 1024) {
-                        this.visibleCards = 3;
+                    if (window.innerWidth >= 1400) {
+                        this.visibleCards = 3; 
+                    } else if (window.innerWidth >= 1024) {
+                        this.visibleCards = 2; 
                     } else if (window.innerWidth >= 768) {
-                        this.visibleCards = 2;
+                        this.visibleCards = 2; 
                     } else {
-                        this.visibleCards = 1;
+                        this.visibleCards = 1;  
                     }
                 },
                 startAutoPlay() {

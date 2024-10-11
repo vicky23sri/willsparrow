@@ -121,7 +121,7 @@
     z-index: 1;
 }
 
-.stats-section .container {
+.stats-section .container max-w-sm lg:max-w-lg xl:max-w-xl {
     position: relative;
     z-index: 2; 
 }
