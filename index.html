@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Will Sparrow</title>
     <link href="./dist/output.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
@@ -52,19 +54,30 @@
             color: transparent;
             -webkit-text-stroke: 1.5px rgba(192, 192, 192, 0.6);
         }
+
+        .border-3 {
+            border-width: 3px;
+        }
+
+        .style-outline-number {
+            -webkit-text-stroke: 2px ;
+            paint-order: stroke fill;
+        }
     </style>
 </head>
 <body class="font-plus-jakarta">
     <!-- navbar -->
-    <nav class="bg-primary p-2 fixed w-full z-50">
+    <nav class="bg-[#333F48] p-2 fixed w-full z-50">
         <div class="container mx-auto flex justify-between items-center">
             <div class="flex items-center space-x-4" data-aos="fade-right" data-aos-duration="1000">
-                <img src="/src/images/lightlogo.png" alt="Logo" class="w-auto h-16">
-            </div>
+                <a href="index.html">
+                    <img src="/src/images/lightlogo.png" alt="Logo" class="w-auto h-16">
+                </a>
+            </div>            
     
             <ul class="hidden lg:flex space-x-12 mx-auto" data-aos="fade-right" data-aos-duration="1100" data-aos-delay="300">
-                <li class="home-link"><a href="/home.html" class="text-white hover:text-black nav-link text-xl font-semibold">Home</a></li>
-                <li><a href="/home.html#about" class="text-white hover:text-black nav-link text-xl font-semibold">About</a></li>
+                <li class="home-link"><a href="/index.html" class="text-white hover:text-black nav-link text-xl font-semibold">Home</a></li>
+                <li><a href="/index.html#about" class="text-white hover:text-black nav-link text-xl font-semibold">About</a></li>
                 <li class="relative group">
                     <a href="#services" class="text-white hover:text-black nav-link text-xl font-semibold">Services</a>
                     <ul class="submenu absolute mt-2 bg-white text-gray-800 w-72 rounded-lg shadow-xl invisible ring-1 ring-black ring-opacity-5 focus:outline-none transform opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition ease-out duration-200 z-50 overflow-hidden">
@@ -101,13 +114,13 @@
                         </li>
                     </ul>
                 </li>
-                <li><a href="/home.html#projects" class="text-white hover:text-black nav-link text-xl font-semibold">Projects</a></li>
+                <li><a href="/index.html#projects" class="text-white hover:text-black nav-link text-xl font-semibold">Projects</a></li>
                 
                 <li><a href="/contactus.html" class="text-white hover:text-black nav-link text-xl font-semibold">Contact Us</a></li>
             </ul>
     
             <div class="hidden lg:flex items-center" data-aos="fade-left" data-aos-duration="1100" data-aos-delay="300">
-                <a href="/contactus.html#contact" class="bg-gray-700 text-white px-6 py-2 rounded-full border-2 border-transparent hover:bg-white hover:text-gray-600 hover:text-lg hover:border-gray-400 transition duration-300 transform hover:scale-105 text-lg font-bold shadow-lg">Get Started</a>
+                <a href="/contactus.html#contact" class="bg-primary text-white px-6 py-2 rounded-full border-2 border-transparent hover:bg-white hover:text-gray-600 hover:text-lg hover:border-gray-400 transition duration-300 transform hover:scale-105 text-lg font-bold shadow-lg">Get Started</a>
             </div>
     
             <div class="lg:hidden" data-aos="fade-left" data-aos-duration="1000">
@@ -124,10 +137,10 @@
             <div class="mobile-menu fixed inset-y-0 right-0 w-full sm:w-3/4 md:w-1/2 bg-white text-gray-900 p-6 transform translate-x-full transition-transform duration-300" id="mobile-menu-content">
                 <button class="text-gray-600 text-3xl absolute top-4 right-4 focus:outline-none" id="close-menu-btn">&times;</button>
                 <ul class="flex flex-col justify-between space-y-14 mt-16">
-                    <li class="home-link" data-aos="fade-up" data-aos-delay="100"><a href="/home.html" class="text-2xl font-semibold hover:text-primary transition duration-300">Home</a></li>
+                    <li class="home-link" data-aos="fade-up" data-aos-delay="100"><a href="/index.html" class="text-2xl font-semibold hover:text-primary transition duration-300">Home</a></li>
                     <li data-aos="fade-up" data-aos-delay="200"><a href="home.html#about" class="text-2xl font-semibold hover:text-primary transition duration-300">About</a></li>
                     <li data-aos="fade-up" data-aos-delay="300">
-                        <a href="#" class="text-2xl font-semibold hover:text-primary transition duration-300 flex justify-between items-center" id="services-menu-btn">
+                        <a href="#services" class="text-2xl font-semibold hover:text-primary transition duration-300 flex justify-between items-center" id="services-menu-btn">
                             Services
                             <svg class="w-6 h-6 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -151,8 +164,8 @@
                             </li>
                         </ul>                                              
                     </li>
-                    <li data-aos="fade-up" data-aos-delay="400"><a href="/home.html#projects" class="text-2xl font-semibold hover:text-primary transition duration-300">Projects</a></li>
-                    <li data-aos="fade-up" data-aos-delay="500"><a href="#testimonial" class="text-2xl font-semibold hover:text-primary transition duration-300">Testimonial</a></li>
+                    <li data-aos="fade-up" data-aos-delay="400"><a href="/index.html#projects" class="text-2xl font-semibold hover:text-primary transition duration-300">Projects</a></li>
+                    <!-- <li data-aos="fade-up" data-aos-delay="500"><a href="#testimonial" class="text-2xl font-semibold hover:text-primary transition duration-300">Testimonial</a></li> -->
                     <li data-aos="fade-up" data-aos-delay="600"><a href="/contactus.html" class="text-2xl font-semibold hover:text-primary transition duration-300">Contact Us</a></li>
                     <li data-aos="fade-up" data-aos-delay="700"><a href="/contactus.html#contact" class="bg-primary text-white px-6 py-3 rounded-full hover:bg-orange-600 transition duration-300 inline-block mt-4 text-xl font-bold text-center">Get Started</a></li>
                 </ul>
@@ -172,16 +185,17 @@
                 <!-- Text Section -->
                 <div class="w-full lg:w-1/2 text-white space-y-6 sm:space-y-8 lg:space-y-10">
                     <h1
-                        class="text-3xl sm:text-4xl lg:text-5xl xl:text-5xl font-semibold leading-tight max-w-4xl"
+                        class="text-3xl sm:text-4xl lg:text-4xl xl:text-5xl font-normal leading-tight max-w-5xl"
                         data-aos="fade-up"
                         data-aos-duration="1000"
                         data-aos-delay="100"
                     >
                         Shaping the Future with
-                        <span class="block mt-2 text-primary">Innovative Solutions</span>
+                        <span class="text-3xl sm:text-4xl lg:text-4xl xl:text-5xl block mt-4 text-primary font-bold">Innovative Solutions</span>
                     </h1>
+
                     <p 
-                        class="text-base sm:text-lg lg:text-xl xl:text-2xl font-medium max-w-2xl leading-relaxed"
+                        class="text-base sm:text-lg lg:text-lg xl:text-xl font-medium max-w-2xl leading-relaxed"
                         data-aos="fade-up"
                         data-aos-duration="1200"
                         data-aos-delay="300"
@@ -195,23 +209,24 @@
                             data-aos-duration="1400"
                             data-aos-delay="500"
                         >
-                            <button class="group inline-flex items-center justify-center text-white font-semibold py-3 px-6 sm:py-4 sm:px-8 rounded-full transition-all duration-300 transform bg-primary hover:bg-opacity-90 hover:scale-105 shadow-lg hover:shadow-xl">
+                            <a href="#services" class="group inline-flex items-center justify-center text-white font-semibold py-3 px-6 sm:py-4 sm:px-8 rounded-full transition-all duration-300 transform bg-primary hover:bg-opacity-90 hover:scale-105 shadow-lg hover:shadow-xl">
                                 <span class="mr-2 text-base sm:text-lg">Explore More</span>
-                            </button>
+                            </a>
                         </div>
+
                         <div 
                             data-aos="fade-up"
                             data-aos-duration="1400"
                             data-aos-delay="500"
                         >
-                            <button class="group inline-flex items-center justify-center text-white font-semibold px-4 py-[10px] sm:px-8 rounded-full transition-all duration-300 transform hover:bg-primary hover:bg-opacity-90 hover:scale-105 shadow-lg hover:shadow-xl">
+                            <a href="/contactus.html" class="group inline-flex items-center justify-center text-white font-semibold px-4 py-[10px] sm:px-8 rounded-full transition-all duration-300 transform hover:bg-primary hover:bg-opacity-90 hover:scale-105 shadow-lg hover:shadow-xl">
                                 <span class="mr-2 text-base sm:text-lg">Let's Talk</span>
                                 <span class="w-8 h-8 sm:w-10 sm:h-10 ml-4 rounded-full bg-white bg-opacity-20 flex items-center justify-center transition-all duration-300 transform group-hover:bg-white">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white group-hover:text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                     </svg>
                                 </span>
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -229,42 +244,42 @@
     </section>
 
     <!-- notes -->
-    <section class="py-16 bg-[#F5F5F5]  overflow-hidden">
+    <section class="py-12 bg-[#F5F5F5]  overflow-hidden">
         <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Box 1 -->
                 <div class=" transform transition-transform duration-300 p-6">
                     <div class="flex items-center">
-                        <div class="w-[150px] h-[100px] rounded-lg flex items-center justify-center shadow-lg" style="background-color: rgba(252, 118, 50, 0.12);" data-aos="fade-right" data-aos-delay="200"> 
-                            <img src="/src/images/expert-tea 1.png" alt="Customer Services" class="w-[60px] h-[60px] object-cover rounded-lg"> 
-                        </div>
+                        <div class="w-[120px] h-[80px] sm:w-[140px] sm:h-[90px] md:w-[150px] md:h-[100px] lg:w-[220px] lg:h-[100px] rounded-lg flex items-center justify-center shadow-lg" style="background-color: rgba(252, 118, 50, 0.12);" data-aos="fade-right" data-aos-delay="200"> 
+                            <img src="/src/images/expert-tea 1.png" alt="Customer Services" class="w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] md:w-[60px] md:h-[60px] lg:w-[60px] lg:h-[60px] object-cover rounded-lg"> 
+                        </div>                                              
                         <div class="ml-6">
-                            <h1 class="text-lg lg:text-xl font-bold mb-2 text-gray-900">Highly Expert Team</h1>
-                            <p class="text-gray-600 text-base lg:text-lg" data-aos="fade-left" data-aos-delay="100">We provide the most responsive and functional IT design.</p>
+                            <h1 class="text-md lg:text-lg font-bold mb-2 text-gray-900">Highly Expert Team</h1>
+                            <p class="text-gray-600 text-base lg:text-md" data-aos="fade-left" data-aos-delay="100">We provide the most responsive and functional IT design.</p>
                         </div>
                     </div>
                 </div>
                 <!-- Box 2 -->
                 <div class=" transform transition-transform duration-300 p-6">
                     <div class="flex items-center">
-                        <div class="w-[150px] h-[100px] rounded-lg flex items-center justify-center shadow-lg" style="background-color: rgba(252, 118, 50, 0.12);" data-aos="fade-right" data-aos-delay="200"> 
-                            <img src="/src/images/tech 1.png" alt="Customer Services" class="w-[60px] h-[60px] object-cover rounded-lg"> 
+                        <div class="w-[120px] h-[80px] sm:w-[140px] sm:h-[90px] md:w-[150px] md:h-[100px] lg:w-[220px] lg:h-[100px] rounded-lg flex items-center justify-center shadow-lg" style="background-color: rgba(252, 118, 50, 0.12);" data-aos="fade-right" data-aos-delay="200"> 
+                            <img src="/src/images/tech 1.png" alt="Customer Services"  class="w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] md:w-[60px] md:h-[60px] lg:w-[60px] lg:h-[60px] object-cover rounded-lg"> 
                         </div>
                         <div class="ml-6">
-                            <h1 class="text-lg lg:text-xl font-bold mb-2 text-gray-900">24/7 Customer Services</h1>
-                            <p class="text-gray-600 text-base lg:text-lg"  data-aos="fade-left" data-aos-delay="200">We provide the most responsive and functional IT design.</p>
+                            <h1 class="text-md lg:text-lg font-bold mb-2 text-gray-900">24/7 Customer Services</h1>
+                            <p class="text-gray-600 text-base lg:text-md"  data-aos="fade-left" data-aos-delay="200">We provide the most responsive and functional IT design.</p>
                         </div>
                     </div>
                 </div>
                 <!-- Box 3 -->
                 <div class=" transform transition-transform duration-300 p-6">
                     <div class="flex items-center">
-                        <div class="w-[150px] h-[100px] rounded-lg flex items-center justify-center shadow-lg" style="background-color: rgba(252, 118, 50, 0.12);" data-aos="fade-right" data-aos-delay="200"> 
-                            <img src="/src/images/mdi_like-outline.png" alt="Customer Services" class="w-[60px] h-[60px] object-cover rounded-lg"> 
+                        <div class="w-[120px] h-[80px] sm:w-[140px] sm:h-[90px] md:w-[150px] md:h-[100px] lg:w-[220px] lg:h-[100px] rounded-lg flex items-center justify-center shadow-lg" style="background-color: rgba(252, 118, 50, 0.12);" data-aos="fade-right" data-aos-delay="200"> 
+                            <img src="/src/images/mdi_like-outline.png" alt="Customer Services"  class="w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] md:w-[60px] md:h-[60px] lg:w-[60px] lg:h-[60px] object-cover rounded-lg"> 
                         </div>
                         <div class="ml-6">
-                            <h1 class="text-lg lg:text-xl font-bold mb-2 text-gray-900">Competitive Pricing</h1>
-                            <p class="text-gray-600 text-base lg:text-lg"  data-aos="fade-left" data-aos-delay="300">We provide the most responsive and functional IT design.</p>
+                            <h1 class="text-md lg:text-lg font-bold mb-2 text-gray-900">Competitive Pricing</h1>
+                            <p class="text-gray-600 text-base lg:text-md"  data-aos="fade-left" data-aos-delay="300">We provide the most responsive and functional IT design.</p>
                         </div>
                     </div>
                 </div>
@@ -273,18 +288,18 @@
     </section>
 
     <!-- About us -->
-    <section id="about" class="py-24 bg-[#F5F5F5] overflow-hidden">
+    <section id="about" class="py-12 bg-[#F5F5F5] overflow-hidden">
         <div class="container mx-auto">
             <div class="flex flex-wrap items-center -mx-4">
                 <!-- Left side - Image -->
                 <div class="w-full xl:w-1/2 px-4 mb-8 lg:mb-0" data-aos="fade-right">
                     <div class="relative">
-                        <img src="/src/images/Group 67.png" alt="About Us">
+                        <img src="/src/images/Group 78.png" alt="About Us">
                     </div>
                 </div>
                 
                 <!-- Right side - Content -->
-                <div class="w-full xl:w-1/2 px-10" data-aos="fade-left">
+                <div class="w-full xl:w-1/2 px-10 py-10" data-aos="fade-left">
                     <div class="lg:pl-8">
                         <div class="flex items-center mb-5">
                             <div class="w-[62px] h-[20px] bg-transparent rounded-xl border border-primary p-[2px]">
@@ -294,15 +309,17 @@
                         </div>
                         
                         <h1 class="text-3xl md:text-5xl font-bold mb-6 text-primary leading-tight">
-                            More than 25+ years we provide IT solutions
+                            Serving more than 15+ years in the industry
                         </h1>
                         
                         <div class="space-y-4 mb-8">
-                            <p class="text-gray-600 text-lg" data-aos="fade-up" data-aos-duration="1400" data-aos-delay="500">
+                            <p class="text-gray-600 text-xl font-semibold" data-aos="fade-up" data-aos-duration="1400" data-aos-delay="500">
                                 Throughout this period, we have earned a strong reputation for outstanding client satisfaction, as demonstrated by our...
                             </p>
                             <p class="text-gray-600 text-lg" data-aos="fade-up" data-aos-duration="1400" data-aos-delay="700">
-                                Will Sparrow Technologies is a global powerhouse in software solutions, engineering, and manufacturing. Since our inception in 2019, we've expanded our presence across India, Australia, the UK, and Canada, serving diverse industries with cutting-edge solutions.
+                                Will Sparrow Technologies is a global powerhouse in software solutions, engineering, and manufacturing. 
+                                Since our inception in 2019, we've expanded our presence across India, Australia, the UK, and Canada, 
+                                serving diverse industries with cutting-edge solutions.
                             </p>
                         </div>
                         
@@ -455,32 +472,26 @@
     </section> -->
 
     <!-- services -->
-    <section id="services" class="bg-gray-900 py-12 md:py-16">
+    <section id="services" class="py-12 bg-cover bg-center" style="background-image: url('/src/images/Group\ 80.png');">
         <div class="container mx-auto px-4 py-8 md:py-16 bg-gradient-to-br from-dark to-gray-800" x-data="{ 
             cards: [
                 {
                     icon: '/src/images/serviceicons/mobile-application 1.png', 
-                    title: 'IT Services',
-                    description: 'Expert IT solutions for businesses, including infrastructure management, network security, and cloud services. Our team provides reliable and efficient support to keep your operations running smoothly.',
+                    title: 'Software Services',
+                    description: 'Our team specializes in creating high-performance web and mobile applications tailored to your business needs.',
                     link: '/services/software.html'
                 },
                 {
                     icon: '/src/images/serviceicons/iot 1.png', 
-                    title: 'Engineering',
-                    description: 'Innovative engineering solutions for complex projects. Our team of experts provides design, development, and implementation services for mechanical, electrical, and software engineering projects.',
+                    title: 'Electronics Design',
+                    description: 'We harness the power of AI and Machine Learning to develop intelligent solutions that automate processes,',
                     link: '/services/enginnering.html'
                 },
                 {
                     icon: '/src/images/serviceicons/cirvute 1.png', 
-                    title: 'Manufacturing',
-                    description: 'Efficient manufacturing solutions for businesses, including production planning, quality control, and supply chain management. Our team helps optimize your manufacturing processes to increase productivity.',
+                    title: 'e-Manufacturing',
+                    description: 'We provide comprehensive PCB assembly and fabrication services, offering high-quality circuit board',
                     link: '/services/manufacturing.html'
-                },
-                {
-                    icon: '/src/images/serviceicons/ai 1.png', 
-                    title: 'Mechanical',
-                    description: 'Specialized mechanical services for businesses, including design, prototyping, and production. Our team of experts provides innovative solutions for mechanical engineering projects, from concept to delivery.',
-                    link: '#'
                 },
             ]
         }">
@@ -496,7 +507,7 @@
                 </div>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10" data-aos="fade-up" data-aos-delay="200">
                 <template x-for="card in cards" :key="card.title">
                     <div class="rounded-lg shadow-lg p-6 md:p-8 bg-gray-100 hover:bg-primary group transition-all duration-300 h-full flex flex-col justify-start relative bg-no-repeat bg-right-top" style="background-image: url('/src/images/line-shape\ 1.png');">
                         <div class="flex flex-col items-start">
@@ -504,7 +515,7 @@
                                 <img :src="card.icon" alt="Icon" class="h-10 w-10 md:h-12 md:w-12 object-contain transition-all duration-300 group-hover:opacity-80" />
                             </div>
                             <h3 class="text-xl md:text-2xl font-bold mb-2 md:mb-2 text-left text-gray-800 group-hover:text-white transition-all duration-300" x-text="card.title"></h3>
-                            <p class="text-md leading-relaxed font-medium text-left text-gray-600 group-hover:text-gray-200 transition-all duration-300" x-text="card.description"></p>
+                            <p class="text-md leading-relaxed font-medium text-left text-gray-600 py-4 group-hover:text-gray-200 transition-all duration-300" x-text="card.description"></p>
                         </div>
                         <a :href="card.link" class="transition-all pt-4 duration-300 rounded-lg flex items-center justify-start group mt-auto text-sm font-semibold uppercase tracking-wider text-gray-800 group-hover:text-white">
                             <span class="mr-2">Read More</span>
@@ -739,51 +750,71 @@
     </section>
 
     <!-- trusted -->
-    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-orange-50 overflow-hidden">
+    <section class="py-24 px-4 sm:px-6 lg:px-8 overflow-hidden" style="background: url('/src/images/77765\ 2.png') center/cover no-repeat, linear-gradient(to right, #29323A 60%, #FC7632 100%);">
+        <!-- Your content goes here -->
         <div>
             <h2 class="text-4xl font-bold text-center mb-12 flex items-center justify-center">
-                <span class="flex-grow h-0.5 bg-orange-300"></span>
-                <span class="px-4 py-4 text-primary text-4xl bg-white">1000+ Brands Trust Us</span>
-                <span class="flex-grow h-0.5 bg-orange-300"></span>
+                <span class="px-10 py-2 rounded-full text-primary text-3xl bg-white">1K Brands Trust Us</span>
             </h2>
             
             <div class="relative overflow-hidden">
                 <div class="flex animate-scroll space-x-12">
                     <!-- First set of logos -->
                     <div class="flex space-x-12 items-center">
-                        <div class="w-40 h-40 bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105">
-                            <img src="/src/images/clients1/image (1).png" alt="Partner 1" class="w-full h-full object-contain p-4">
+                        <div class="w-40 h-28 bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                            <img src="/src/images/clients1/logo.png" alt="Partner 1" class="w-full h-full object-contain p-4">
                         </div>
-                        <div class="w-40 h-40 bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105">
-                            <img src="/src/images/clients1/image (2).png" alt="Partner 2" class="w-full h-full object-contain p-4">
+                        <div class="w-40 h-28 bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                            <img src="/src/images/clients1/realty-logo-bAZ1hoeQ.png" alt="Partner 2" class="w-full h-full object-contain p-4">
                         </div>
-                        <div class="w-40 h-40 bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105">
-                            <img src="/src/images/clients1/image (3).png" alt="Partner 3" class="w-full h-full object-contain p-4">
+                        <div class="w-40 h-28 bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                            <img src="/src/images/clients1/realty.svg" alt="Partner 3" class="w-full h-full object-contain p-4">
                         </div>
-                        <div class="w-40 h-40 bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105">
-                            <img src="/src/images/clients1/image 1.png" alt="Partner 4" class="w-full h-full object-contain p-4">
+                        <div class="w-40 h-28 bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                            <img src="/src/images/clients1/yantra-1.jpg" alt="Partner 4" class="w-full h-full object-contain p-4">
                         </div>
-                        <div class="w-40 h-40 bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105">
-                            <img src="/src/images/clients1/image.png" alt="Partner 5" class="w-full h-full object-contain p-4">
+                        <div class="w-40 h-28 bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                            <img src="/src/images/clients1/genius-logo.svg" alt="Partner 5" class="w-full h-full object-contain p-4">
                         </div>
+                        <div class="w-40 h-28 bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                            <img src="/src/images/clients1/parav-electronics.svg" alt="Partner 6" class="w-full h-full object-contain p-4">
+                        </div>
+                        <div class="w-40 h-28 bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                            <img src="/src/images/clients1/sunplower.png" alt="Partner 7" class="w-full h-full object-contain p-4">
+                        </div>
+                        <div class="w-40 h-28 bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                            <img src="/src/images/clients1/images.jpeg" alt="Partner 8" class="w-full h-full object-contain p-4">
+                        </div>
+                        <!-- <div class="w-40 h-28 bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                            <img src="/src/images/clients1/" alt="Partner 8" class="w-full h-full object-contain p-4">
+                        </div> -->
                     </div>
                     <!-- Second set of logos (duplicate for infinite scroll effect) -->
                     <div class="flex space-x-12 items-center">
-                        <div class="w-40 h-40 bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105">
-                            <img src="/src/images/clients1/image (1).png" alt="Partner 1" class="w-full h-full object-contain p-4">
+                        <div class="w-40 h-28 bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                            <img src="/src/images/clients1/logo.png" alt="Partner 1" class="w-full h-full object-contain p-4">
                         </div>
-                        <div class="w-40 h-40 bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105">
-                            <img src="/src/images/clients1/image (2).png" alt="Partner 2" class="w-full h-full object-contain p-4">
+                        <div class="w-40 h-28 bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                            <img src="/src/images/clients1/realty-logo-bAZ1hoeQ.png" alt="Partner 2" class="w-full h-full object-contain p-4">
                         </div>
-                        <div class="w-40 h-40 bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105">
-                            <img src="/src/images/clients1/image (3).png" alt="Partner 3" class="w-full h-full object-contain p-4">
+                        <div class="w-40 h-28 bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                            <img src="/src/images/clients1/realty.svg" alt="Partner 3" class="w-full h-full object-contain p-4">
                         </div>
-                        <div class="w-40 h-40 bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105">
-                            <img src="/src/images/clients1/image 1.png" alt="Partner 4" class="w-full h-full object-contain p-4">
+                        <div class="w-40 h-28 bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                            <img src="/src/images/clients1/yantra-1.jpg" alt="Partner 4" class="w-full h-full object-contain p-4">
                         </div>
-                        <div class="w-40 h-40 bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105">
-                            <img src="/src/images/clients1/image.png" alt="Partner 5" class="w-full h-full object-contain p-4">
+                        <div class="w-40 h-28 bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                            <img src="/src/images/clients1/genius-logo.svg" alt="Partner 5" class="w-full h-full object-contain p-4">
                         </div>
+                        <div class="w-40 h-28 bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                            <img src="/src/images/clients1/sunplower.png" alt="Partner 7" class="w-full h-full object-contain p-4">
+                        </div>
+                        <div class="w-40 h-28 bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                            <img src="/src/images/clients1/images.jpeg" alt="Partner 8" class="w-full h-full object-contain p-4">
+                        </div>
+                        <!-- <div class="w-40 h-28 bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                            <img src="/src/images/clients1/" alt="Partner 8" class="w-full h-full object-contain p-4">
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -799,101 +830,89 @@
                     <div class="w-[62px] h-[20px] bg-transparent rounded-xl border border-primary p-[2px]">
                         <div class="w-full h-full bg-primary rounded-lg"></div>
                     </div>
-                    <h2 class="text-2xl text-black font-bold ml-4">Work Process.</h2>
+                    <h2 class="text-2xl text-black font-bold ml-4">Our WORK</h2>
                 </div>
-                <p class="text-primary text-3xl md:text-5xl font-semibold" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Our software development process.</p>
+                <p class="text-primary text-3xl md:text-5xl font-bold" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Our Product Images</p>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
                 <!-- Planning Box -->
-                <div class="relative flex-1 min-w-[280px] h-[340px] bg-[#fafafa] rounded-tl-xl rounded-tr-xl rounded-br-full rounded-bl-full p-6 pt-20 pb-16 mt-16 shadow-lg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                    <div class="absolute -top-16 left-1/2 transform -translate-x-1/2 w-32 h-32 bg-primary rounded-full flex items-center justify-center p-[2px]">
+                <div class="relative flex-1 min-w-[280px] h-[340px] rounded-tl-xl rounded-tr-xl border-primary border-3 rounded-br-full rounded-bl-full p-6 pt-20 pb-16 mt-16 shadow-lg"
+                    style="background: url('/src/images/WhatsApp\ Image\ 2024-10-19\ at\ 9.20.29\ PM.jpeg') no-repeat center/cover, #fafafa;"
+                    data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                    <!-- <div class="absolute -top-16 left-1/2 transform -translate-x-1/2 w-32 h-32 bg-primary rounded-full flex items-center justify-center p-[2px]">
                         <div class="w-full h-full bg-amber-50 rounded-full flex items-center justify-center p-[5px]">
                             <div class="w-full h-full bg-primary rounded-full flex items-center justify-center">
                                 <img src="/src/images/serviceicons/requirement 1.png" alt="Icon" class="w-16 h-16 object-contain text-white" />
                             </div>
                         </div>
-                    </div>
-                    <div class="text-center mb-8">
-                        <h3 class="text-2xl font-semibold text-black mb-4">Planning</h3>
-                        <p class="text-gray-600 font-medium text-xl">
-                            Define project scope, gather requirements, 
-                            and establish clear goals.
+                    </div> -->
+                    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 
+                        bg-opacity-50 rounded-full p-2">
+                        <p class="font-bold text-5xl tracking-wider text-primary 
+                                style-outline-number">
+                            01
                         </p>
                     </div>
-                    <p class="absolute bottom-8 left-1/2 transform -translate-x-1/2 
-                        font-bold text-5xl outlined-number 
-                        tracking-wider">
-                        01
-                    </p>
                 </div>
             
                 <!-- Design Box -->
-                <div class="relative flex-1 min-w-[280px] h-[340px] bg-[#fafafa] rounded-tl-xl rounded-tr-xl rounded-br-full rounded-bl-full p-6 pt-20 pb-16 mt-16 shadow-lg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                    <div class="absolute -top-16 left-1/2 transform -translate-x-1/2 w-32 h-32 bg-primary rounded-full flex items-center justify-center p-[2px]">
+                <div class="relative flex-1 min-w-[280px] h-[340px] rounded-tl-xl rounded-tr-xl border-primary border-3 rounded-br-full rounded-bl-full p-6 pt-20 pb-16 mt-16 shadow-lg"
+                style="background: url('/src/images/cover_image_1696612430.jpg.760x400_q85_crop_upscale.jpg') no-repeat center/cover, #fafafa;"
+                data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                    <!-- <div class="absolute -top-16 left-1/2 transform -translate-x-1/2 w-32 h-32 bg-primary rounded-full flex items-center justify-center p-[2px]">
                         <div class="w-full h-full bg-amber-50 rounded-full flex items-center justify-center p-[5px]">
                             <div class="w-full h-full bg-primary rounded-full flex items-center justify-center">
                                 <img src="/src/images/serviceicons/pen 1.png" alt="Icon" class="w-16 h-16 object-contain text-white" />
                             </div>
                         </div>
-                    </div>
-                    <div class="text-center mb-8">
-                        <h3 class="text-2xl font-semibold text-black mb-4">Design</h3>
-                        <p class="text-gray-600 font-medium text-xl">
-                            Create system architecture and user interfaces 
-                            to meet project specifications.
+                    </div> -->
+                    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 
+                        bg-opacity-50 rounded-full p-2">
+                        <p class="font-bold text-5xl tracking-wider text-primary 
+                                style-outline-number">
+                            02
                         </p>
                     </div>
-                    <p class="absolute bottom-8 left-1/2 transform -translate-x-1/2 
-                        font-bold text-5xl outlined-number 
-                        tracking-wider">
-                        02
-                    </p>
                 </div>
             
                 <!-- Development Box -->
-                <div class="relative flex-1 min-w-[280px] h-[340px] bg-[#fafafa] rounded-tl-xl rounded-tr-xl rounded-br-full rounded-bl-full p-6 pt-20 pb-16 mt-16 shadow-lg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
-                    <div class="absolute -top-16 left-1/2 transform -translate-x-1/2 w-32 h-32 bg-primary rounded-full flex items-center justify-center p-[2px]">
+                <div class="relative flex-1 min-w-[280px] h-[340px] rounded-tl-xl rounded-tr-xl border-primary border-3 rounded-br-full rounded-bl-full p-6 pt-20 pb-16 mt-16 shadow-lg"
+                style="background: url('/src/images/male-technician-inserting-chip-computer-motherboard-wooden-desk.jpg') no-repeat center/cover, #fafafa;"
+                data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                    <!-- <div class="absolute -top-16 left-1/2 transform -translate-x-1/2 w-32 h-32 bg-primary rounded-full flex items-center justify-center p-[2px]">
                         <div class="w-full h-full bg-amber-50 rounded-full flex items-center justify-center p-[5px]">
                             <div class="w-full h-full bg-primary rounded-full flex items-center justify-center">
                                 <img src="/src/images/serviceicons/deplyo 1.png" alt="Icon" class="w-16 h-16 object-contain text-white" />
                             </div>
                         </div>
-                    </div>
-                    <div class="text-center mb-8">
-                        <h3 class="text-2xl font-semibold text-black mb-4">Development</h3>
-                        <p class="text-gray-600 font-medium text-xl">
-                            Write and test code to implement the 
-                            design and integrate system components.
+                    </div> -->
+                    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 
+                        bg-opacity-50 rounded-full p-2">
+                        <p class="font-bold text-5xl tracking-wider text-primary 
+                                style-outline-number">
+                            03
                         </p>
                     </div>
-                    <p class="absolute bottom-8 left-1/2 transform -translate-x-1/2 
-                        font-bold text-5xl outlined-number 
-                        tracking-wider">
-                        03
-                    </p>
                 </div>
             
                 <!-- Deployment Box -->
-                <div class="relative flex-1 min-w-[280px] h-[340px] bg-[#fafafa] rounded-tl-xl rounded-tr-xl rounded-br-full rounded-bl-full p-6 pt-20 pb-16 mt-16 shadow-lg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
-                    <div class="absolute -top-16 left-1/2 transform -translate-x-1/2 w-32 h-32 bg-primary rounded-full flex items-center justify-center p-[2px]">
+                <div class="relative flex-1 min-w-[280px] h-[340px] rounded-tl-xl rounded-tr-xl border-primary border-3 rounded-br-full rounded-bl-full p-6 pt-20 pb-16 mt-16 shadow-lg"
+                    style="background: url('/src/images/Screenshot\ from\ 2024-10-19\ 18-15-44.png') no-repeat center/cover, #fafafa;"
+                    data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                    <!-- <div class="absolute -top-16 left-1/2 transform -translate-x-1/2 w-32 h-32 bg-primary rounded-full flex items-center justify-center p-[2px]">
                         <div class="w-full h-full bg-amber-50 rounded-full flex items-center justify-center p-[5px]">
                             <div class="w-full h-full bg-primary rounded-full flex items-center justify-center">
                                 <img src="/src/images/serviceicons/deploy 1.png" alt="Icon" class="w-16 h-16 object-contain text-white" />
                             </div>
                         </div>
-                    </div>
-                    <div class="text-center mb-8">
-                        <h3 class="text-2xl font-semibold text-black mb-4">Deployment</h3>
-                        <p class="text-gray-600 font-medium text-xl">
-                            Deliver the final product to the users and
-                            ensure its ongoing maintenance.
+                    </div> -->
+                    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 
+                        bg-opacity-50 rounded-full p-2">
+                        <p class="font-bold text-5xl tracking-wider text-primary 
+                                style-outline-number">
+                            04
                         </p>
                     </div>
-                    <p class="absolute bottom-8 left-1/2 transform -translate-x-1/2 
-                        font-bold text-5xl outlined-number 
-                        tracking-wider">
-                        04
-                    </p>
                 </div>
             </div>
             
@@ -932,7 +951,7 @@
                 <div class="flex transition-all duration-500 ease-in-out testimonial-slider" :style="`transform: translateX(-${currentIndex * (100 / visibleCards)}%);`">
                     <template x-for="(testimonial, index) in testimonials" :key="index">
                         <div class="w-full sm:w-full md:w-1/2 xl:w-1/3 flex-shrink-0 px-4" data-aos="fade-up" data-aos-delay="100">
-                            <div class="bg-white rounded-lg shadow-2xl p-8 transform hover:scale-105 transition-all duration-300 testimonial-fade-in h-full flex flex-col justify-between items-center text-center">
+                            <div class="bg-black rounded-lg shadow-2xl p-8 transform hover:scale-105 transition-all duration-300 testimonial-fade-in h-full flex flex-col justify-between items-center text-center">
                                 <div class="flex flex-col items-center relative">
                                     <div class="relative">
                                         <img :src="testimonial.avatar" :alt="testimonial.name" class="w-32 h-32 rounded-full border-4 border-primary-500 object-cover mb-6">
@@ -940,11 +959,11 @@
                                             <i class="fas fa-quote-right text-4xl text-primary"></i>
                                         </div>
                                     </div>
-                                    <p class="text-gray-700 text-lg italic leading-relaxed mb-1" x-text="testimonial.message"></p>
+                                    <p class="text-gray-200 text-lg italic leading-relaxed mb-1" x-text="testimonial.message"></p>
                                 </div>
                                 <div class="w-full border-t pt-5 mt-4 flex flex-col items-center">
-                                    <h3 class="text-xl font-bold text-gray-800 mb-1" x-text="testimonial.name"></h3>
-                                    <p class="text-sm text-gray-600 font-medium mb-2" x-text="testimonial.profession"></p>
+                                    <h3 class="text-xl font-bold text-gray-200 mb-1" x-text="testimonial.name"></h3>
+                                    <p class="text-sm text-gray-300 font-medium mb-2" x-text="testimonial.profession"></p>
                                     <div class="flex items-center mb-2">
                                         <!-- <span class="text-2xl font-bold text-primary-500 mr-2" x-text="testimonial.rating"></span> -->
                                         <div class="flex">
@@ -965,28 +984,28 @@
     </section>
 
     <!-- stats -->
-    <section class="mx-auto container py-10 px-4 md:px-0 bg-black rounded-3xl md:rounded-full">
+    <section class="mx-auto container py-10 px-4 md:px-0 bg-[#333F48] rounded-3xl md:rounded-full">
         <div class="container mx-auto h-full flex justify-center items-center">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
                 <!-- Card 1 -->
                 <div class="card p-4 flex flex-col items-center text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
                     <img src="/src/images/pajamas_work.png" alt="Projects Icon" class="w-12 h-12 mb-4">
-                    <h2 class="text-3xl font-bold mb-2 text-white" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">100+</h2>
-                    <h3 class="text-xl font-bold text-gray-300">Projects Completed</h3>
+                    <h2 class="text-3xl font-bold mb-2 text-white" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">15+</h2>
+                    <h3 class="text-xl font-bold text-gray-300">Years of Experiences</h3>
                 </div>
                 
                 <!-- Card 2 -->
                 <div class="card p-4 flex flex-col items-center text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
                     <img src="/src/images/mdi_like-outline.png" alt="Satisfaction Icon" class="w-12 h-12 mb-4">
-                    <h2 class="text-3xl font-bold mb-2 text-white" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">98%</h2>
-                    <h3 class="text-xl font-bold text-gray-300">Customer Satisfaction</h3>
+                    <h2 class="text-3xl font-bold mb-2 text-white" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">19+</h2>
+                    <h3 class="text-xl font-bold text-gray-300">Satisfied Clients</h3>
                 </div>
                 
                 <!-- Card 3 -->
                 <div class="card p-4 flex flex-col items-center text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
                     <img src="/src/images/mingcute_time-line.png" alt="Time Icon" class="w-12 h-12 mb-4">
-                    <h2 class="text-3xl font-bold mb-2 text-white" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">3 Mins</h2>
-                    <h3 class="text-xl font-bold text-gray-300">Average Answer Time</h3>
+                    <h2 class="text-3xl font-bold mb-2 text-white" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">25+</h2>
+                    <h3 class="text-xl font-bold text-gray-300">Experienced Professionals</h3>
                 </div>
             </div>
         </div>
@@ -1006,58 +1025,48 @@
                     <h2 class="text-2xl text-black font-bold ml-4">why choose us.</h2>
                 </div>
                 <h1 class="text-3xl md:text-4xl 2xl:text-5xl font-bold text-primary mb-5 max-w-4xl leading-10" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
-                    We Deliver Prominent and Trusted IT, Engineering, and Manufacturing Services You Can Rely On
-                </h1>                
-                <p class="text-gray-600 text-xl mb-14 font-medium max-w-4xl" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">It is a well-known fact that readers can be distracted by the content on a page when focusing on its layout and design.</p>
-                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-20">
+                    We Deliver Prominent and Trusted  Services You Can Rely On
+                </h1>
+                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-10 pt-5 pb-4">
+                    <!-- Software Services -->
                     <li class="flex items-start space-x-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                         <div class="flex-shrink-0">
                             <span class="flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary">
-                                <i class="fas fa-palette text-xl"></i>
+                                <i class="fas fa-code text-xl"></i> <!-- Icon representing software services -->
                             </span>
                         </div>
                         <div>
-                            <h3 class="text-xl font-semibold mb-2">Branding and Design Identity</h3>
-                            <p class="text-gray-600">Create a unique and memorable brand identity that sets you apart.</p>
+                            <h3 class="text-xl font-bold mb-2">Software Services</h3>
+                            <p class="text-gray-600">Delivering expert software solutions, from development to deployment, tailored to your business needs.</p>
                         </div>
                     </li>
-                    
+                
+                    <!-- e-Manufacturing -->
                     <li class="flex items-start space-x-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                         <div class="flex-shrink-0">
                             <span class="flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary">
-                                <i class="fas fa-clock text-xl"></i>
+                                <i class="fas fa-industry text-xl"></i> <!-- Icon representing e-manufacturing -->
                             </span>
                         </div>
                         <div>
-                            <h3 class="text-xl font-semibold mb-2">24/7 System Monitoring</h3>
-                            <p class="text-gray-600">Round-the-clock surveillance ensuring your systems run smoothly.</p>
+                            <h3 class="text-xl font-bold mb-2">e-Manufacturing</h3>
+                            <p class="text-gray-600">Innovative solutions to streamline your manufacturing processes with real-time monitoring and automation.</p>
                         </div>
                     </li>
-                    
+                
+                    <!-- Electronics Design -->
                     <li class="flex items-start space-x-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
                         <div class="flex-shrink-0">
                             <span class="flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary">
-                                <i class="fas fa-bullhorn text-xl"></i>
+                                <i class="fas fa-microchip text-xl"></i> <!-- Icon representing electronics design -->
                             </span>
                         </div>
                         <div>
-                            <h3 class="text-xl font-semibold mb-2">Website Marketing Solutions</h3>
-                            <p class="text-gray-600">Comprehensive strategies to boost your online presence.</p>
+                            <h3 class="text-xl font-bold mb-2">Electronics Design</h3>
+                            <p class="text-gray-600">High-performance electronic designs to power your innovative products and solutions.</p>
                         </div>
                     </li>
-                    
-                    <li class="flex items-start space-x-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
-                        <div class="flex-shrink-0">
-                            <span class="flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary">
-                                <i class="fas fa-cloud-download-alt text-xl"></i>
-                            </span>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-semibold mb-2">Unlimited Download Data</h3>
-                            <p class="text-gray-600">Access and download data without any restrictions.</p>
-                        </div>
-                    </li>
-                </ul>
+                </ul>                
             </div>
         </div>
     </section>
@@ -1065,13 +1074,13 @@
     <!-- footer -->
     <footer class="bg-[#212529] text-white pt-16 pb-8 overflow-hidden">
         <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 mb-12">
                 <div class="space-y-8">
                     <h2 class="text-2xl font-semibold border-b-2 border-primary pb-2 inline-block">Browse</h2>
                     <ul class="space-y-3" data-aos="fade-right">
                         <li><a href="#about" class="hover:text-primary transition duration-300">About us</a></li>
                         <li><a href="#services" class="hover:text-primary transition duration-300">Services</a></li>
-                        <li><a href="/home.html#projects" class="hover:text-primary transition duration-300">Projects</a></li>
+                        <li><a href="/index.html#projects" class="hover:text-primary transition duration-300">Projects</a></li>
                         <li><a href="#testimonial"class="hover:text-primary transition duration-300">testimonial</a></li>
                     </ul>
                 </div>
@@ -1121,7 +1130,7 @@
                 
                                 <!-- Phone Section -->
                                 <div class="font-semibold pt-5">
-                                    <p>PH: +91 99446 13667</p>
+                                    <p>PH: +91 76038 11590</p>
                                 </div>
                             </div>
                         </div>
@@ -1158,8 +1167,8 @@
                 
                                 <!-- Phone Section -->
                                 <div class="font-semibold pt-5">
-                                    <p>PH: +1 123 456 7890</p> <!-- Add USA phone number here if available -->
-                                </div>
+                                    <p>Email: <a href="mailto:friends@willsparrow.com" class="text-blue-500 hover:underline">friends@willsparrow.com</a></p>
+                                </div>                                
                             </div>
                         </div>
                     </div>
