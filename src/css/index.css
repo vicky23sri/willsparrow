@@ -9,7 +9,7 @@
     height: 2px;
     bottom: -5px;
     left: 0;
-    background-color: #000;
+    background-color: #fc7632;
     transform: scaleX(0);
     transition: transform 0.3s ease-in-out;
 }
