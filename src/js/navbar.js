@@ -11,7 +11,7 @@ const homeLinks = document.querySelectorAll('.home-link');
 const currentPath = window.location.pathname;
 
 homeLinks.forEach(link => {
-    if (currentPath === '/index.html') {
+    if (currentPath === '/index.html' || currentPath === '/') {
         link.style.display = 'none';
     }
 });
