@@ -20,6 +20,10 @@ module.exports = {
       width: {
         '125': '500px',
       },
+      spacing: {
+        'custom-padding': '1rem', 
+        'custom-vertical-padding': '4rem'
+      },
     },
     fontFamily: {
       sans: ['plus-jakarta', 'sans-serif'],
