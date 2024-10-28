@@ -20,22 +20,6 @@ module.exports = {
       width: {
         '125': '500px',
       },
-      maxWidth: {
-        'sm':'425px',
-        'md':'1300px',
-        'lg':'1536px',
-        'xl':'2560px',
-      },
-      container: {
-        center: true,
-        padding: '1rem',
-        screens: {
-          sm: '425px',
-          md: '1300px',
-          lg: '1440px',
-          xl: '2560px',
-        },
-      },
     },
     fontFamily: {
       sans: ['plus-jakarta', 'sans-serif'],
