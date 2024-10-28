@@ -2,7 +2,8 @@
 module.exports = {
   content: [
     "./src/**/*.{html,js}",
-    "./*.{html,js}" 
+    "./*.{html,js}",
+    "./services/**/*.{html,js}",  // Added for services folder
   ],
   theme: {
     extend: {
