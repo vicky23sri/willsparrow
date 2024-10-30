@@ -78,10 +78,10 @@
 </head>
 <body class="font-plus-jakarta">
     <!-- navbar -->
-    <nav class="bg-[#333F48] p-2 fixed w-full z-50">
+    <nav class="bg-[#333F48] py-2 px-custom-padding fixed w-full z-50">
         <div class="container mx-auto flex justify-between items-center">
-            <div class="flex items-center space-x-4" data-aos="fade-right" data-aos-duration="1000">
-                <a href="index.html">
+            <div class="flex items-center" data-aos="fade-right" data-aos-duration="1000">
+                <a href="/index.html">
                     <img src="/src/images/Will-Sparrow-logo-White 1.png" alt="Logo" class="w-auto h-16">
                 </a>
             </div>            
@@ -158,22 +158,22 @@
                             </svg>
                         </a>
                         <ul class="mobile-submenu pl-6 pt-5 space-y-7" id="services-submenu">
-                                <li class="flex">
-                                    <a href="/services/software.html" class="text-xl text-gray-700 pl-7 hover:text-white hover:bg-primary hover:scale-105 hover:shadow-lg hover:rounded-xl transition-all duration-300 ease-in-out w-full py-4 flex items-center justify-start">
-                                        Software Services
-                                    </a>
-                                </li>
-                                <li class="flex">
-                                    <a href="/services/enginnering.html" class="text-xl pl-7 text-gray-700 hover:text-white hover:bg-primary hover:scale-105 hover:shadow-lg hover:rounded-xl transition-all duration-300 ease-in-out w-full py-4 flex items-center justify-start">
-                                        Engineering Services
-                                    </a>
-                                </li>
-                                <li class="flex">
-                                    <a href="/services/manufacturing.html" class="text-xl pl-7 text-gray-700 hover:text-white hover:bg-primary hover:scale-105 hover:shadow-lg hover:rounded-xl transition-all duration-300 ease-in-out w-full py-4 flex items-center justify-start">
-                                        Manufacturing Services
-                                    </a>
-                                </li>
-                            </ul>                                               
+                            <li class="flex">
+                                <a href="/services/software.html" class="text-xl text-gray-700 pl-7 hover:text-white hover:bg-primary hover:scale-105 hover:shadow-lg hover:rounded-xl transition-all duration-300 ease-in-out w-full py-4 flex items-center justify-start">
+                                    Software Services
+                                </a>
+                            </li>
+                            <li class="flex">
+                                <a href="/services/enginnering.html" class="text-xl pl-7 text-gray-700 hover:text-white hover:bg-primary hover:scale-105 hover:shadow-lg hover:rounded-xl transition-all duration-300 ease-in-out w-full py-4 flex items-center justify-start">
+                                    Engineering Services
+                                </a>
+                            </li>
+                            <li class="flex">
+                                <a href="/services/manufacturing.html" class="text-xl pl-7 text-gray-700 hover:text-white hover:bg-primary hover:scale-105 hover:shadow-lg hover:rounded-xl transition-all duration-300 ease-in-out w-full py-4 flex items-center justify-start">
+                                    Manufacturing Services
+                                </a>
+                            </li>
+                        </ul>                                               
                     </li>
                     <li data-aos="fade-up" data-aos-delay="400"><a href="/index.html#projects" class="text-2xl font-semibold hover:text-primary transition duration-300">Projects</a></li>
                     <!-- <li data-aos="fade-up" data-aos-delay="500"><a href="#testimonial" class="text-2xl font-semibold hover:text-primary transition duration-300">Testimonial</a></li> -->
@@ -209,7 +209,7 @@
     </section>
 
     <section class="bg-white py-10 overflow-hidden">
-        <div class="container mx-auto px-6 md:px-4">
+        <div class="container mx-auto px-6 md:px-custom-padding">
             <h2 
                 class="text-3xl font-bold text-center mb-8"
                 data-aos="fade-up"
@@ -299,8 +299,8 @@
     </section>    
 
     <!-- contact -->
-    <section id="contact" class="container mx-auto px-6 md:px-4 py-16 overflow-hidden">
-        <div class="flex flex-col lg:flex-row items-center gap-12">
+    <section id="contact" class="container mx-auto px-6 md:px-custom-padding py-custom-vertical-padding overflow-hidden">
+        <div class="flex flex-col lg:flex-row items-start gap-12">
             <!-- Left side image -->
             <div class="lg:w-1/2" data-aos="fade-right" data-aos-duration="1000">
                 <img src="/src/images/2754428 1.png" alt="Contact Us" class="rounded-lg shadow-lg w-full h-auto object-cover">
@@ -308,13 +308,13 @@
             
             <!-- Right side form -->
             <div class="lg:w-1/2 bg-white" data-aos="fade-left" data-aos-duration="1000">
-                <h1 class="text-4xl font-bold text-primary mb-4">We're Here to Help</h1>
+                <h1 class="text-3xl md:text-5xl font-bold text-primary mb-4">We're Here to Help</h1>
                 <p class="text-lg text-gray-600 mb-8">Please fill in your details below. Rest assured, your information is safe with us.</p>
                 
                 <form id="contactForm" class="space-y-6">
                     <div>
                         <label for="enquiry" class="block text-sm font-medium text-gray-700 mb-1">Enquiry</label>
-                        <select id="enquiry" name="enquiry" class="w-full px-4 py-3 rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50">
+                        <select id="enquiry" name="enquiry" class="w-full px-custom-padding py-3 rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50">
                             <option>General Inquiry</option>
                             <option>Technical Support</option>
                             <option>Sales</option>
@@ -325,30 +325,30 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
                             <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
-                            <input type="text" id="name" name="name" class="w-full px-4 py-2 rounded-md border-2 border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50">
+                            <input type="text" id="name" name="name" class="w-full px-custom-padding py-2 rounded-md border-2 border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50">
                         </div>
                         
                         <div>
                             <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                            <input type="email" id="email" name="email" class="w-full px-4 py-2 rounded-md border-2 border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50">
+                            <input type="email" id="email" name="email" class="w-full px-custom-padding py-2 rounded-md border-2 border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50">
                         </div>
                     </div>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
                             <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone</label>
-                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 rounded-md border-2 border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50">
+                            <input type="tel" id="phone" name="phone" class="w-full px-custom-padding py-2 rounded-md border-2 border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50">
                         </div>
                         
                         <div>
                             <label for="company" class="block text-sm font-medium text-gray-700 mb-1">Company</label>
-                            <input type="text" id="company" name="company" class="w-full px-4 py-2 rounded-md border-2 border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50">
+                            <input type="text" id="company" name="company" class="w-full px-custom-padding py-2 rounded-md border-2 border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50">
                         </div>
                     </div>
                     
                     <div>
                         <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                        <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 rounded-md border-2 border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50"></textarea>
+                        <textarea id="message" name="message" rows="4" class="w-full px-custom-padding py-2 rounded-md border-2 border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50"></textarea>
                     </div>
                     
                     <div id="errorMessage" class="text-red-500 text-sm hidden"></div>
@@ -363,8 +363,8 @@
     </section>
 
     <!-- Info Boxes Section -->
-    <section id="info-boxes" class="py-16 bg-gray-50 overflow-hidden">
-        <div class="container mx-auto px-6 md:px-4">
+    <section id="info-boxes" class="py-custom-vertical-padding bg-gray-50 overflow-hidden">
+        <div class="container mx-auto px-6 md:px-custom-padding">
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-16">
                 <!-- Engineering Excellence Box -->
                 <div class="bg-white p-10 rounded-lg shadow-lg hover:shadow-xl transition duration-300 flex flex-col items-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
@@ -399,7 +399,7 @@
 
     <!-- footer -->
     <footer class="bg-[#212529] text-white pt-16 pb-8 overflow-hidden">
-        <div class="container mx-auto px-2">
+        <div class="container mx-auto px-custom-padding">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div class="space-y-8">
@@ -536,18 +536,22 @@
             </div>
 
             <div class="border-t border-white pt-8 mt-4">
-                <div class="flex flex-col lg:flex-row justify-between items-center space-y-4 md:space-y-3">
+                <div class="flex flex-col lg:flex-row justify-between items-center gap-4">
                     <div class="text-sm text-gray-300">
                         © 2024 <a href="#"
                             class="hover:text-white transition-colors duration-300">Willsparrow Technologies™</a>. All Rights 
                         Reserved.
                     </div>
-                    <div class="flex space-x-4 text-sm text-gray-300">
-                        <a href="#" class="hover:text-white transition-colors duration-300">Terms of Use</a>
-                        <a href="#" class="hover:text-white transition-colors duration-300">Privacy Policy</a>
-                        <a href="#" class="hover:text-white transition-colors duration-300">Sale & Refunds</a>
-                        <a href="#" class="hover:text-white transition-colors duration-300">Legal</a>
-                        <a href="#" class="hover:text-white transition-colors duration-300">Site Map</a>
+                    <div class="flex flex-col lg:flex-row justify-between items-center gap-4">
+                        <div class="flex gap-4 text-sm text-gray-300">
+                            <a href="#" class="hover:text-white transition-colors duration-300">Terms of Use</a>
+                            <a href="#" class="hover:text-white transition-colors duration-300">Privacy Policy</a>
+                            <a href="#" class="hover:text-white transition-colors duration-300">Sale & Refunds</a>
+                        </div>
+                        <div class="flex gap-4 text-sm text-gray-300">
+                            <a href="#" class="hover:text-white transition-colors duration-300">Legal</a>
+                            <a href="#" class="hover:text-white transition-colors duration-300">Site Map</a>
+                        </div>
                     </div>
                 </div>
             </div>
