@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will Sparrow Technologies</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="/src/images/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/src/images/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/src/images/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/src/images/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/src/images/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/src/images/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/src/images/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/src/images/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/src/images/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/src/images/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/src/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/src/images/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/src/images/icons/favicon-16x16.png">
+    <link rel="manifest" href="/src/images/icons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/src/images/icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link href="/dist/output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/src/css/index.css">
+    <style>
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .carousel-container {
+            perspective: 1000px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        @keyframes testimonialFadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .testimonial-fade-in {
+            animation: testimonialFadeIn 0.5s ease-out forwards;
+        }
+        .testimonial-bg {
+            background-image: url('/src/images/testimonals.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+        .animate-scroll {
+            animation: scroll 15s linear infinite;
+        }
+
+        .outlined-number {
+            color: transparent;
+            -webkit-text-stroke: 1.5px rgba(192, 192, 192, 0.6);
+        }
+
+        .border-3 {
+            border-width: 3px;
+        }
+
+        .style-outline-number {
+            -webkit-text-stroke: 2px ;
+            paint-order: stroke fill;
+        }
+    </style>
+</head>
+<body class="font-plus-jakarta">
+        <!-- navbar -->
+        <nav class="bg-[#333F48] py-2 px-custom-padding fixed w-full z-50">
+            <div class="container mx-auto flex justify-between items-center">
+                <div class="flex items-center" data-aos="fade-right" data-aos-duration="1000">
+                    <a href="/index.html">
+                        <img src="/src/images/Will-Sparrow-logo-White 1.png" alt="Logo" class="w-auto h-16">
+                    </a>
+                </div>            
+        
+                <ul class="hidden lg:flex space-x-12 mx-auto" data-aos="fade-right" data-aos-duration="1100" data-aos-delay="300">
+                    <li class="home-link"><a href="/index.html" class="text-white hover:text-primary nav-link text-xl font-semibold">Home</a></li>
+                    <li><a href="/index.html#about" class="text-white hover:text-primary nav-link text-xl font-semibold">About Us</a></li>
+                    <li class="relative group">
+                        <a href="#services" class="text-white hover:text-primary nav-link text-xl font-semibold">Services</a>
+                        <ul class="submenu absolute mt-2 bg-white text-gray-800 w-72 rounded-lg shadow-xl invisible ring-1 ring-black ring-opacity-5 focus:outline-none transform opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition ease-out duration-200 z-50 overflow-hidden">
+                            <li class="border-b border-gray-100 last:border-b-0 transform opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                                <a href="/services/software.html" class="block px-6 py-4 hover:bg-primary hover:text-white">
+                                    <div class="flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                                    </svg>
+                                        <span>Software Services</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="border-b border-gray-100 last:border-b-0 transform opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                                <a href="/services/enginnering.html" class="block px-6 py-4 hover:bg-primary hover:text-white">
+                                    <div class="flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        </svg>
+                                        <span>Engineering Services</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="border-b border-gray-100 last:border-b-0 transform opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                                <a href="/services/manufacturing.html" class="block px-6 py-4 hover:bg-primary hover:text-white">
+                                    <div class="flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                                        </svg>
+                                        <span>Manufacturing Services</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="/index.html#projects" class="text-white hover:text-primary nav-link text-xl font-semibold">Projects</a></li>
+                    
+                    <li><a href="/contactus.html" class="text-white hover:text-primary nav-link text-xl font-semibold">Contact Us</a></li>
+                </ul>
+        
+                <div class="hidden lg:flex items-center" data-aos="fade-left" data-aos-duration="1100" data-aos-delay="300">
+                    <a href="/contactus.html#contact" class="bg-primary text-white px-6 py-2 rounded-full border-2 border-transparent hover:bg-white hover:text-gray-600 hover:text-lg hover:border-gray-400 transition duration-300 transform hover:scale-105 text-lg font-bold shadow-lg">Get Started</a>
+                </div>
+        
+                <div class="lg:hidden" data-aos="fade-left" data-aos-duration="1000">
+                    <button class="text-white focus:outline-none" id="mobile-menu-btn">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        
+            <!-- Mobile Menu -->
+            <div class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden" id="mobile-menu-overlay">
+                <div class="mobile-menu fixed inset-y-0 right-0 w-full sm:w-3/4 md:w-1/2 bg-white text-gray-900 p-6 transform translate-x-full transition-transform duration-300" id="mobile-menu-content">
+                    <button class="text-gray-600 text-3xl absolute top-4 right-4 focus:outline-none" id="close-menu-btn">&times;</button>
+                    <ul class="flex flex-col justify-between space-y-14 mt-16">
+                        <li class="home-link" data-aos="fade-up" data-aos-delay="100"><a href="/index.html" class="text-2xl font-semibold hover:text-primary transition duration-300">Home</a></li>
+                        <li data-aos="fade-up" data-aos-delay="200"><a href="/index.html#about" class="text-2xl font-semibold hover:text-primary transition duration-300">About</a></li>
+                        <li data-aos="fade-up" data-aos-delay="300">
+                            <a href="#services" class="text-2xl font-semibold hover:text-primary transition duration-300 flex justify-between items-center" id="services-menu-btn">
+                                Services
+                                <svg class="w-6 h-6 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </a>
+                            <ul class="mobile-submenu pl-6 pt-5 space-y-7" id="services-submenu">
+                                <li class="flex">
+                                    <a href="/services/software.html" class="text-xl text-gray-700 pl-7 hover:text-white hover:bg-primary hover:scale-105 hover:shadow-lg hover:rounded-xl transition-all duration-300 ease-in-out w-full py-4 flex items-center justify-start">
+                                        Software Services
+                                    </a>
+                                </li>
+                                <li class="flex">
+                                    <a href="/services/enginnering.html" class="text-xl pl-7 text-gray-700 hover:text-white hover:bg-primary hover:scale-105 hover:shadow-lg hover:rounded-xl transition-all duration-300 ease-in-out w-full py-4 flex items-center justify-start">
+                                        Engineering Services
+                                    </a>
+                                </li>
+                                <li class="flex">
+                                    <a href="/services/manufacturing.html" class="text-xl pl-7 text-gray-700 hover:text-white hover:bg-primary hover:scale-105 hover:shadow-lg hover:rounded-xl transition-all duration-300 ease-in-out w-full py-4 flex items-center justify-start">
+                                        Manufacturing Services
+                                    </a>
+                                </li>
+                            </ul>                                               
+                        </li>
+                        <li data-aos="fade-up" data-aos-delay="400"><a href="/index.html#projects" class="text-2xl font-semibold hover:text-primary transition duration-300">Projects</a></li>
+                        <!-- <li data-aos="fade-up" data-aos-delay="500"><a href="#testimonial" class="text-2xl font-semibold hover:text-primary transition duration-300">Testimonial</a></li> -->
+                        <li data-aos="fade-up" data-aos-delay="600"><a href="/contactus.html" class="text-2xl font-semibold hover:text-primary transition duration-300">Contact Us</a></li>
+                        <li data-aos="fade-up" data-aos-delay="700"><a href="/contactus.html#contact" class="bg-primary text-white px-6 py-3 rounded-full hover:bg-orange-600 transition duration-300 inline-block mt-4 text-xl font-bold text-center">Get Started</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- hero -->
+        <section
+            class="relative min-h-[65vh] pt-36 pb-16 flex items-center overflow-hidden"
+        >
+            <div
+                class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                style="
+                background-image: url('/src/images/banners/cybersecurity.jpg');
+                filter: brightness(40%);
+                "
+            ></div>
+
+            <div class="container mx-auto relative z-10 px-6 lg:px-12">
+                <div class="flex flex-col lg:flex-row items-center justify-center">
+                <!-- Text Section -->
+                <div
+                    class="w-full lg:w-1/2 text-white space-y-6 sm:space-y-8 lg:space-y-7 mb-10 lg:mb-0 flex flex-col items-center text-center"
+                >
+                    <h1
+                        class="text-3xl sm:text-4xl lg:text-5xl text-primary font-bold leading-tight max-w-5xl"
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                        data-aos-delay="100"
+                    >
+                        Cybersecurity Services
+                    </h1>
+                    <p
+                        class="text-base sm:text-lg lg:text-xl xl:text-2xl font-medium max-w-2xl leading-tight"
+                        data-aos="fade-up"
+                        data-aos-duration="1200"
+                        data-aos-delay="300"
+                    >
+                        Partner with us to safeguard your digital assets and stay resilient. Our cybersecurity services protect 
+                        against evolving threats, ensure compliance, and enhance trust in your systems.
+                    </p>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container mx-auto px-4 py-20">
+            <div class="text-center mb-16">
+                <h1 class="text-6xl p-4 font-extrabold text-transparent bg-clip-text bg-primary">
+                    Cybersecurity Solution
+                </h1>
+                <p class="text-2xl text-black max-w-4xl mx-auto leading-relaxed">
+                    Safeguard your organization with advanced cybersecurity solutions that proactively protect your data, infrastructure, and digital assets from evolving threats.
+                </p>
+            </div>            
+    
+            <section class="grid md:grid-cols-2 gap-12 bg-white rounded-3xl shadow-2xl mb-16 overflow-hidden border-2 border-gray-200">
+                <div class="relative" data-aos="fade-right">
+                    <img src="/src/images/cyber_security/cyber_1.jpg"
+                        alt="Threat Detection" 
+                        class="w-full h-full object-cover filter brightness-90 transition duration-300 hover:brightness-100">
+                </div>
+                <div class="p-12 flex flex-col justify-center space-y-8" data-aos="fade-left">
+                    <div class="relative">
+                        <div class="absolute -top-2 -left-2 w-20 h-20 bg-primary rounded-full opacity-10"></div>
+                        <div class="flex items-center space-x-6 relative z-10">
+                            <div class="w-20 h-20 bg-primary rounded-2xl flex items-center justify-center shadow-lg">
+                                <i class="fas fa-exclamation-triangle text-white text-3xl"></i>
+                            </div>
+                            <h2 class="text-4xl font-bold text-gray-900 tracking-tight ml-4">Threat Detection</h2>
+                        </div>
+                    </div>
+                    <p class="text-xl text-gray-600 leading-relaxed font-light">
+                        Proactively identify and mitigate risks with cutting-edge threat detection systems that protect your infrastructure and data.
+                    </p>
+                    <div class="space-y-6">
+                        <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-lg transition-all group">
+                            <div class="flex items-center space-x-5 gap-4">
+                                <i class="fas fa-eye text-primary text-3xl group-hover:text-primary transition"></i>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-800 group-hover:text-primary transition">Real-Time Monitoring</h3>
+                                    <p class="text-gray-600 text-sm mt-1">Continuous surveillance of your systems to detect and respond to threats as they happen.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-lg transition-all group">
+                            <div class="flex items-center space-x-5 gap-4">
+                                <i class="fas fa-chart-line text-primary text-3xl group-hover:text-primary transition"></i>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-800 group-hover:text-primary transition">Anomaly Detection</h3>
+                                    <p class="text-gray-600 text-sm mt-1">Advanced algorithms to identify unusual behavior and potential security breaches.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-lg transition-all group">
+                            <div class="flex items-center space-x-5 gap-4">
+                                <i class="fas fa-robot text-primary text-3xl group-hover:text-primary transition"></i>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-800 group-hover:text-primary transition">Incident Response Automation</h3>
+                                    <p class="text-gray-600 text-sm mt-1">Streamlined workflows and automated tools for rapid response to security incidents.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="grid md:grid-cols-2 gap-12 bg-white rounded-3xl shadow-2xl mb-16 overflow-hidden border-2 border-gray-200">
+                <div class="p-12 flex flex-col justify-center space-y-8" data-aos="fade-right">
+                    <div class="relative">
+                        <div class="absolute -top-2 -left-2 w-20 h-20 bg-primary rounded-full opacity-10"></div>
+                        <div class="flex items-center space-x-6 relative z-10">
+                            <div class="w-20 h-20 bg-primary rounded-2xl flex items-center justify-center shadow-lg">
+                                <i class="fas fa-balance-scale text-white text-3xl"></i>
+                            </div>
+                            <h2 class="text-4xl font-bold text-gray-900 tracking-tight ml-4">Compliance</h2>
+                        </div>
+                    </div>
+                    <p class="text-xl text-gray-600 leading-relaxed font-light">
+                        Ensure your organization adheres to global regulatory standards with streamlined compliance frameworks that mitigate risks and build stakeholder confidence.
+                    </p>
+                    <div class="space-y-6">
+                        <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-lg transition-all group">
+                            <div class="flex items-center space-x-5 gap-4">
+                                <i class="fas fa-file-contract text-primary text-3xl group-hover:text-primary transition"></i>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-800 group-hover:text-primary transition">Regulatory Adherence</h3>
+                                    <p class="text-gray-600 text-sm mt-1">Meet industry-specific compliance requirements, including GDPR, HIPAA, and PCI DSS.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-lg transition-all group">
+                            <div class="flex items-center space-x-5 gap-4">
+                                <i class="fas fa-clipboard-check text-primary text-3xl group-hover:text-primary transition"></i>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-800 group-hover:text-primary transition">Audit Readiness</h3>
+                                    <p class="text-gray-600 text-sm mt-1">Simplify audits with organized records, automated workflows, and compliance reporting.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-lg transition-all group">
+                            <div class="flex items-center space-x-5 gap-4">
+                                <i class="fas fa-shield-alt text-primary text-3xl group-hover:text-primary transition"></i>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-800 group-hover:text-primary transition">Risk Management</h3>
+                                    <p class="text-gray-600 text-sm mt-1">Identify, assess, and mitigate compliance risks proactively.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative" data-aos="fade-left">
+                    <img src="/src/images/cyber_security/cyber_2.jpg"
+                        alt="Compliance" 
+                        class="w-full h-full object-cover filter brightness-90 transition duration-300 hover:brightness-100">
+                </div>
+            </section>
+
+            <section class="grid md:grid-cols-2 gap-12 bg-white rounded-3xl shadow-2xl mb-16 overflow-hidden border-2 border-gray-200">
+                <div class="relative" data-aos="fade-right">
+                    <img src="/src/images/cyber_security/cyber_3.jpg" 
+                        alt="Incident Response and Recovery" 
+                        class="w-full h-full object-cover filter brightness-90 transition duration-300 hover:brightness-100">
+                </div>
+                <div class="p-12 flex flex-col justify-center space-y-8" data-aos="fade-left">
+                    <div class="relative">
+                        <div class="absolute -top-2 -left-2 w-20 h-20 bg-primary rounded-full opacity-10"></div>
+                        <div class="flex items-center space-x-6 relative z-10">
+                            <div class="w-20 h-20 bg-primary rounded-2xl flex items-center justify-center shadow-lg">
+                                <i class="fas fa-clipboard-list text-white text-3xl"></i>
+                            </div>
+                            <h2 class="text-4xl font-bold text-gray-900 tracking-tight ml-4">Incident Response and Recovery</h2>
+                        </div>
+                    </div>
+                    <p class="text-xl text-gray-600 leading-relaxed font-light">
+                        Minimize the impact of security breaches with a structured incident response strategy, ensuring swift recovery and continuous protection.
+                    </p>
+                    <div class="space-y-6">
+                        <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-lg transition-all group">
+                            <div class="flex items-center space-x-5 gap-4">
+                                <i class="fas fa-bell text-primary text-3xl group-hover:text-primary transition"></i>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-800 group-hover:text-primary transition">Incident Detection & Notification</h3>
+                                    <p class="text-gray-600 text-sm mt-1">Identify potential threats quickly and notify relevant teams to take immediate action.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-lg transition-all group">
+                            <div class="flex items-center space-x-5 gap-4">
+                                <i class="fas fa-tools text-primary text-3xl group-hover:text-primary transition"></i>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-800 group-hover:text-primary transition">Investigation & Containment</h3>
+                                    <p class="text-gray-600 text-sm mt-1">Analyze the root cause and contain the incident to prevent further damage or spread.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-lg transition-all group">
+                            <div class="flex items-center space-x-5 gap-4">
+                                <i class="fas fa-sync-alt text-primary text-3xl group-hover:text-primary transition"></i>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-800 group-hover:text-primary transition">Recovery & Remediation</h3>
+                                    <p class="text-gray-600 text-sm mt-1">Restore systems, remove vulnerabilities, and implement measures to prevent future incidents.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>            
+
+            <section class="grid md:grid-cols-2 gap-12 bg-white rounded-3xl shadow-2xl mb-16 overflow-hidden border-2 border-gray-200">
+                <div class="p-12 flex flex-col justify-center space-y-8" data-aos="fade-right">
+                    <div class="relative">
+                        <div class="absolute -top-2 -left-2 w-20 h-20 bg-primary rounded-full opacity-10"></div>
+                        <div class="flex items-center space-x-6 relative z-10">
+                            <div class="w-20 h-20 bg-primary rounded-2xl flex items-center justify-center shadow-lg">
+                                <i class="fas fa-shield-alt text-white text-3xl"></i>
+                            </div>
+                            <h2 class="text-4xl font-bold text-gray-900 tracking-tight ml-4">Data Protection</h2>
+                        </div>
+                    </div>
+                    <p class="text-xl text-gray-600 leading-relaxed font-light">
+                        Safeguard your sensitive information with advanced data protection techniques that ensure confidentiality, integrity, and availability.
+                    </p>
+                    <div class="space-y-6">
+                        <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-lg transition-all group">
+                            <div class="flex items-center space-x-5 gap-4">
+                                <i class="fas fa-lock text-primary text-3xl group-hover:text-primary transition"></i>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-800 group-hover:text-primary transition">Data Encryption</h3>
+                                    <p class="text-gray-600 text-sm mt-1">Encrypt data both in transit and at rest to prevent unauthorized access.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-lg transition-all group">
+                            <div class="flex items-center space-x-5 gap-4">
+                                <i class="fas fa-user-lock text-primary text-3xl group-hover:text-primary transition"></i>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-800 group-hover:text-primary transition">Access Control</h3>
+                                    <p class="text-gray-600 text-sm mt-1">Implement strict role-based access controls to protect critical information.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-lg transition-all group">
+                            <div class="flex items-center space-x-5 gap-4">
+                                <i class="fas fa-database text-primary text-3xl group-hover:text-primary transition"></i>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-800 group-hover:text-primary transition">Data Backup & Recovery</h3>
+                                    <p class="text-gray-600 text-sm mt-1">Ensure business continuity with reliable backup and disaster recovery systems.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative" data-aos="fade-left">
+                    <img src="/src/images/cyber_security/cyber_4.jpg" 
+                        alt="Data Protection" 
+                        class="w-full h-full object-cover filter brightness-90 transition duration-300 hover:brightness-100">
+                </div>
+            </section>
+
+        </div>
+ 
+
+        <!-- footer -->
+        <footer class="bg-[#212529] text-white pt-16 pb-8 overflow-hidden">
+            <div class="container mx-auto px-custom-padding">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="space-y-8">
+                            <h2 class="text-2xl font-semibold border-b-2 border-primary pb-2 inline-block">Browse</h2>
+                            <ul class="space-y-3" data-aos="fade-right">
+                                <li><a href="/index.html#about" class="hover:text-primary transition duration-300">About us</a></li>
+                                <li><a href="/index.html#services" class="hover:text-primary transition duration-300">Services</a></li>
+                                <li><a href="/index.html#projects" class="hover:text-primary transition duration-300">Projects</a></li>
+                                <li><a href="/index.html#testimonial"class="hover:text-primary transition duration-300">testimonial</a></li>
+                            </ul>
+    
+                            <div class="space-y-4">
+                                <h2 class="text-2xl text-white font-bold uppercase mb-4">Follow Us On</h2>
+                                <div class="w-full md:w-auto" data-aos="fade-right">
+                                    <div class="flex space-x-4">
+                                        <a href="#"
+                                            class="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-primary transition duration-300">
+                                            <svg class="h-6 w-6 text-white" fill="currentColor" viewBox="0 0 24 24"
+                                                aria-hidden="true">
+                                                <path fill-rule="evenodd"
+                                                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                        </a>
+                                        <a href="#"
+                                            class="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-primary transition duration-300">
+                                            <svg class="h-6 w-6 text-white" fill="currentColor" viewBox="0 0 24 24"
+                                                aria-hidden="true">
+                                                <path
+                                                    d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                                            </svg>
+                                        </a>
+                                        <a href="#"
+                                            class="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-pink-500 transition duration-300">
+                                            <i class="fa-brands fa-instagram text-white text-2xl"></i>
+                                        </a>
+                                        <a href="#"
+                                            class="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-red-500 transition duration-300">
+                                            <i class="fa-brands fa-youtube text-white text-2xl"></i>
+                                        </a>
+                                        <a href="#"
+                                            class="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-primary transition duration-300">
+                                            <i class="fa-brands fa-linkedin text-white text-2xl"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space-y-8">
+                            <h2 class="text-2xl font-semibold border-b-2 border-primary pb-2 inline-block">Our Services</h2>
+                            <ul class="space-y-3"  data-aos="fade-right">
+                                <li><a href="/services/software.html" class="hover:text-primary transition duration-300">Software Services</a></li>
+                                <li><a href="/services/enginnering.html"
+                                        class="hover:text-primary transition duration-300">Engineering Services</a></li>
+                                <li><a href="/services/manufacturing.html"
+                                        class="hover:text-primary transition duration-300">Manufacturing Services</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="space-y-8">
+                        <h2 class="text-2xl font-semibold border-b-2 border-primary pb-2 inline-block">Locate Us</h2>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6" data-aos="fade-right">
+                            <!-- India Address -->
+                            <div class="space-y-4">
+                                <img src="/src/images/footer/Frame 198.png" alt="Temple" class="h-20">
+                                <div class="flex items-center space-x-2">
+                                    <img src="/src/images/footer/emojione-v1_flag-for-india.svg" alt="India Flag" class="w-6">
+                                    <h3 class="text-xl font-semibold">INDIA</h3>
+                                </div>
+                                <div class="text-md space-y-1">
+                                    <!-- Address Section -->
+                                    <div class="space-y-1 mb-2">
+                                        <p>D No.4/367-A, Rajiv Nagar,</p>
+                                        <p>Venkatapuram,</p>
+                                        <p>Krishnagiri Indl. Estate, Krishnagiri,</p>
+                                        <p>Tamil Nadu, INDIA - 635002</p>
+                                    </div>
+    
+                                    <div class="font-semibold pb-4">
+                                        <p>PH: +91 99522 74629</p>
+                                    </div>
+                    
+                                   <hr class="w-1/2 h-1">
+                    
+                                    <!-- Additional Address Section -->
+                                    <div class="space-y-1 pt-4">
+                                        <p>C204, ISR Sukriti,</p>
+                                        <p>Halasahalli cross road, Varthur,</p>
+                                        <p>Bengaluru, INDIA 560087</p>
+                                    </div>
+                    
+                                    <!-- Phone Section -->
+                                    <div class="font-semibold pt-5">
+                                        <p>PH: +91 99522 76468</p>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <!-- USA Address -->
+                            <div class="space-y-4">
+                                <img src="/src/images/Group.png" alt="USA" class="h-20">
+                                <div class="flex items-center space-x-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="2em" viewBox="0 0 64 64">
+                                        <path fill="#ec1c24" d="M26 17.76v3.38h37.965c-.053-1.09-.167-2.468-.575-3.38" />
+                                        <path fill="#e6e7e8" d="M61.6 14.38H26v3.38h37.39c-.406-1.261-1.01-2.411-1.79-3.38" />
+                                        <path fill="#ec1c24" d="M54 11H26v3.38h35.6C59.931 12.29 57.184 11 54 11" />
+                                        <path fill="#e6e7e8" d="M63.965 21.14H26v3.38h38v-2.253c0-.201-.013-.397-.019-.594c-.004-.054-.01-.193-.016-.533" />
+                                        <path fill="#ec1c24" d="M26 27.9h38v-3.38H26z" />
+                                        <path fill="#e6e7e8" d="M26 31.28h38V27.9H26z" />
+                                        <path fill="#ec1c24" d="M26 31.28h38v3.38H26z" />
+                                        <path fill="#e6e7e8" d="M0 34.66v3.38h64v-3.38H26z" />
+                                        <path fill="#ec1c24" d="M0 38.04h64v3.38H0z" />
+                                        <path fill="#e6e7e8" d="M.005 43.499s-.009.819.015 1.301h63.96c.028-.494.015-1.301.015-1.301L64 41.42H0z" />
+                                        <path fill="#ec1c24" d="M10 55h44c3.193 0 5.847-1.16 7.66-3.44H2.33C4.202 53.89 6.906 55 9.995 55" />
+                                        <path fill="#e6e7e8" d="M2.335 51.56h59.33a10 10 0 0 0 1.74-3.38H.605a10.4 10.4 0 0 0 1.735 3.38" />
+                                        <path fill="#ec1c24" d="M.6 48.18h62.8a14.4 14.4 0 0 0 .58-3.38H.02c.099 1.156.191 2.029.58 3.38" />
+                                        <path fill="#176496" d="M26 11H10C3.373 11 0 15.925 0 22v12.66h26z" />
+                                        <path fill="#fff" d="m2.798 16.976l.544-.418l.543.418l-.211-.672l.541-.411h-.668l-.207-.675l-.206.675h-.667l.543.411zm3.594 0l.544-.418l.543.418l-.21-.672l.54-.411h-.667l-.207-.675l-.206.675H6.06l.543.411zm3.965 0l.543-.418l.544.418l-.211-.672l.54-.411h-.663l-.21-.675l-.207.675h-.663l.537.411zm3.936 0l.543-.418l.544.418l-.21-.672l.54-.411h-.67l-.204-.675l-.206.675h-.668l.542.411zm3.95 0l.544-.418l.543.418l-.21-.672l.541-.411h-.669l-.206-.675l-.206.675h-.667l.54.411zM4.711 18.731l.543-.417l.543.417l-.209-.671l.54-.411H5.46l-.207-.674l-.203.674h-.67l.541.411zm3.595 0l.543-.417l.543.417l-.21-.671l.54-.411H9.05l-.201-.674l-.207.674h-.667l.541.411zm3.965 0l.542-.417l.543.417l-.21-.671l.541-.411h-.667l-.207-.674l-.207.674h-.668l.541.411zm3.934 0l.544-.417l.544.417l-.213-.671l.542-.411h-.667l-.207-.674l-.205.674h-.668l.541.411zm3.955 0l.539-.417l.543.417l-.212-.671l.542-.411h-.666l-.208-.674l-.205.674h-.668l.541.411zm2.227-1.755l.543-.418l.544.418l-.211-.672l.54-.411h-.663l-.211-.675l-.206.675h-.673l.547.411zM2.745 31.02l.544-.413l.543.413l-.21-.666l.54-.412l-.667.002l-.208-.674l-.204.674l-.669-.002l.541.412zm3.595 0l.543-.413l.544.413l-.211-.666l.54-.412l-.666.002l-.208-.674l-.205.674l-.667-.002l.54.412zm3.965 0l.543-.413l.544.413l-.211-.666l.54-.412l-.671.002l-.203-.674l-.206.674l-.667-.002l.541.412zm3.936 0l.543-.413l.543.413l-.207-.666l.537-.412l-.668.002l-.206-.674l-.206.674l-.667-.002l.54.412zm3.949 0l.544-.413l.544.413l-.208-.666l.537-.412l-.667.002l-.207-.674l-.205.674l-.668-.002l.54.412zm4.144 0l.543-.413l.544.413l-.211-.666l.541-.412l-.671.002l-.204-.674l-.206.674l-.67-.002l.544.412zM2.798 20.488l.544-.418l.543.418l-.211-.672l.541-.411l-.668.002l-.207-.676l-.206.676l-.667-.002l.543.411zm3.594 0l.544-.418l.543.418l-.21-.672l.54-.411l-.667.002l-.207-.676l-.206.676l-.669-.002l.543.411zm3.965 0l.543-.418l.544.418l-.211-.672l.54-.411l-.663.002l-.21-.676l-.207.676l-.663-.002l.537.411zm3.936 0l.543-.418l.544.418l-.21-.672l.54-.411l-.67.002l-.204-.676l-.206.676l-.668-.002l.542.411zm3.95 0l.544-.418l.543.418l-.21-.672l.541-.411l-.669.002l-.206-.676l-.206.676l-.667-.002l.54.411zM4.711 22.244l.543-.417l.543.417l-.209-.671l.54-.413H5.46l-.207-.672l-.203.672h-.67l.541.413zm3.595 0l.543-.417l.543.417l-.21-.671l.54-.413H9.05l-.201-.672l-.207.672h-.667l.541.413zm3.965 0l.542-.417l.543.417l-.21-.671l.541-.413h-.667l-.207-.672l-.207.672h-.668l.541.413zm3.934 0l.544-.417l.544.417l-.213-.671l.542-.413h-.667l-.207-.672l-.205.672h-.668l.541.413zm3.955 0l.539-.417l.543.417l-.212-.671l.542-.413h-.666l-.208-.672l-.205.672h-.668l.541.413zm2.227-1.756l.543-.418l.544.418l-.211-.672l.54-.411l-.663.002l-.211-.676l-.206.676l-.673-.002l.547.411zM2.745 24l.544-.417l.543.417l-.211-.67l.541-.412l-.668.002l-.207-.676l-.204.676l-.669-.002l.541.412zm3.595 0l.543-.417l.544.417l-.211-.67l.54-.412l-.666.002l-.208-.676l-.205.676l-.667-.002l.539.412zm3.965 0l.543-.417l.543.417l-.21-.67l.54-.412l-.671.002l-.203-.676l-.206.676l-.667-.002l.541.412zm3.936 0l.542-.417l.544.417l-.207-.67l.537-.412l-.668.002l-.206-.676l-.206.676l-.667-.002l.54.412zm3.949 0l.544-.417l.543.417l-.207-.67l.537-.412l-.668.002l-.206-.676l-.205.676l-.668-.002l.54.412zM4.658 25.756l.543-.416l.543.416l-.209-.666l.539-.414h-.668L5.2 24l-.205.676h-.668l.541.414zm3.595 0l.543-.416l.543.416l-.21-.666l.54-.414H9L8.795 24l-.206.676h-.668l.542.414zm3.966 0l.541-.416l.544.416l-.214-.666l.544-.414h-.667L12.76 24l-.206.676h-.668l.541.414zm3.931 0l.546-.416l.544.416l-.21-.666l.539-.414h-.667L16.695 24l-.205.676h-.668l.541.414zm3.95 0l.546-.416l.544.416l-.211-.666l.542-.414h-.667L20.646 24l-.206.676h-.668l.541.414zM22.334 24l.543-.417l.543.417l-.21-.67l.541-.412l-.671.002l-.204-.676l-.206.676l-.67-.002l.544.412zM2.745 27.513l.544-.413l.543.413l-.211-.671l.541-.412l-.668.002l-.207-.676l-.204.676l-.669-.002l.541.412zm3.595 0l.543-.413l.544.413l-.211-.671l.54-.412l-.666.002l-.208-.676l-.205.676l-.667-.002l.539.412zm3.965 0l.543-.413l.543.413l-.21-.671l.54-.412l-.671.002l-.203-.676l-.206.676l-.667-.002l.541.412zm3.936 0l.542-.413l.544.413l-.207-.671l.537-.412l-.668.002l-.206-.676l-.206.676l-.667-.002l.54.412zm3.949 0l.544-.413l.543.413l-.207-.671l.537-.412l-.668.002l-.206-.676l-.205.676l-.668-.002l.54.412zM4.658 29.27l.543-.418l.543.418l-.209-.672l.539-.408h-.668l-.206-.677l-.205.677h-.668l.541.408zm3.595 0l.543-.418l.543.418l-.21-.672l.54-.408H9l-.205-.677l-.206.677h-.668l.542.408zm3.966 0l.541-.418l.544.418l-.214-.672l.544-.408h-.667l-.207-.677l-.206.677h-.668l.541.408zm3.931 0l.546-.418l.544.418l-.21-.672l.539-.408h-.667l-.207-.677l-.205.677h-.668l.541.408zm3.95 0l.546-.418l.544.418l-.211-.672l.542-.408h-.667l-.208-.677l-.206.677h-.668l.541.408zm2.234-1.757l.543-.413l.543.413l-.21-.671l.541-.412l-.671.002l-.204-.676l-.206.676l-.67-.002l.544.412z" />
+                                    </svg>
+                                    <h3 class="text-xl font-semibold">USA</h3>
+                                </div>
+                                <div class="text-md space-y-1">
+                                    <!-- Address Section -->
+                                    <div class="space-y-1">
+                                        <p>Fremont,</p>
+                                        <p>California, USA - 94538</p>
+                                    </div>
+                    
+                                    <!-- Phone Section -->
+                                    <div class="font-semibold pt-3">
+                                        <p>Email: <a href="mailto:friends@willsparrow.com" class="text-blue-500 hover:underline">friends@willsparrow.com</a></p>
+                                        <p class="pt-2">PH: +1 (209) 914-6816</p>
+                                    </div>                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="border-t border-white pt-8 mt-4">
+                    <div class="flex flex-col lg:flex-row justify-between items-center gap-4">
+                        <div class="text-sm text-black">
+                            © 2024 <a href="#"
+                                class="hover:text-white transition-colors duration-300">Willsparrow Technologies™</a>. All Rights 
+                            Reserved.
+                        </div>
+                        <div class="flex flex-col lg:flex-row justify-between items-center gap-4">
+                            <div class="flex gap-4 text-sm text-black">
+                                <a href="#" class="hover:text-white transition-colors duration-300">Terms of Use</a>
+                                <a href="#" class="hover:text-white transition-colors duration-300">Privacy Policy</a>
+                                <a href="#" class="hover:text-white transition-colors duration-300">Sale & Refunds</a>
+                            </div>
+                            <div class="flex gap-4 text-sm text-black">
+                                <a href="#" class="hover:text-white transition-colors duration-300">Legal</a>
+                                <a href="#" class="hover:text-white transition-colors duration-300">Site Map</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+        <script src="/src/js/aos-init.js"></script>
+        <script src="/src/js/navbar.js"></script>
+    </body>
+</html>

@@ -42,6 +42,10 @@
             perspective: 1000px;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         @keyframes testimonialFadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -102,7 +106,7 @@
         
                 <ul class="hidden lg:flex space-x-12 mx-auto" data-aos="fade-right" data-aos-duration="1100" data-aos-delay="300">
                     <li class="home-link"><a href="/index.html" class="text-white hover:text-primary nav-link text-xl font-semibold">Home</a></li>
-                    <li><a href="/index.html#about" class="text-white hover:text-primary nav-link text-xl font-semibold">About</a></li>
+                    <li><a href="/index.html#about" class="text-white hover:text-primary nav-link text-xl font-semibold">About Us</a></li>
                     <li class="relative group">
                         <a href="#services" class="text-white hover:text-primary nav-link text-xl font-semibold">Services</a>
                         <ul class="submenu absolute mt-2 bg-white text-gray-800 w-72 rounded-lg shadow-xl invisible ring-1 ring-black ring-opacity-5 focus:outline-none transform opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition ease-out duration-200 z-50 overflow-hidden">
@@ -258,39 +262,41 @@
                         </p>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
                             <div class="group perspective" data-aos="flip-left" data-aos-delay="200">
-                                <div class="flex items-center p-4 gap-4 bg-white rounded-lg shadow-md transition duration-300 transform group-hover:-translate-y-2 group-hover:shadow-xl group-hover:rotate-y-15">
+                                <a href="#agile-development-section" class="flex items-center p-4 gap-4 bg-white rounded-lg shadow-md transition duration-300 transform group-hover:-translate-y-2 group-hover:shadow-xl group-hover:rotate-y-15">
                                     <div class="bg-orange-500 p-3 rounded-lg shadow-lg group-hover:bg-primary transition-all duration-500">
                                         <i class="fas fa-code text-white text-2xl"></i>
                                     </div>
                                     <span class="text-gray-800 font-semibold group-hover:text-primary transition duration-300">Agile Development</span>
-                                </div>
+                                </a>
                             </div>
                             <div class="group perspective" data-aos="flip-left" data-aos-delay="400">
-                                <div class="flex items-center p-4 gap-4 bg-white rounded-lg shadow-md transition duration-300 transform group-hover:-translate-y-2 group-hover:shadow-xl group-hover:rotate-y-15">
+                                <a href="/services/software/cloud.html" 
+                                    class="flex items-center p-4 gap-4 bg-white rounded-lg shadow-md transition duration-300 transform group-hover:-translate-y-2 group-hover:shadow-xl group-hover:rotate-y-15">
                                     <div class="bg-orange-500 p-3 rounded-lg shadow-lg group-hover:bg-primary transition-all duration-500">
-                                        <i class="fas fa-cloud text-white text-2xl"></i>
+                                        <i class="fas fa-code text-white text-2xl"></i>
                                     </div>
                                     <span class="text-gray-800 font-semibold group-hover:text-primary transition duration-300">Cloud Solutions</span>
-                                </div>
-                            </div>
-                            <div class="group perspective" data-aos="flip-left" data-aos-delay="600">
-                                <div class="flex items-center p-4 gap-4 bg-white rounded-lg shadow-md transition duration-300 transform group-hover:-translate-y-2 group-hover:shadow-xl group-hover:rotate-y-15">
-                                    <div class="bg-orange-500 px-5 py-3 rounded-lg shadow-lg group-hover:bg-primary transition-all duration-500">
-                                        <i class="fas fa-mobile-alt text-white text-2xl"></i>
+                                </a>
+                            </div>                            
+                            <div class="group perspective" data-aos="flip-left" data-aos-delay="200">
+                                <a href="#mobile-development-section" class="flex items-center p-4 gap-4 bg-white rounded-lg shadow-md transition duration-300 transform group-hover:-translate-y-2 group-hover:shadow-xl group-hover:rotate-y-15">
+                                    <div class="bg-orange-500 p-3 rounded-lg shadow-lg group-hover:bg-primary transition-all duration-500">
+                                        <i class="fas fa-code text-white text-2xl"></i>
                                     </div>
                                     <span class="text-gray-800 font-semibold group-hover:text-primary transition duration-300">Mobile Development</span>
-                                </div>
+                                </a>
                             </div>
-                            <div class="group perspective" data-aos="flip-left" data-aos-delay="800">
-                                <div class="flex items-center p-4 gap-4 bg-white rounded-lg shadow-md transition duration-300 transform group-hover:-translate-y-2 group-hover:shadow-xl group-hover:rotate-y-15">
-                                    <div class="bg-orange-500 px-5 py-3 rounded-lg shadow-lg group-hover:bg-primary transition-all duration-500">
-                                        <i class="fas fa-chart-line text-white text-2xl"></i>
+                            <div class="group perspective" data-aos="flip-left" data-aos-delay="400">
+                                <a href="/services/software/dataanalytics.html" 
+                                    class="flex items-center p-4 gap-4 bg-white rounded-lg shadow-md transition duration-300 transform group-hover:-translate-y-2 group-hover:shadow-xl group-hover:rotate-y-15">
+                                    <div class="bg-orange-500 p-3 rounded-lg shadow-lg group-hover:bg-primary transition-all duration-500">
+                                        <i class="fas fa-code text-white text-2xl"></i>
                                     </div>
                                     <span class="text-gray-800 font-semibold group-hover:text-primary transition duration-300">Data Analytics</span>
-                                </div>
-                            </div>
+                                </a>
+                            </div>  
                         </div>
-                        <a href="#" class="inline-block bg-primary text-white font-bold py-3 px-8 rounded-xl hover:bg-orange-400 transition duration-300 transform hover:-translate-y-1 hover:shadow-lg" data-aos="zoom-in" data-aos-delay="1000">
+                        <a href="/contactus.html#contact" class="inline-block bg-primary text-white font-bold py-3 px-8 rounded-xl hover:bg-orange-400 transition duration-300 transform hover:-translate-y-1 hover:shadow-lg" data-aos="zoom-in" data-aos-delay="1000">
                             Elevate Your Business
                         </a>
                     </div>
@@ -380,23 +386,23 @@
             
                         <!-- Card Footer -->
                         <div class="px-6 pb-6">
-                            <a href="#" class="block w-full bg-primary text-white text-center py-3 rounded-xl font-semibold hover:bg-primary-700 transition-colors duration-300">
+                            <a href="/services/software/cloud.html" class="block w-full bg-primary text-white text-center py-3 rounded-xl font-semibold hover:bg-primary-700 transition-colors duration-300">
                                 Learn More
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-3xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <div class="bg-white rounded-3xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl">
                     <div class="relative h-72">
-                        <img src="/src/images/software(1)/enterprise-resource-planning-holographic-interface-min.jpg" alt="Enterprise Software" class="w-full h-full object-cover"/>
+                        <img src="/src/images/software/office-workers-using-finance-graphs (1)-min.jpg" alt="Data Analytics" class="w-full h-full object-cover"/>
                         <div class="absolute inset-0 bg-gradient-to-b from-transparent to-primary/80"></div>
                         <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-b from-black/80 to-black/40">
                             <div class="flex items-center">
                                 <div class="w-12 h-12 flex-shrink-0 bg-white rounded-2xl flex items-center justify-center shadow-lg">
-                                    <i class="fas fa-laptop-code text-2xl text-primary"></i>
+                                    <i class="fas fa-chart-bar text-2xl text-primary"></i>
                                 </div>
-                                <h3 class="ml-4 text-2xl font-bold text-white">Enterprise Software</h3>
+                                <h3 class="ml-4 text-2xl font-bold text-white">Data Analytics</h3>
                             </div>
                         </div>
                     </div>
@@ -404,35 +410,37 @@
                         <ul class="space-y-4">
                             <li class="flex items-start">
                                 <div class="mt-1 w-8 h-8 rounded-full bg-primary-100 flex items-center justify-center mr-4 flex-shrink-0">
-                                    <i class="fas fa-cogs text-sm text-primary"></i>
+                                    <i class="fas fa-robot text-sm text-primary"></i>
                                 </div>
                                 <div>
-                                    <h4 class="font-semibold text-gray-900">Custom Development</h4>
-                                    <p class="mt-1 text-sm text-gray-500">Tailored software solutions for your unique business needs</p>
+                                    <h4 class="font-semibold text-gray-900">Machine Learning</h4>
+                                    <p class="mt-1 text-sm text-gray-500">Advanced predictive analytics and pattern recognition</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
                                 <div class="mt-1 w-8 h-8 rounded-full bg-primary-100 flex items-center justify-center mr-4 flex-shrink-0">
-                                    <i class="fas fa-sync text-sm text-primary"></i>
+                                    <i class="fas fa-chart-line text-sm text-primary"></i>
                                 </div>
                                 <div>
-                                    <h4 class="font-semibold text-gray-900">Legacy Modernization</h4>
-                                    <p class="mt-1 text-sm text-gray-500">Update and transform your existing systems</p>
+                                    <h4 class="font-semibold text-gray-900">Predictive Analysis</h4>
+                                    <p class="mt-1 text-sm text-gray-500">Forecast trends and make data-driven decisions</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
                                 <div class="mt-1 w-8 h-8 rounded-full bg-primary-100 flex items-center justify-center mr-4 flex-shrink-0">
-                                    <i class="fas fa-plug text-sm text-primary"></i>    
+                                    <i class="fas fa-database text-sm text-primary"></i>
                                 </div>
                                 <div>
-                                    <h4 class="font-semibold text-gray-900">API Integration</h4>
-                                    <p class="mt-1 text-sm text-gray-500">Seamless connectivity between your systems</p>
+                                    <h4 class="font-semibold text-gray-900">Big Data Processing</h4>
+                                    <p class="mt-1 text-sm text-gray-500">Handle and analyze large-scale data sets</p>
                                 </div>
                             </li>
                         </ul>
                     </div>
                     <div class="px-6 pb-6">
-                        <a href="#" class="block w-full bg-primary text-white text-center py-3 rounded-xl font-semibold hover:bg-primary-700 transition-colors duration-300">Learn More</a>
+                        <a href="/services/software/dataanalytics.html" class="block w-full bg-primary text-white text-center py-3 rounded-xl font-semibold hover:bg-primary-700 transition-colors duration-300">
+                            Learn More
+                        </a>
                     </div>
                 </div>
     
@@ -482,7 +490,9 @@
                         </ul>
                     </div>
                     <div class="px-6 pb-6">
-                        <a href="#" class="block w-full bg-primary text-white text-center py-3 rounded-xl font-semibold hover:bg-primary-700 transition-colors duration-300">Learn More</a>
+                        <a href="/services/software/cybersecurity.html" class="block w-full bg-primary text-white text-center py-3 rounded-xl font-semibold hover:bg-primary-700 transition-colors duration-300">
+                            Learn More
+                        </a>
                     </div>
                 </div>
     
@@ -507,8 +517,8 @@
                                     <i class="fas fa-robot text-sm text-primary"></i>
                                 </div>
                                 <div>
-                                    <h4 class="font-semibold text-gray-900">Predictive Analytics</h4>
-                                    <p class="mt-1 text-sm text-gray-500">Data-driven insights for informed decisions</p>
+                                    <h4 class="font-semibold text-gray-900">Natural Language Processing (NLP)</h4>
+                                    <p class="mt-1 text-sm text-gray-500">NLP enables machines to understand human language.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
@@ -532,7 +542,9 @@
                         </ul>
                     </div>
                     <div class="px-6 pb-6">
-                        <a href="#" class="block w-full bg-primary text-white text-center py-3 rounded-xl font-semibold hover:bg-primary-700 transition-colors duration-300">Learn More</a>
+                        <a href="/services/software/ai&ml.html" class="block w-full bg-primary text-white text-center py-3 rounded-xl font-semibold hover:bg-primary-700 transition-colors duration-300">
+                            Learn More
+                        </a>
                     </div>
                 </div>
     
@@ -582,7 +594,9 @@
                         </ul>
                     </div>
                     <div class="px-6 pb-6">
-                        <a href="#" class="block w-full bg-primary text-white text-center py-3 rounded-xl font-semibold hover:bg-primary-700 transition-colors duration-300">Learn More</a>
+                        <a href="/services/software/devops.html" class="block w-full bg-primary text-white text-center py-3 rounded-xl font-semibold hover:bg-primary-700 transition-colors duration-300">
+                            Learn More
+                        </a>
                     </div>
                 </div>
 
@@ -631,7 +645,9 @@
                         </ul>
                     </div>
                     <div class="px-6 pb-6">
-                        <a href="#" class="block w-full bg-primary text-white text-center py-3 rounded-xl font-semibold hover:bg-primary-700 transition-colors duration-300">Learn More</a>
+                        <a href="/services/software/webdevelopement.html" class="block w-full bg-primary text-white text-center py-3 rounded-xl font-semibold hover:bg-primary-700 transition-colors duration-300">
+                            Learn More
+                        </a>
                     </div>
                 </div>
                 
@@ -687,8 +703,78 @@
             </div>
         </section>
 
+        <!-- agile development -->
+        <section id="agile-development-section" class="px-4 py-10">
+            <div class="container mx-auto">
+                <div class="rounded-2xl shadow-xl overflow-hidden transform hover:shadow-2xl transition-all duration-300">
+                    <div class="flex flex-col lg:flex-row items-center">
+                        <!-- Left Image Side -->
+                        <div class="w-full lg:w-1/2 p-6 sm:p-8 lg:p-16" data-aos="fade-right" data-aos-duration="1000">
+                            <div class="relative">
+                                <div class="absolute -top-4 -left-4 w-24 h-24 bg-yellow-400 rounded-full opacity-50 blur-2xl"></div>
+                                <div class="absolute -bottom-4 -right-4 w-24 h-24 bg-blue-400 rounded-full opacity-50 blur-2xl"></div>
+                                <img src="/src/images/software/office-workers-using-finance-graphs-min.jpg" alt="Agile Development Process" class="relative rounded-2xl shadow-2xl h-[700px] w-full object-cover" />
+                            </div>
+                        </div>
+        
+                        <!-- Right Content Side -->
+                        <div class="lg:w-1/2 p-8 lg:p-16" data-aos="fade-left" data-aos-duration="1000">
+                            <div class="space-y-8">
+                                <div>
+                                    <span class="bg-indigo-50 text-indigo-700 text-sm font-semibold px-5 py-2 rounded-full uppercase tracking-wide">Industry Leading</span>
+                                </div>
+                                <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">Agile Development</h2>
+                                <p class="text-xl text-gray-600 leading-relaxed">We implement agile methodologies to deliver high-quality software solutions that adapt to changing business needs.</p>
+        
+                                <div class="space-y-6">
+                                    <div class="flex items-start space-x-4">
+                                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500 to-indigo-600 flex items-center justify-center flex-shrink-0">
+                                            <i class="fas fa-sync text-white text-xl"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-xl font-semibold text-gray-900">Iterative Development</h3>
+                                            <p class="text-gray-600 mt-2">Regular sprints and iterations ensuring continuous improvement and rapid delivery of value.</p>
+                                        </div>
+                                    </div>
+        
+                                    <div class="flex items-start space-x-4">
+                                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-primary flex items-center justify-center flex-shrink-0">
+                                            <i class="fas fa-users text-white text-xl"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-xl font-semibold text-gray-900">Collaborative Approach</h3>
+                                            <p class="text-gray-600 mt-2">Cross-functional teams working together with daily stand-ups and sprint planning.</p>
+                                        </div>
+                                    </div>
+        
+                                    <div class="flex items-start space-x-4">
+                                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-primary flex items-center justify-center flex-shrink-0">
+                                            <i class="fas fa-chart-line text-white text-xl"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-xl font-semibold text-gray-900">Continuous Improvement</h3>
+                                            <p class="text-gray-600 mt-2">Regular retrospectives and adaptable processes for optimal project outcomes.</p>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="pt-8">
+                                    <a href="/contactus.html#contact" class="inline-flex items-center px-8 py-4 bg-primary text-white font-bold rounded-xl transition-all duration-200 transform hover:-translate-y-1 hover:shadow-lg text-lg">
+                                        Start Your Agile Journey
+                                        <svg class="w-6 h-6 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- mobile application -->
-        <section class="px-custom-padding py-10">
+        <section id="mobile-development-section" class="px-custom-padding py-10">
             <div class="container mx-auto">
                 <div class="rounded-2xl shadow-xl overflow-hidden transform hover:shadow-2xl transition-all duration-300">
                     <div class="flex flex-col lg:flex-row items-center">
@@ -734,7 +820,7 @@
                         </div>
             
                         <div class="pt-8">
-                            <a href="#" class="inline-flex items-center px-8 py-4 bg-primary text-white font-bold rounded-xl transition-all duration-200 transform hover:-translate-y-1 hover:shadow-lg text-lg">
+                            <a href="/contactus.html#contact" class="inline-flex items-center px-8 py-4 bg-primary text-white font-bold rounded-xl transition-all duration-200 transform hover:-translate-y-1 hover:shadow-lg text-lg">
                             Schedule a Consultation
                             <svg class="w-6 h-6 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -1138,17 +1224,21 @@
                                 </div>
                                 <div class="text-md space-y-1">
                                     <!-- Address Section -->
-                                    <div class="space-y-1 mb-6">
+                                    <div class="space-y-1 mb-2">
                                         <p>D No.4/367-A, Rajiv Nagar,</p>
                                         <p>Venkatapuram,</p>
                                         <p>Krishnagiri Indl. Estate, Krishnagiri,</p>
                                         <p>Tamil Nadu, INDIA - 635002</p>
                                     </div>
+    
+                                    <div class="font-semibold pb-4">
+                                        <p>PH: +91 99522 74629</p>
+                                    </div>
                     
-                                   <hr class="py-4 w-1/2 h-1">
+                                   <hr class="w-1/2 h-1">
                     
                                     <!-- Additional Address Section -->
-                                    <div class="space-y-1">
+                                    <div class="space-y-1 pt-4">
                                         <p>C204, ISR Sukriti,</p>
                                         <p>Halasahalli cross road, Varthur,</p>
                                         <p>Bengaluru, INDIA 560087</p>
@@ -1156,7 +1246,7 @@
                     
                                     <!-- Phone Section -->
                                     <div class="font-semibold pt-5">
-                                        <p>PH: +91 76038 11590</p>
+                                        <p>PH: +91 99522 76468</p>
                                     </div>
                                 </div>
                             </div>
@@ -1192,8 +1282,9 @@
                                     </div>
                     
                                     <!-- Phone Section -->
-                                    <div class="font-semibold pt-5">
+                                    <div class="font-semibold pt-3">
                                         <p>Email: <a href="mailto:friends@willsparrow.com" class="text-blue-500 hover:underline">friends@willsparrow.com</a></p>
+                                        <p class="pt-2">PH: +1 (209) 914-6816</p>
                                     </div>                                
                                 </div>
                             </div>
@@ -1202,23 +1293,31 @@
                 </div>
     
                 <div class="border-t border-white pt-8 mt-4">
-                    <div class="flex flex-col lg:flex-row justify-between items-center gap-4">
-                        <div class="text-sm text-gray-300">
-                            © 2024 <a href="#"
-                                class="hover:text-white transition-colors duration-300">Willsparrow Technologies™</a>. All Rights 
-                            Reserved.
+                    <div class="flex flex-wrap justify-between items-center gap-8">
+                        <!-- Section 1 -->
+                        <div class="text-sm text-white">
+                            © 2024 
+                            <a href="#" class="hover:text-white transition-colors duration-300">Willsparrow Technologies™</a>. 
+                            All Rights Reserved.
                         </div>
+
+                        <!-- Section 2 -->
+                        <div class="text-sm text-white">
+                            Photos Designed by Freepik & Unsplash
+                        </div>
+                    
+                        <!-- Section 3 -->
                         <div class="flex flex-col lg:flex-row justify-between items-center gap-4">
-                            <div class="flex gap-4 text-sm text-gray-300">
-                                <a href="#" class="hover:text-white transition-colors duration-300">Terms of Use</a>
-                                <a href="#" class="hover:text-white transition-colors duration-300">Privacy Policy</a>
-                                <a href="#" class="hover:text-white transition-colors duration-300">Sale & Refunds</a>
-                            </div>
-                            <div class="flex gap-4 text-sm text-gray-300">
-                                <a href="#" class="hover:text-white transition-colors duration-300">Legal</a>
-                                <a href="#" class="hover:text-white transition-colors duration-300">Site Map</a>
-                            </div>
+                        <div class="flex gap-4 text-sm text-gray-300">
+                            <a href="#" class="hover:text-white transition-colors duration-300">Terms of Use</a>
+                            <a href="#" class="hover:text-white transition-colors duration-300">Privacy Policy</a>
+                            <a href="#" class="hover:text-white transition-colors duration-300">Sale & Refunds</a>
                         </div>
+                        <div class="flex gap-4 text-sm text-gray-300">
+                            <a href="#" class="hover:text-white transition-colors duration-300">Legal</a>
+                            <a href="#" class="hover:text-white transition-colors duration-300">Site Map</a>
+                        </div>
+                    </div>
                     </div>
                 </div>
             </div>
