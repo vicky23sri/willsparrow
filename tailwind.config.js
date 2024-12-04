@@ -22,7 +22,8 @@ module.exports = {
       },
       spacing: {
         'custom-padding': '1rem', 
-        'custom-vertical-padding': '4rem'
+        'custom-vertical-padding': '4rem',
+        'custom-vertical-padding-1': '2rem'
       },
     },
     fontFamily: {
